@@ -10,13 +10,13 @@ top.
 
 Each row carries a provenance pill:
 
-- **Managed** (green) — installed by the Livery Manager. The manager remembers
+- **Managed** (green): installed by the Livery Manager. The manager remembers
   which archive it came from and when, shown right under the name. Managed
   liveries can be re-installed, updated, or removed freely.
-- **Manual** (gray) — found in your Liveries folder but **not** installed by
-  the manager: you copied it in by hand, or another tool did. The manager
-  lists it so you can see your whole collection, but it will never overwrite
-  or delete a manual livery without asking you first.
+- **Manual** (gray): found in your Liveries folder but **not** installed by
+  the manager. Either you copied it in by hand or another tool did. The
+  manager lists it so you can see your whole collection, but it will never
+  overwrite or delete a manual livery without asking you first.
 
 ## Removing a livery
 
@@ -33,5 +33,6 @@ stronger warning first, since it isn't the manager's to delete quietly.
 
 ## Open folder
 
-**Open folder** shows the livery in Windows Explorer — handy for checking
-textures, editing `description.lua`, or zipping a livery up to share.
+**Open folder** shows the livery in Windows Explorer, which is handy for
+checking textures, editing `description.lua`, or zipping a livery up to
+share.

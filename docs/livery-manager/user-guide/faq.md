@@ -5,7 +5,7 @@
 Almost always one of these, in order of likelihood:
 
 1. **DCS was running when you installed.** The game only scans for liveries
-   at startup — **fully close DCS** (not just back to the main menu) and
+   at startup. **Fully close DCS** (not just back to the main menu) and
    launch it again.
 2. **Wrong aircraft.** If the manager flagged the livery with a yellow
    *Check the aircraft* warning and the guess was wrong, it's sitting in
@@ -17,7 +17,7 @@ Almost always one of these, in order of likelihood:
 
 ## Will other players see my livery in multiplayer?
 
-Only if they have the **same livery installed** — skins are client-side.
+Only if they have the **same livery installed**; skins are client-side.
 Everyone else sees the aircraft's default livery. Squadrons typically share a
 livery pack so everyone sees the same paint.
 
@@ -25,13 +25,13 @@ livery pack so everyone sees the same paint.
 
 No. Liveries in `Saved Games` are exactly where DCS wants user content, and
 multiplayer integrity check doesn't inspect them. IC problems come from
-modified files **inside the game installation** — which this manager never
+modified files **inside the game installation**, which this manager never
 touches.
 
 ## What archive formats work?
 
 `.zip` out of the box. `.7z` and `.rar` are extracted with
-[7-Zip](https://www.7-zip.org/) when it's installed — the manager tells you
+[7-Zip](https://www.7-zip.org/) when it's installed; the manager tells you
 if it's needed. Archives containing further archives are unpacked
 automatically.
 
@@ -39,7 +39,7 @@ automatically.
 
 Yes. Updates and repairs only touch the game installation; your
 `Saved Games\...\Liveries` folder is yours. The same goes for uninstalling
-the Livery Manager — your collection stays.
+the Livery Manager; your collection stays.
 
 ## Liveries are huge. Where did my disk space go?
 
