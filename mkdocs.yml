@@ -1,0 +1,108 @@
+site_name: Invictus Cockpits Documentation
+site_url: https://docs.invictuscockpits.com
+repo_url: https://github.com/invictuscockpits/docs
+repo_name: invictuscockpits/docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+extra_css:
+  - assets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/invictuscockpits
+    - icon: fontawesome/solid/globe
+      link: https://invictuscockpits.com
+
+nav:
+  - Home: index.md
+  - AIM Cockpit Manager:
+      - User Guide:
+          - cockpit-manager/user-guide/index.md
+          - Start Here:
+              - What You Need: cockpit-manager/user-guide/what-you-need.md
+              - Install the Manager: cockpit-manager/user-guide/install-the-manager.md
+          - Connect Your Cockpit:
+              - Set Up the Cockpit Network: cockpit-manager/user-guide/set-up-the-cockpit-network.md
+              - Add Your First Board: cockpit-manager/user-guide/add-your-first-board.md
+              - Assign Controls to Pins: cockpit-manager/user-guide/assign-controls-to-pins.md
+              - Test and Calibrate: cockpit-manager/user-guide/test-and-calibrate.md
+              - Swap or Replace a Board: cockpit-manager/user-guide/swap-or-replace-a-board.md
+          - DCS World:
+              - Set Up DCS: cockpit-manager/user-guide/set-up-dcs.md
+              - Cockpit Displays in DCS: cockpit-manager/user-guide/cockpit-displays-in-dcs.md
+          - Falcon BMS:
+              - Set Up Falcon BMS: cockpit-manager/user-guide/set-up-falcon-bms.md
+              - Install the Virtual-Joystick Driver: cockpit-manager/user-guide/install-the-virtual-joystick-driver.md
+              - Load the Keyfile: cockpit-manager/user-guide/load-the-keyfile.md
+              - Assign Axes in BMS: cockpit-manager/user-guide/assign-axes-in-bms.md
+              - Cockpit Displays in BMS: cockpit-manager/user-guide/cockpit-displays-in-bms.md
+          - Physical Outputs:
+              - Indicator and Caution Lights: cockpit-manager/user-guide/indicator-and-caution-lights.md
+          - VFT5 Side-Stick:
+              - VFT5 Side-Stick: cockpit-manager/user-guide/vft5-side-stick.md
+          - Keeping Updated:
+              - Update the Manager: cockpit-manager/user-guide/update-the-manager.md
+              - Update Board Firmware: cockpit-manager/user-guide/update-board-firmware.md
+          - Reference and Help:
+              - Settings: cockpit-manager/user-guide/settings.md
+              - Troubleshooting: cockpit-manager/user-guide/troubleshooting.md
+              - FAQ: cockpit-manager/user-guide/faq.md
+              - Glossary: cockpit-manager/user-guide/glossary.md
+              - Get Support: cockpit-manager/user-guide/get-support.md
+  - HOTAS Configurator:
+      - User Guide:
+          - hotas-configurator/user-guide/index.md
+          - Getting Started: hotas-configurator/user-guide/getting-started.md
+          - Overview: hotas-configurator/user-guide/overview.md
+          - Axes Settings: hotas-configurator/user-guide/axes-settings.md
+          - Axes Curves: hotas-configurator/user-guide/axes-curves.md
+          - Developer Mode: hotas-configurator/user-guide/developer-mode.md
+          - Reflashing Firmware: hotas-configurator/user-guide/reflashing-firmware.md
+          - Troubleshooting: hotas-configurator/user-guide/troubleshooting.md
+  - AIM Joystick Probe:
+      - User Guide:
+          - joystick-probe/user-guide/index.md
+          - Getting Started: joystick-probe/user-guide/getting-started.md
+          - Reading Your Controller: joystick-probe/user-guide/reading-your-controller.md
+          - Test-All Mode: joystick-probe/user-guide/test-all-mode.md
+          - AIM Ghost Joysticks: joystick-probe/user-guide/aim-ghost-joysticks.md
+          - Updates: joystick-probe/user-guide/updates.md
+          - FAQ: joystick-probe/user-guide/faq.md
