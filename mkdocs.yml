@@ -89,6 +89,14 @@ nav:
               - FAQ: cockpit-manager/user-guide/faq.md
               - Glossary: cockpit-manager/user-guide/glossary.md
               - Get Support: cockpit-manager/user-guide/get-support.md
+  - Livery Manager:
+      - User Guide:
+          - livery-manager/user-guide/index.md
+          - Getting Started: livery-manager/user-guide/getting-started.md
+          - Install a Livery: livery-manager/user-guide/install-a-livery.md
+          - The Library: livery-manager/user-guide/library.md
+          - Settings: livery-manager/user-guide/settings.md
+          - FAQ: livery-manager/user-guide/faq.md
   - HOTAS Configurator:
       - User Guide:
           - hotas-configurator/user-guide/index.md

@@ -24,6 +24,12 @@ Guides and reference material for Invictus Cockpit Systems software and hardware
 
     A modern joystick tester for Windows that shows a controller's complete button map, including all 128 buttons of an AIM Ghost Joystick.
 
+- **[Invictus Livery Manager](livery-manager/user-guide/index.md)**
+
+    ---
+
+    A free DCS World livery installer. Drop a downloaded archive on the window and it lands in the right Saved Games folder, under the right aircraft, every time.
+
 </div>
 
 ## Looking for something else?
