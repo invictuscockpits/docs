@@ -39,7 +39,7 @@ The board reboots to apply its new configuration. Wait 15-20 seconds. It will re
 
 ## A switch doesn't respond when operated
 
-Switch states are visible in the **Avionics â†’ Panels** view. The manager reflects the state of your physical panels directly. It is not synced to the sim. When you operate a switch on the panel, the corresponding control in the Panels view should toggle. When you click a switch in the manager, it can trigger an action in the sim.
+Switch states are visible in the **Avionics → Panels** view. The manager reflects the state of your physical panels directly. It is not synced to the sim. When you operate a switch on the panel, the corresponding control in the Panels view should toggle. When you click a switch in the manager, it can trigger an action in the sim.
 
 If a switch doesn't respond when physically operated:
 
@@ -62,7 +62,7 @@ The manager already guards rotaries with a 100 ms settle window by default. If a
 
 - If the pot is not yet wired, right-click it in the live view and select **Mute**. Unwired pots float and show noise.
 - Confirm the supply wire goes to **3.3V**, not 5V. Using 5V on a pot channel can damage the board.
-- Run calibration: right-click the pot â†’ **Calibrate**, sweep full range several times, then Save. See [Test and Calibrate](test-and-calibrate.md).
+- Run calibration: right-click the pot → **Calibrate**, sweep full range several times, then Save. See [Test and Calibrate](test-and-calibrate.md).
 - Keep wiring runs under 1 meter. Long unshielded runs pick up noise.
 
 ---
@@ -129,7 +129,7 @@ The TLC59281 daisy-chain bit order is reversed from what the catalog expects. Sw
 ## Manager won't check for updates
 
 - Confirm internet access is available. The manager reaches `api.github.com`.
-- If you see "GitHub returned HTTP 403," the API rate limit was hit. Wait a few minutes and try again via **Settings â†’ CHECK NOW**.
+- If you see "GitHub returned HTTP 403," the API rate limit was hit. Wait a few minutes and try again via **Settings → CHECK NOW**.
 
 ---
 
