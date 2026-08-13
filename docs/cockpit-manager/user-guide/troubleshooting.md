@@ -6,6 +6,9 @@ Quick-reference for common problems. Each section links to the relevant wiki pag
 
 ## Board won't appear on the Network page
 
+> [!TIP]
+> From manager **1.6.0**, start with [Network Health](network-health.md) (Network sidebar, **Network health** button). It checks every layer in order and the first red light tells you exactly which of the steps below to look at, so you don't have to walk them all.
+
 - Confirm the PoE switch provides **802.3at** power. AIM boards require 802.3at. They are not compatible with 802.3af-only switches.
 - Check the switch link light for the port the board is plugged into. No link light = cable or port issue.
 - Confirm the PC's cockpit network adapter has the correct static IP (`10.24.6.1`). Use the manager's **Fix it for me** button on the Network page if the adapter isn't configured yet. See [Set Up the Cockpit Network](set-up-the-cockpit-network.md).
@@ -44,6 +47,14 @@ If a switch doesn't respond when physically operated:
 - Check your wiring: one switch leg to the GPIO pin, the other to GND. Polarity doesn't matter.
 - The board must be saved and rebooted after any pin assignment change.
 - Try a different GPIO pin. A damaged pin won't respond even with correct wiring.
+
+---
+
+## A rotary switch briefly snaps back to its previous position
+
+When you turn a multi-position rotary, the display jumps to the new position, flicks back to the old one for a moment, then settles. This happens because the switch's contacts pass through a gap between positions, and a too-short settle window lets that in-between moment read as a real change.
+
+The manager already guards rotaries with a 100 ms settle window by default. If a particular switch still does this (contact style varies between rotary brands), right-click that control in the panels view and choose **Adjust response time** (manager 1.6.0 and later), then raise the value until the snap-back stops. Saving sends the change to the board, which restarts for a moment.
 
 ---
 

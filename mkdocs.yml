@@ -63,6 +63,7 @@ nav:
               - Install the Manager: cockpit-manager/user-guide/install-the-manager.md
           - Connect Your Cockpit:
               - Set Up the Cockpit Network: cockpit-manager/user-guide/set-up-the-cockpit-network.md
+              - Network Health: cockpit-manager/user-guide/network-health.md
               - Add Your First Board: cockpit-manager/user-guide/add-your-first-board.md
               - Assign Controls to Pins: cockpit-manager/user-guide/assign-controls-to-pins.md
               - Test and Calibrate: cockpit-manager/user-guide/test-and-calibrate.md
@@ -80,6 +81,10 @@ nav:
               - Indicator and Caution Lights: cockpit-manager/user-guide/indicator-and-caution-lights.md
           - VFT5 Side-Stick:
               - VFT5 Side-Stick: cockpit-manager/user-guide/vft5-side-stick.md
+          - Session Tools:
+              - Hot Start: cockpit-manager/user-guide/hot-start.md
+              - Display Layout: cockpit-manager/user-guide/display-layout.md
+              - Backups: cockpit-manager/user-guide/backups.md
           - Keeping Updated:
               - Update the Manager: cockpit-manager/user-guide/update-the-manager.md
               - Update Board Firmware: cockpit-manager/user-guide/update-board-firmware.md

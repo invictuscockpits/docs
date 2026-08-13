@@ -66,6 +66,43 @@ How long you hover before a control hint appears. This setting is grayed out whe
 
 ---
 
+## App Behavior
+
+> [!NOTE]
+> This section and the three below it arrive with manager **1.6.0**.
+
+**Close button hides to the system tray** *(default: off)*
+
+With this on, closing the window keeps the manager running in the system tray so your boards, sim forwarding, and displays stay live. Reopen from the tray icon, which also offers **Hot start (launch session)**. Quit fully from the tray icon's menu.
+
+**Start with Windows** *(default: off)*
+
+Launches the manager automatically when you sign in to Windows. Pairs naturally with the tray option for a cockpit PC that should always be ready to fly.
+
+**Repair DCS integration automatically** *(default: on)*
+
+Checks the DCS integration at startup and reinstalls anything a DCS update wiped: export script, aircraft patches, and stick input profile. See the **Surviving DCS updates** section of [Set Up DCS](set-up-dcs.md).
+
+---
+
+## Flight Session
+
+The ordered list of apps that [Hot Start](hot-start.md) launches, with per-app delays, admin elevation, and the **Restore display layout first** option. Full details on the [Hot Start](hot-start.md) page.
+
+---
+
+## Display Layout
+
+**SAVE CURRENT LAYOUT** and **RESTORE SAVED LAYOUT** snapshot and restore your multi-monitor arrangement. Full details on the [Display Layout](display-layout.md) page.
+
+---
+
+## Backups
+
+Backs up and restores DCS bindings and the BMS keyfile, and exports or imports the manager's whole configuration. Backups land in **Documents\AIM Cockpit Manager Backups**. Full details on the [Backups](backups.md) page.
+
+---
+
 ## Software
 
 **Check for updates on launch** *(default: on)*

@@ -72,4 +72,12 @@ Flip a switch on your cockpit panel. The corresponding switch in DCS should move
 
 ---
 
+## Surviving DCS updates
+
+DCS updates and repairs routinely wipe the integration files from Saved Games, which used to mean redoing this page's steps after every patch.
+
+From manager **1.6.0**, the manager checks the integration at startup and reinstalls anything a DCS update removed or reverted: the export script, the aircraft patches, and your stick's input profile. When it repairs something you get a brief note; there's nothing to click. The behavior is controlled by **Repair DCS integration automatically** in the App Behavior section of [Settings](settings.md), on by default.
+
+---
+
 **Next:** [Cockpit Displays in DCS](cockpit-displays-in-dcs.md)

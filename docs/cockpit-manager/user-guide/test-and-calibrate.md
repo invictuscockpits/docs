@@ -53,6 +53,14 @@ If the result doesn't look right, the bar starts mid-range, or stops short, clic
 
 ## Diagnosing problems
 
+### Right-click fixes for switches
+
+Every control in the live view has a right-click menu, and two entries solve the most common switch complaints without touching a soldering iron:
+
+**Invert switch wiring** *(manager 1.5.0 and later)*: if a toggle reads backwards (up shows as down), it was wired to the opposite throw. This flips it in software, instantly, and the fix persists with the board's configuration. No rework, no reboot.
+
+**Adjust response time** *(manager 1.6.0 and later)*: how long the board waits for a switch's contacts to settle before reporting a new position. Raise it if a rotary switch briefly snaps back to its previous position when you turn it; lower it if a control feels slow. Saving sends the change to the board, which restarts for a moment. Rotaries default to 100 ms.
+
 ### A switch doesn't respond
 
 1. **Check the pin assignment.** In the panel view, confirm the control is assigned to the correct GPIO pin number.
