@@ -10,7 +10,7 @@
 
 ### 1. Download the installer
 
-Go to the [Releases](https://github.com/invictuscockpits/aim-cockpit-manager-releases/releases) page and download the latest `AIM-Cockpit-Manager-vX.X.X-Setup.exe`. Pick the most recent version at the top of the list.
+Go to the [Software page at invictuscockpits.com](https://invictuscockpits.com/pages/software) and download the latest `AIM-Cockpit-Manager-vX.X.X-Setup.exe`.
 
 ### 2. Get past the SmartScreen warning
 
@@ -23,7 +23,7 @@ Click **More info**. The **Publisher** line should read **Invictus Machine LLC**
 ![SmartScreen More info view showing Publisher Invictus Machine LLC and the Run anyway button](images/install-smartscreen-details.png)
 
 > [!TIP]
-> If the **Publisher** is blank or anything other than **Invictus Machine LLC**, stop. Don't run it. Re-download from the [Releases](https://github.com/invictuscockpits/aim-cockpit-manager-releases/releases) page. You can also verify the file directly: right-click it → **Properties** → **Digital Signatures**.
+> If the **Publisher** is blank or anything other than **Invictus Machine LLC**, stop. Don't run it. Re-download from the [Software page](https://invictuscockpits.com/pages/software). You can also verify the file directly: right-click it → **Properties** → **Digital Signatures**.
 
 ### 3. Choose how to install
 
@@ -57,7 +57,7 @@ The manager should open to the **Network** page and show a status bar at the bot
 
 | Problem | Fix |
 |---|---|
-| Windows SmartScreen says the app is unrecognized | Re-download from the [Releases](https://github.com/invictuscockpits/aim-cockpit-manager-releases/releases) page, then check **Properties → Digital Signatures** shows **Invictus Machine LLC**. If it does, click **More info → Run anyway**. |
+| Windows SmartScreen says the app is unrecognized | Re-download from the [Software page](https://invictuscockpits.com/pages/software), then check **Properties → Digital Signatures** shows **Invictus Machine LLC**. If it does, click **More info → Run anyway**. |
 | Installer won't run / Windows blocks it | Right-click the installer → **Properties** → **Unblock** → try again. |
 | Manager won't open after install | Check Start Menu for "AIM Cockpit Manager." If it's not there, re-run the installer. |
 | Boards not appearing after launch | Continue to [Set Up the Cockpit Network](set-up-the-cockpit-network.md). Discovery needs the network configured first. |

@@ -10,7 +10,7 @@
 ## Download
 
 Grab the latest **Invictus-Livery-Manager-Setup.exe** from the
-[Releases page](https://github.com/invictuscockpits/invictus-livery-manager-releases/releases).
+[Software page at invictuscockpits.com](https://invictuscockpits.com/pages/software).
 
 ## Install
 

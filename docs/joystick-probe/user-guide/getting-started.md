@@ -8,7 +8,7 @@
 ## Download
 
 Grab the latest **AIM-Joystick-Probe-Setup.exe** from the
-[Releases page](https://github.com/invictuscockpits/aim-joystick-probe-releases/releases).
+[Software page at invictuscockpits.com](https://invictuscockpits.com/pages/software).
 
 ## Install
 

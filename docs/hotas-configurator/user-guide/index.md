@@ -16,7 +16,7 @@ The Configurator allows you to:
 
 ## Getting Started
 
-📥 [Download the latest release](https://github.com/invictuscockpits/HOTASConfigurator/releases)
+📥 [Download the latest release](https://invictuscockpits.com/pages/software)
 
 * Install the Configurator
 * Plug in your Invictus HOTAS device via USB
