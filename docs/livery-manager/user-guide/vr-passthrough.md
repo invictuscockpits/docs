@@ -5,6 +5,8 @@
     we're refining it with tester feedback; report anything odd through
     **Report an Issue** in the app sidebar.
 
+![The VR Passthrough page](images/vr-passthrough.png)
+
 The VR Passthrough page sets up a mixed reality cockpit: you fly DCS in a
 headset while seeing your real, physical cockpit through passthrough. The
 manager installs a special cockpit livery that paints every physical surface
@@ -33,9 +35,9 @@ written into the game installation for this step.
 
 The livery installs under its own name, so your stock cockpit is untouched.
 Switch between the passthrough cockpit and the normal one any time in DCS
-under **Options, Special, F-16C, Cockpit Livery**. After installing or
-switching, always close DCS completely and restart it; DCS only scans for
-liveries at startup.
+under **Options → Special → F-16C → Customized Cockpit**. After installing
+or switching, always close DCS completely and restart it; DCS only scans
+for liveries at startup.
 
 **Remove** uninstalls both the livery and the helper mod cleanly.
 
@@ -126,8 +128,8 @@ improvements ship as soon as they're ready.
 
 - **The cockpit isn't magenta in DCS.** Restart DCS completely; liveries
   only load at startup. Then check all three status pills on the page are
-  green and that DCS's Special Options cockpit livery shows the passthrough
-  livery.
+  green and that **Options → Special → F-16C → Customized Cockpit** shows
+  the passthrough livery.
 - **Glare or reflections punch holes in the passthrough.** Run **Apply
   all** under Recommended DCS settings with DCS closed. If you changed
   graphics settings recently, re-run it; DCS sometimes reintroduces
