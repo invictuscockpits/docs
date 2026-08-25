@@ -6,6 +6,11 @@ top.
 
 ![The Library page](images/library.png)
 
+An aircraft's cockpit liveries (like the VR Passthrough cockpit) are listed
+in the same group as its regular skins, marked with a green **Cockpit**
+badge; the small folder names next to the heading show where each kind
+lives on disk.
+
 ## Managed vs Manual
 
 Each row carries a provenance pill:
