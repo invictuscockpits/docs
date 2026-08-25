@@ -1,5 +1,10 @@
 # VR Passthrough Cockpit
 
+!!! warning "Beta"
+    The VR Passthrough cockpit is a beta release. It works end to end, and
+    we're refining it with tester feedback; report anything odd through
+    **Report an Issue** in the app sidebar.
+
 The VR Passthrough page sets up a mixed reality cockpit: you fly DCS in a
 headset while seeing your real, physical cockpit through passthrough. The
 manager installs a special cockpit livery that paints every physical surface
