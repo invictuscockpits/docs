@@ -68,17 +68,25 @@ SSLR off, cockpit global illumination off, lens effects off, and motion blur
 off. Everything else, including your resolution and VR settings, is left
 alone.
 
-## Night mode
+## The cockpit lighting patch
 
-At night, DCS's lighting leaves the cockpit too dark for the chroma key to
-work. The optional **night lighting patch** solves this: after applying it,
-turn the instrument lighting knobs up at night and the cockpit keys
-correctly after dark. Day flying is completely unchanged with the knobs off.
+The **cockpit lighting patch** fixes two things no livery can reach:
 
-This is the one feature that modifies a file in the DCS installation (the
-F-16C cockpit model), so applying it shows a Windows administrator prompt.
-The manager keeps a pristine backup of the original file, and **Restore
-original** puts it back at any time. Two things to know:
+- **Magenta light bleed.** The keyed cockpit acts as a bright light
+  source, and DCS's cockpit ambient lighting washes that color onto the
+  virtual parts (canopy frame, HUD arms). The patch tames the cockpit's
+  image-based lighting so the bleed disappears. Recommended for all
+  passthrough flying.
+- **Night flying.** At night, DCS's lighting leaves the cockpit too dark
+  for the chroma key to work. With the patch applied, turn the
+  instrument lighting knobs up after dark and the cockpit keys
+  correctly. Day flying with the knobs off is unchanged.
+
+This is the one feature that modifies files in the DCS installation (the
+F-16C cockpit model and its lighting parameters), so applying it shows a
+Windows administrator prompt. The manager keeps pristine backups of the
+original files, and **Restore original** puts them back at any time. Two
+things to know:
 
 - **DCS updates and repairs quietly undo the patch.** Nothing breaks; the
   cockpit simply goes back to dark nights. Re-apply the patch from this page
@@ -137,8 +145,11 @@ improvements ship as soon as they're ready.
   all** under Recommended DCS settings with DCS closed. If you changed
   graphics settings recently, re-run it; DCS sometimes reintroduces
   reflections.
-- **The cockpit is green or dark at night.** Apply the night lighting
-  patch, then turn the instrument lighting knobs up. If nights went dark
-  again after a DCS update, re-apply the patch.
+- **The cockpit is green or dark at night, or virtual parts have a pink
+  tint.** Apply the cockpit lighting patch, then turn the instrument
+  lighting knobs up at night. If either symptom returns after a DCS
+  update, re-apply the patch.
 - **A multiplayer server rejects you.** Use **Restore original** in the
-  night mode section, fly, then re-apply the patch afterward.
+  cockpit lighting section, fly, then re-apply the patch afterward.
+- **Thin dark trim markings on some panel edges** are a known cosmetic
+  residual of the current livery and are purely visual.
