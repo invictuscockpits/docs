@@ -39,6 +39,8 @@ under **Options → Special → F-16C → Customized Cockpit**. After installing
 or switching, always close DCS completely and restart it; DCS only scans
 for liveries at startup.
 
+![The Customized Cockpit dropdown in DCS's Special options](images/dcs-special-options.png)
+
 **Remove** uninstalls both the livery and the helper mod cleanly.
 
 !!! note "About that dropdown"
