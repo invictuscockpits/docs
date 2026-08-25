@@ -96,11 +96,12 @@ passthrough settings, enable chroma keying with:
 | Setting | Value |
 | --- | --- |
 | Key color | red 255, green 0, blue 255 |
-| Similarity | 15 to 20 percent |
-| Smoothness | 5 to 10 percent |
+| Similarity | 35 percent |
+| Smoothness | 1 percent |
 
-For night flying, apply the night lighting patch and raise Similarity a few
-points if dim corners of the pit stop keying.
+Turn off Virtual Desktop's video sharpening; it amplifies color fringing at
+the passthrough edges. For night flying, apply the night lighting patch and
+raise Similarity a few points if dim corners of the pit stop keying.
 
 ## Cockpit profiles
 
