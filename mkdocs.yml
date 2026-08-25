@@ -100,6 +100,7 @@ nav:
           - Getting Started: livery-manager/user-guide/getting-started.md
           - Install a Livery: livery-manager/user-guide/install-a-livery.md
           - The Library: livery-manager/user-guide/library.md
+          - VR Passthrough Cockpit: livery-manager/user-guide/vr-passthrough.md
           - Settings: livery-manager/user-guide/settings.md
           - FAQ: livery-manager/user-guide/faq.md
   - HOTAS Configurator:
