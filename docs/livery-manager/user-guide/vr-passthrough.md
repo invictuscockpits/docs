@@ -92,8 +92,15 @@ This is the one feature that modifies files in the DCS installation (the
 F-16C cockpit model, its lighting parameters, and the cockpit shader),
 so applying it shows a Windows administrator prompt. The manager keeps
 pristine backups of the original files, and **Restore original** puts
-them back at any time. Applying or restoring also clears DCS's compiled
-shader caches, so the next DCS start takes longer while they rebuild.
+them back at any time.
+
+!!! warning "One-time slow DCS start"
+    Applying or restoring the patch clears DCS's compiled-shader
+    caches, and the **next DCS launch rebuilds them: DCS can sit at a
+    frozen-looking screen for 10 to 30 minutes**. This is normal,
+    happens once, and must not be interrupted; do not end the DCS
+    process. Every launch after that is normal speed.
+
 Two things to know:
 
 - **DCS updates and repairs quietly undo the patch.** Nothing breaks; the
