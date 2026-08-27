@@ -76,7 +76,9 @@ The **cockpit lighting patch** fixes three things no livery can reach:
   chroma color with sun, shadow, and reflections, so surfaces "popped"
   pink as the aircraft maneuvered. The patch adds a shader bypass that
   outputs the key as a constant before lighting touches it (community
-  fix by beta tester Ron D).
+  fix by beta tester Ron D). The bypass also catches the half-blended
+  pixels at the edges of the key, which used to show as a faint pink
+  outline along the passthrough boundary.
 
 - **Magenta light bleed.** The keyed cockpit acts as a bright light
   source, and DCS's cockpit ambient lighting washes that color onto the
@@ -109,6 +111,35 @@ Two things to know:
 - **Strict multiplayer servers** with pure-client integrity checks will flag
   the modified cockpit model. Use **Restore original** before flying on
   those servers, and re-apply afterward.
+
+## Screen mode
+
+With the passthrough livery, the keyed display screens show your real
+pit, but DCS still draws the display symbology in the virtual cockpit,
+so MFD pages, DED lines, and RWR contacts float in space over your
+physical screens. **Screen mode** fixes that for pits with real display
+hardware: it hides the in-cockpit rendering of the two MFDs, the DED,
+the RWR, the EHSI, the CMDS display, and the UHF radio repeater.
+
+Each display keeps rendering to an export viewport when your DCS
+monitor configuration assigns one, so your physical screens keep
+working. The viewport names to use in your monitor setup are
+`LEFT_MFCD`, `RIGHT_MFCD`, `EHSI`, `DED`, `RWR`, `CMDS`, and
+`UHF_RADIO`. The MFD and EHSI names are the ones DCS already uses; the
+DED, RWR, CMDS, and UHF hooks are added by Screen mode itself, since
+DCS doesn't ship export support for those displays.
+
+A display with no viewport assigned isn't visible anywhere while Screen
+mode is on, so leave it off unless your pit actually shows those
+displays on real screens.
+
+Like the cockpit lighting patch, Screen mode modifies scripts in the
+DCS installation: applying it shows a Windows administrator prompt and
+pristine backups are kept. Unlike the lighting patch it involves no
+shader rebuild; it takes effect on the next DCS start. DCS updates and
+repairs quietly turn it off, and strict multiplayer servers with
+pure-client integrity checks will flag the modified scripts; use
+**Turn off** before flying on those servers and re-apply afterward.
 
 ## Virtual Desktop setup
 
@@ -164,7 +195,11 @@ improvements ship as soon as they're ready.
   tint.** Apply the cockpit lighting patch, then turn the instrument
   lighting knobs up at night. If either symptom returns after a DCS
   update, re-apply the patch.
+- **Display symbology floats over your physical screens.** Turn on
+  **Screen mode**. If it's already on and a display came back after a
+  DCS update, the update restored the stock scripts; re-apply it.
 - **A multiplayer server rejects you.** Use **Restore original** in the
-  cockpit lighting section, fly, then re-apply the patch afterward.
+  cockpit lighting section and **Turn off** under Screen mode, fly,
+  then re-apply both afterward.
 - **Thin dark trim markings on some panel edges** are a known cosmetic
   residual of the current livery and are purely visual.
