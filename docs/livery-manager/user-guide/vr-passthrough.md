@@ -70,7 +70,13 @@ alone.
 
 ## The cockpit lighting patch
 
-The **cockpit lighting patch** fixes two things no livery can reach:
+The **cockpit lighting patch** fixes three things no livery can reach:
+
+- **Key stability in flight.** DCS's cockpit lighting used to shade the
+  chroma color with sun, shadow, and reflections, so surfaces "popped"
+  pink as the aircraft maneuvered. The patch adds a shader bypass that
+  outputs the key as a constant before lighting touches it (community
+  fix by beta tester Ron D).
 
 - **Magenta light bleed.** The keyed cockpit acts as a bright light
   source, and DCS's cockpit ambient lighting washes that color onto the
@@ -83,10 +89,12 @@ The **cockpit lighting patch** fixes two things no livery can reach:
   correctly. Day flying with the knobs off is unchanged.
 
 This is the one feature that modifies files in the DCS installation (the
-F-16C cockpit model and its lighting parameters), so applying it shows a
-Windows administrator prompt. The manager keeps pristine backups of the
-original files, and **Restore original** puts them back at any time. Two
-things to know:
+F-16C cockpit model, its lighting parameters, and the cockpit shader),
+so applying it shows a Windows administrator prompt. The manager keeps
+pristine backups of the original files, and **Restore original** puts
+them back at any time. Applying or restoring also clears DCS's compiled
+shader caches, so the next DCS start takes longer while they rebuild.
+Two things to know:
 
 - **DCS updates and repairs quietly undo the patch.** Nothing breaks; the
   cockpit simply goes back to dark nights. Re-apply the patch from this page
