@@ -126,6 +126,14 @@ The TLC59281 daisy-chain bit order is reversed from what the catalog expects. Sw
 
 ---
 
+## High CPU usage with nothing running (WUDFHost.exe)
+
+If Task Manager shows `WUDFHost.exe` (Windows Driver Foundation host) working hard even when the manager and BMS are closed, and you have the AIM Ghost Joysticks installed, your virtual joystick driver is out of date. Driver 1.0.0.0 polled in a tight loop around the clock, roughly half a CPU core per joystick.
+
+Update the manager to **1.6.2 or later**, open **Setup BMS keyfile** from the home page, and click **Update driver** where the status shows **Update available**. Your joysticks are rebuilt with the same names and numbering, so your keyfile still applies. See [Install the Virtual-Joystick Driver](install-the-virtual-joystick-driver.md).
+
+---
+
 ## Manager won't check for updates
 
 - Confirm internet access is available. The manager reaches `api.github.com`.

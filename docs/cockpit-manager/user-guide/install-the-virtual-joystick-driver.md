@@ -36,6 +36,12 @@ The top of the dialog shows the **AIM GHOST JOYSTICKS** status.
 - If you see extra devices from a previous installation, click **Remove [N] extra devices** to clean up, then create the correct count.
 - Click **Remove all** to tear everything down and start fresh if something looks off.
 
+### If the status shows "Update available"
+
+Your installed driver is older than the one this manager version ships. Click **Update driver** and approve the Windows administrator prompt. The manager replaces the driver and rebuilds your joysticks with the same names and numbering, so your keyfile and bindings still apply.
+
+Updating matters: driver **1.0.1.0** (shipped with manager 1.6.2) fixes a bug where the virtual joysticks quietly used far more CPU than they should, even with nothing running. If Task Manager shows `WUDFHost.exe` busy on an idle PC, this is the fix.
+
 ## Check it worked
 
 The status banner should read **[N] of [N] devices ready** with a green border. Open Windows **Settings → Bluetooth & devices → Controllers** (or `joy.cpl` in Run) and you'll see entries named **AIM Ghost Joystick 1**, **AIM Ghost Joystick 2**, and so on. One per virtual device created.
