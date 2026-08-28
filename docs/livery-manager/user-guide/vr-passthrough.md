@@ -76,9 +76,10 @@ The **cockpit lighting patch** fixes three things no livery can reach:
   chroma color with sun, shadow, and reflections, so surfaces "popped"
   pink as the aircraft maneuvered. The patch adds a shader bypass that
   outputs the key as a constant before lighting touches it (community
-  fix by beta tester Ron D). The bypass also catches the half-blended
-  pixels at the edges of the key, which used to show as a faint pink
-  outline along the passthrough boundary.
+  fix by beta tester Ron D), and a final-pass snap that pins every
+  key-hued pixel to the exact key color, so texture filtering,
+  anti-aliasing, exposure, and lit indicator overlays can't push the
+  key out of the chroma window either.
 
 - **Magenta light bleed.** The keyed cockpit acts as a bright light
   source, and DCS's cockpit ambient lighting washes that color onto the
@@ -203,3 +204,9 @@ improvements ship as soon as they're ready.
   then re-apply both afterward.
 - **Thin dark trim markings on some panel edges** are a known cosmetic
   residual of the current livery and are purely visual.
+- **A thin pink fringe at the passthrough boundary** comes from the
+  headset video stream's color compression, not from DCS: video codecs
+  store color at reduced resolution, smearing the key slightly across
+  edges. HEVC 10-bit (or AV1 10-bit), the highest bitrate your link
+  sustains, and the VDXR runtime keep it minimal. A dedicated
+  treatment is planned.
