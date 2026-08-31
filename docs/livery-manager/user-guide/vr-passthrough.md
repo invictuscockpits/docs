@@ -158,6 +158,37 @@ Turn off Virtual Desktop's video sharpening; it amplifies color fringing at
 the passthrough edges. For night flying, apply the night lighting patch and
 raise Similarity a few points if dim corners of the pit stop keying.
 
+## Aligning the virtual and physical cockpit
+
+The passthrough boundary follows DCS's cockpit geometry, so the
+virtual cockpit needs to sit exactly where your physical one does:
+same position, same size. Both adjustments live in DCS; Virtual
+Desktop has nothing to align because the camera feed is locked to the
+real world by the headset's own tracking.
+
+**Match the size first.** In DCS's VR settings tab, enable the forced
+IPD distance and treat it as a world-scale dial: a smaller value makes
+the virtual cockpit larger, a larger value makes it smaller. Your
+glareshield is the ideal ruler; adjust until the virtual glareshield
+width matches the physical one. This scales the whole world uniformly,
+and at the small corrections a cockpit match needs, the effect outside
+the canopy is barely noticeable.
+
+**Then set the position.** Sit in your normal flying posture and
+recenter VR (Num 5 by default). Nudge the cockpit camera until virtual
+landmarks line up with their physical counterparts: the cockpit camera
+move controls are bound under the View Cockpit category (RCtrl+RShift
+plus the numpad keys by default), and RCtrl+RShift+Num 5 resets the
+camera if you get lost. When the glareshield edges and canopy rails
+line up, press **RAlt+Num 0** (Save Cockpit Angles) to store it as the
+aircraft's default view. From then on, every VR recenter snaps the
+virtual pit back into alignment with the real one.
+
+Two supporting details: set your headset's floor height honestly,
+since it anchors the vertical origin DCS receives, and expect to
+iterate the size and position steps once or twice, since scaling
+shifts the landmarks you aligned to.
+
 ## Cockpit profiles
 
 The profile selector at the top of the page chooses which aircraft
