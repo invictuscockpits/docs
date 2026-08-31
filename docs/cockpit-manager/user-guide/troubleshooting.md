@@ -134,6 +134,12 @@ Update the manager to **1.6.2 or later**, open **Setup BMS keyfile** from the ho
 
 ---
 
+## DCS-BIOS switches stopped working alongside the manager
+
+Manager versions before **1.6.3** listened for DCS commands on the same port DCS-BIOS uses for its switch input (7778). Whichever integration loaded first silently cut off the other's input: DCS-BIOS warning lights kept working while its switches went dead (or the reverse). Update the manager to 1.6.3 or later, then launch it once before starting DCS so it updates its DCS integration. The manager now uses its own port and the two coexist cleanly.
+
+---
+
 ## Manager won't check for updates
 
 - Confirm internet access is available. The manager reaches `api.github.com`.
