@@ -22,8 +22,9 @@ move your head.
   every switch, gauge, and panel you see is the real one in front of you.
 - A Quest 3 (or similar headset) running **Virtual Desktop** with
   passthrough chroma keying.
-- The DCS F-16C module. More aircraft profiles are on the way, and you can
-  wire in your own (see Cockpit profiles below).
+- The DCS F-16C or F/A-18C module. Both ship as built-in cockpit
+  profiles; more are on the way, and you can wire in your own (see
+  Cockpit profiles below).
 
 ## Install the cockpit livery
 
@@ -35,7 +36,8 @@ written into the game installation for this step.
 
 The livery installs under its own name, so your stock cockpit is untouched.
 Switch between the passthrough cockpit and the normal one any time in DCS
-under **Options → Special → F-16C → Customized Cockpit**. After installing
+under **Options → Special → F-16C → Customized Cockpit** (or the
+matching F/A-18C entry for the Hornet). After installing
 or switching, always close DCS completely and restart it; DCS only scans
 for liveries at startup.
 
@@ -68,9 +70,9 @@ SSLR off, cockpit global illumination off, lens effects off, and motion blur
 off. Everything else, including your resolution and VR settings, is left
 alone.
 
-## The cockpit lighting patch
+## The cockpit patch
 
-The **cockpit lighting patch** fixes three things no livery can reach:
+The **cockpit patch** fixes three things no livery can reach:
 
 - **Key stability in flight.** DCS's cockpit lighting used to shade the
   chroma color with sun, shadow, and reflections, so surfaces "popped"
@@ -134,28 +136,56 @@ A display with no viewport assigned isn't visible anywhere while Screen
 mode is on, so leave it off unless your pit actually shows those
 displays on real screens.
 
-Like the cockpit lighting patch, Screen mode modifies scripts in the
+For the F/A-18C Hornet, Screen mode covers the two MDIs, the AMPCD,
+the RWR, the UFC, and the IFEI. The viewport names are `LEFT_MFCD`,
+`RIGHT_MFCD`, `CENTER_MFCD`, `RWR`, `UFC`, and `IFEI`; the first three
+are the names DCS already uses for the Hornet, and the RWR, UFC, and
+IFEI hooks are added by Screen mode.
+
+Like the cockpit patch, Screen mode modifies scripts in the
 DCS installation: applying it shows a Windows administrator prompt and
-pristine backups are kept. Unlike the lighting patch it involves no
+pristine backups are kept. Unlike the cockpit patch it involves no
 shader rebuild; it takes effect on the next DCS start. DCS updates and
 repairs quietly turn it off, and strict multiplayer servers with
 pure-client integrity checks will flag the modified scripts; use
 **Turn off** before flying on those servers and re-apply afterward.
 
+## Choosing the key color
+
+The Headset section of the VR Passthrough page offers two chroma key
+colors, magenta and blue, with a sample square of each. The choice
+applies to every aircraft. Switching recolors the installed cockpit
+livery on the spot, and the cockpit patch generates its
+shaders for the same color, so re-apply the patch after switching
+(that is one shader rebuild). Magenta is the proven default. Blue is
+offered because it is less noticeable after Virtual Desktop's video
+compression: any fringe the encoder leaves at the passthrough edge is
+dark blue rather than bright pink.
+
 ## Virtual Desktop setup
 
 On the headset, use Virtual Desktop with the **VDXR** runtime and
 **HEVC 10-bit** at the highest bitrate your setup sustains. In the
-passthrough settings, enable chroma keying with:
+passthrough settings, enable chroma keying with the values for the
+key color you chose. The app shows the same values in a popup after
+the cockpit patch is applied.
 
-| Setting | Value |
-| --- | --- |
-| Key color | red 255, green 0, blue 255 |
-| Similarity | 35 percent |
-| Smoothness | 1 percent |
+| Setting | Magenta | Blue |
+| --- | --- | --- |
+| Key color (red, green, blue) | 153, 0, 153 | 0, 0, 120 |
+| Similarity | about 17 percent | about 9 percent |
+| Smoothness | about 12 percent | about 9 percent |
+| Opacity | 100 percent | 100 percent |
+
+The magenta values assume the cockpit patch is applied: it
+outputs a dimmed key that reduces the pink edge fringe, and the old
+255/0/255 key no longer matches. The blue values are a separate
+setup; do not carry either key's Similarity and Smoothness over to the
+other. Tune Similarity and Smoothness a point or two to
+your lighting.
 
 Turn off Virtual Desktop's video sharpening; it amplifies color fringing at
-the passthrough edges. For night flying, apply the night lighting patch and
+the passthrough edges. For night flying, apply the cockpit patch and
 raise Similarity a few points if dim corners of the pit stop keying.
 
 ## Aligning the virtual and physical cockpit
@@ -224,7 +254,7 @@ improvements ship as soon as they're ready.
   graphics settings recently, re-run it; DCS sometimes reintroduces
   reflections.
 - **The cockpit is green or dark at night, or virtual parts have a pink
-  tint.** Apply the cockpit lighting patch, then turn the instrument
+  tint.** Apply the cockpit patch, then turn the instrument
   lighting knobs up at night. If either symptom returns after a DCS
   update, re-apply the patch.
 - **Display symbology floats over your physical screens.** Turn on
