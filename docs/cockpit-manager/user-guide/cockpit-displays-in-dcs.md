@@ -56,7 +56,7 @@ Once a monitor is assigned to a role, the **CALIBRATE** button for that role bec
 ![Calibration popup with X/Y offset, scale, and Show alignment crosshair](images/mfd-calibrate.png)
 
 > [!TIP]
-> In some instances the exported window from DCS may be smaller than you expected, leading to your desktop image appearing on the edges.  If that creates a problem, set your wallpayer to a plain black background.
+> In some instances the exported window from DCS may be smaller than you expected, leading to your desktop image appearing on the edges.  If that creates a problem, set your wallpaper to a plain black background.
 
 ### 5. Apply the DCS setup
 
@@ -77,6 +77,9 @@ Open DCS World and go to **Options → System**.
 > [!IMPORTANT]
 > You must do this step every time you change which monitors are assigned: DCS won't pick up a new layout file until you select it in Options and restart.
 
+> [!NOTE]
+> **Flying in VR?** Also open **Options → VR** and turn on **Use DCS System Resolution** (under the mirror options). Without it the exported displays stay dark in VR. Everything else VR needs is already in the layout the manager writes.
+
 ## Check it worked
 
 Load into the F-16C in DCS. Each assigned monitor should show its cockpit display. The view fills a centered square on the screen. Black bars on the sides of the monitor are normal and expected.
@@ -90,6 +93,7 @@ The **DISPLAY MANAGEMENT** card on the home page shows how many roles are assign
 | Monitors don't appear after clicking Apply DCS Setup | Make sure you completed step 6. Selected "AIM MFDs" in DCS Options → System and restarted DCS. |
 | A display is on the wrong monitor | Reopen the dialog, change the dropdown for that role, click Apply DCS Setup again, then restart DCS. |
 | Display appears in the wrong spot on the screen | Open the Calibrate popup for that role and nudge the dx/dy values. |
+| Displays work in 2D but go dark in VR | Update the manager to 1.6.4 or later, launch it once so it refreshes the layout, and turn on **Use DCS System Resolution** under **Options → VR** in DCS. |
 | "DCS displays: update available" badge appears on the card | Click Setup displays and click Apply DCS Setup again. Your layout changed since the last time you applied. |
 | RWR display doesn't show up in DCS | The RWR needs an aircraft file patch, applied automatically when you click Apply DCS Setup. Look for the confirmation note in the dialog. If it reports **no F-16C module was found**, your DCS is probably on a different drive: open the **DCS Integration** card, click **Set folder…**, and pick your main DCS folder (the one with `Mods` and `bin`). If the patch can't be written, restart the **manager** (not DCS) as Administrator: DCS installs under Program Files, which is write-protected. |
 | FLASH button doesn't help. No monitor lights up | The monitor may be turned off or Windows may not see it. Check your display connections and try Windows Settings → Display to verify it's detected. |
