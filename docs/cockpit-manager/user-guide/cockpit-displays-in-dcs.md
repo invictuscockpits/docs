@@ -77,6 +77,14 @@ Open DCS World and go to **Options → System**.
 > [!IMPORTANT]
 > You must do this step every time you change which monitors are assigned: DCS won't pick up a new layout file until you select it in Options and restart.
 
+## Flying in VR
+
+Your exported cockpit displays can still appear on your physical monitors while you fly in a VR headset, but DCS needs one extra setting. In VR, DCS draws your desktop as the headset mirror window, and by default it sizes that window to the headset, which is smaller than your monitor layout. Anything positioned outside it, your MFDs and other exports, falls off the edge and never appears.
+
+The fix is in DCS, in **Options → VR**: set the mirror to **use DCS system resolution** (rather than the headset resolution). That makes the desktop window match the resolution from your monitor layout, so it covers your MFD monitors and the exports render on them as they do in 2D.
+
+The data-driven displays (DED, PFL, caution and indicator lights, gauges, UHF) are unaffected by any of this. They flow to your panel hardware as data, not as rendered pixels, so they work in VR regardless of the mirror setting.
+
 ## Check it worked
 
 Load into the F-16C in DCS. Each assigned monitor should show its cockpit display. The view fills a centered square on the screen. Black bars on the sides of the monitor are normal and expected.
@@ -93,6 +101,7 @@ The **DISPLAY MANAGEMENT** card on the home page shows how many roles are assign
 | "DCS displays: update available" badge appears on the card | Click Setup displays and click Apply DCS Setup again. Your layout changed since the last time you applied. |
 | RWR display doesn't show up in DCS | The RWR needs an aircraft file patch, applied automatically when you click Apply DCS Setup. Look for the confirmation note in the dialog. If it reports **no F-16C module was found**, your DCS is probably on a different drive: open the **DCS Integration** card, click **Set folder…**, and pick your main DCS folder (the one with `Mods` and `bin`). If the patch can't be written, restart the **manager** (not DCS) as Administrator: DCS installs under Program Files, which is write-protected. |
 | FLASH button doesn't help. No monitor lights up | The monitor may be turned off or Windows may not see it. Check your display connections and try Windows Settings → Display to verify it's detected. |
+| MFDs show in 2D but go dark in VR | DCS is sizing the headset mirror window to the headset instead of your monitors, so the MFD viewports fall off its edge. In DCS **Options → VR**, set the mirror to **use DCS system resolution**. See the "Flying in VR" section above. |
 
 ---
 
