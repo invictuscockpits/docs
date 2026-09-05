@@ -70,9 +70,9 @@ SSLR off, cockpit global illumination off, lens effects off, and motion blur
 off. Everything else, including your resolution and VR settings, is left
 alone.
 
-## The cockpit patch
+## Lighting Engine
 
-The **cockpit patch** fixes three things no livery can reach:
+**Lighting Engine** fixes three things no livery can reach:
 
 - **Key stability in flight.** DCS's cockpit lighting used to shade the
   chroma color with sun, shadow, and reflections, so surfaces "popped"
@@ -115,47 +115,45 @@ Two things to know:
   the modified cockpit model. Use **Restore original** before flying on
   those servers, and re-apply afterward.
 
-## Screen mode
+## Display exports
 
 With the passthrough livery, the keyed display screens show your real
-pit, but DCS still draws the display symbology in the virtual cockpit,
-so MFD pages, DED lines, and RWR contacts float in space over your
-physical screens. **Screen mode** fixes that for pits with real display
-hardware: it hides the in-cockpit rendering of the two MFDs, the DED,
-the RWR, the EHSI, the CMDS display, and the UHF radio repeater.
+pit, but DCS would still draw the display symbology in the virtual
+cockpit, so MFD pages, DED lines, and RWR contacts would float over
+your physical screens. The Lighting Engine handles this automatically,
+one display at a time, from your DCS monitor setup: a display with an
+export viewport assigned leaves the virtual cockpit and renders only on
+your physical screen; a display without one stays exactly where DCS
+draws it. There is no switch to remember, and no display can end up
+rendering nowhere.
 
-Each display keeps rendering to an export viewport when your DCS
-monitor configuration assigns one, so your physical screens keep
-working. The viewport names to use in your monitor setup are
-`LEFT_MFCD`, `RIGHT_MFCD`, `EHSI`, `DED`, `RWR`, `CMDS`, and
-`UHF_RADIO`. The MFD and EHSI names are the ones DCS already uses; the
-DED, RWR, CMDS, and UHF hooks are added by Screen mode itself, since
-DCS doesn't ship export support for those displays.
+The viewport names to use in your monitor setup are `LEFT_MFCD`,
+`RIGHT_MFCD`, `EHSI`, `DED`, `RWR`, `CMDS`, and `UHF_RADIO` for the
+F-16C. The MFD and EHSI names are the ones DCS already uses; the DED,
+RWR, CMDS, and UHF hooks are added by the Lighting Engine, since DCS
+doesn't ship export support for those displays. For the F/A-18C Hornet
+the names are `LEFT_MFCD`, `RIGHT_MFCD`, `CENTER_MFCD`, `RWR`, `UFC`,
+and `IFEI`; the first three are the names DCS already uses, and the
+RWR, UFC, and IFEI hooks are added by the Lighting Engine.
 
-A display with no viewport assigned isn't visible anywhere while Screen
-mode is on, so leave it off unless your pit actually shows those
-displays on real screens.
+**VR users with export screens** need two DCS-side settings. In the DCS
+VR options, set the mirror to use the DCS system resolution; with the
+default headset-sized mirror the DCS window shrinks to the mirror pane
+while the headset is active, and any export viewport outside it, which
+is where a physical MFD monitor usually sits, goes dark even though the
+same layout works in 2D. The settings audit on this page flags it. Your
+monitor setup file also needs the line `VR_allow_MFD_out_of_HMD = true`
+at the top level; AIM Cockpit Manager writes it for you.
 
-For the F/A-18C Hornet, Screen mode covers the two MDIs, the AMPCD,
-the RWR, the UFC, and the IFEI. The viewport names are `LEFT_MFCD`,
-`RIGHT_MFCD`, `CENTER_MFCD`, `RWR`, `UFC`, and `IFEI`; the first three
-are the names DCS already uses for the Hornet, and the RWR, UFC, and
-IFEI hooks are added by Screen mode.
-
-Like the cockpit patch, Screen mode modifies scripts in the
-DCS installation: applying it shows a Windows administrator prompt and
-pristine backups are kept. Unlike the cockpit patch it involves no
-shader rebuild; it takes effect on the next DCS start. DCS updates and
-repairs quietly turn it off, and strict multiplayer servers with
-pure-client integrity checks will flag the modified scripts; use
-**Turn off** before flying on those servers and re-apply afterward.
+Changing your monitor setup takes effect on the next DCS start; the
+Lighting Engine itself doesn't need re-applying for it.
 
 ## Choosing the key color
 
 The Headset section of the VR Passthrough page offers two chroma key
 colors, magenta and blue, with a sample square of each. The choice
 applies to every aircraft. Switching recolors the installed cockpit
-livery on the spot, and the cockpit patch generates its
+livery on the spot, and the Lighting Engine generates its
 shaders for the same color, so re-apply the patch after switching
 (that is one shader rebuild). Magenta is the proven default. Blue is
 offered because it is less noticeable after Virtual Desktop's video
@@ -168,7 +166,7 @@ On the headset, use Virtual Desktop with the **VDXR** runtime and
 **HEVC 10-bit** at the highest bitrate your setup sustains. In the
 passthrough settings, enable chroma keying with the values for the
 key color you chose. The app shows the same values in a popup after
-the cockpit patch is applied.
+the Lighting Engine is applied.
 
 | Setting | Magenta | Blue |
 | --- | --- | --- |
@@ -177,7 +175,7 @@ the cockpit patch is applied.
 | Smoothness | about 12 percent | about 9 percent |
 | Opacity | 100 percent | 100 percent |
 
-The magenta values assume the cockpit patch is applied: it
+The magenta values assume the Lighting Engine is applied: it
 outputs a dimmed key that reduces the pink edge fringe, and the old
 255/0/255 key no longer matches. The blue values are a separate
 setup; do not carry either key's Similarity and Smoothness over to the
@@ -185,7 +183,7 @@ other. Tune Similarity and Smoothness a point or two to
 your lighting.
 
 Turn off Virtual Desktop's video sharpening; it amplifies color fringing at
-the passthrough edges. For night flying, apply the cockpit patch and
+the passthrough edges. For night flying, apply the Lighting Engine and
 raise Similarity a few points if dim corners of the pit stop keying.
 
 ## Aligning the virtual and physical cockpit
@@ -254,14 +252,14 @@ improvements ship as soon as they're ready.
   graphics settings recently, re-run it; DCS sometimes reintroduces
   reflections.
 - **The cockpit is green or dark at night, or virtual parts have a pink
-  tint.** Apply the cockpit patch, then turn the instrument
+  tint.** Apply the Lighting Engine, then turn the instrument
   lighting knobs up at night. If either symptom returns after a DCS
   update, re-apply the patch.
 - **Display symbology floats over your physical screens.** Turn on
-  **Screen mode**. If it's already on and a display came back after a
+  **display exports**. If it's already on and a display came back after a
   DCS update, the update restored the stock scripts; re-apply it.
 - **A multiplayer server rejects you.** Use **Restore original** in the
-  cockpit lighting section and **Turn off** under Screen mode, fly,
+  cockpit lighting section and **Turn off** under display exports, fly,
   then re-apply both afterward.
 - **Thin dark trim markings on some panel edges** are a known cosmetic
   residual of the current livery and are purely visual.
