@@ -175,8 +175,8 @@ key, and again in a popup after the Lighting Engine is applied.
 | Setting | Magenta | Blue |
 | --- | --- | --- |
 | Key color (red, green, blue) | 153, 0, 153 | 0, 0, 180 |
-| Similarity | about 17 percent | about 9 percent |
-| Smoothness | about 12 percent | about 9 percent |
+| Similarity | about 17 percent | about 10 percent |
+| Smoothness | about 12 percent | about 10 percent |
 | Opacity | 100 percent | 100 percent |
 
 Both sets assume the Lighting Engine is applied, since its shaders pin
@@ -263,8 +263,6 @@ improvements ship as soon as they're ready.
   DCS update restores the stock display scripts. Click **Apply**.
 - **A multiplayer server rejects you.** Use **Restore original** under
   Lighting Engine, fly, then apply it again afterward.
-- **Thin dark trim markings on some panel edges** are a known cosmetic
-  residual of the current livery and are purely visual.
 - **A thin pink fringe at the passthrough boundary** comes from the
   headset video stream's color compression, not from DCS: video codecs
   store color at reduced resolution, smearing the key slightly across
