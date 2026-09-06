@@ -120,12 +120,11 @@ Two things to know:
 With the passthrough livery, the keyed display screens show your real
 pit, but DCS would still draw the display symbology in the virtual
 cockpit, so MFD pages, DED lines, and RWR contacts would float over
-your physical screens. The Lighting Engine handles this automatically,
-one display at a time, from your DCS monitor setup: a display with an
-export viewport assigned leaves the virtual cockpit and renders only on
-your physical screen; a display without one stays exactly where DCS
-draws it. There is no switch to remember, and no display can end up
-rendering nowhere.
+your physical screens. The Lighting Engine turns those in-cockpit
+overlays off. A display with an export viewport assigned in your DCS
+monitor setup renders only on your physical screen, whatever the
+viewport is named, so Helios and AIM Cockpit Manager layouts both
+work; a display without one renders nowhere.
 
 The viewport names to use in your monitor setup are `LEFT_MFCD`,
 `RIGHT_MFCD`, `EHSI`, `DED`, `RWR`, `CMDS`, and `UHF_RADIO` for the
@@ -146,7 +145,9 @@ monitor setup file also needs the line `VR_allow_MFD_out_of_HMD = true`
 at the top level; AIM Cockpit Manager writes it for you.
 
 Changing your monitor setup takes effect on the next DCS start; the
-Lighting Engine itself doesn't need re-applying for it.
+Lighting Engine itself doesn't need re-applying for it. Helios users:
+apply Helios's DCS patches first, then the Lighting Engine, so its
+display hooks sit on top of Helios's.
 
 ## Choosing the key color
 
