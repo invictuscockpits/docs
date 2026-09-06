@@ -30,7 +30,8 @@ Two common reasons:
 
 Below the Saved Games section the manager lists any DCS **game installations**
 it found (standalone or Steam), with the game version where available. These
-are **read-only**; the manager never writes into the game install. They're
+are **read-only** for livery installs; only the VR Passthrough page's Lighting
+Engine ever writes into the game install, with backups. They're
 used to detect which aircraft modules you own, so the aircraft picker on the
 Install page knows the correct livery folder name for every module, even one
 released after this version of the manager.

@@ -52,7 +52,7 @@ for liveries at startup.
     when it applies your settings, which is also why the dropdown starts
     working once the manager has set things up.
 
-## Recommended DCS settings
+## Recommended VR settings
 
 The chroma key works best with specific renderer settings. Reflections
 paint moving highlights over the key color, shadows darken it, and lens
@@ -64,19 +64,19 @@ file directly and keeps a backup alongside it; **Restore backup** puts your
 old settings back. DCS must be closed because it rewrites its settings file
 on exit and would overwrite the changes.
 
-The applied settings are: canopy and MFD reflections off (both the F-16C
-special options and the global graphics toggle), shadows flat/off, SSAO off,
-SSLR off, cockpit global illumination off, lens effects off, and motion blur
-off. Everything else, including your resolution and VR settings, is left
-alone.
+The applied settings are: canopy and MFD reflections off (both the
+aircraft's special options and the global graphics toggle), shadows
+flat/off, SSAO off, SSLR off, cockpit global illumination off, lens effects
+off, motion blur off, VR bloom off, and the VR mirror set to the DCS system
+resolution. Everything else, including your resolution, is left alone.
 
 ## Lighting Engine
 
-**Lighting Engine** fixes three things no livery can reach:
+**Lighting Engine** handles four things no livery can reach:
 
 - **Key stability in flight.** DCS's cockpit lighting used to shade the
   chroma color with sun, shadow, and reflections, so surfaces "popped"
-  pink as the aircraft maneuvered. The patch adds a shader bypass that
+  pink as the aircraft maneuvered. It adds a shader bypass that
   outputs the key as a constant before lighting touches it (community
   fix by beta tester Ron D), and a final-pass snap that pins every
   key-hued pixel to the exact key color, so texture filtering,
@@ -85,35 +85,38 @@ alone.
 
 - **Magenta light bleed.** The keyed cockpit acts as a bright light
   source, and DCS's cockpit ambient lighting washes that color onto the
-  virtual parts (canopy frame, HUD arms). The patch tames the cockpit's
-  image-based lighting so the bleed disappears. Recommended for all
-  passthrough flying.
+  virtual parts (canopy frame, HUD arms). It tames the cockpit's
+  image-based lighting so the bleed disappears.
 - **Night flying.** At night, DCS's lighting leaves the cockpit too dark
-  for the chroma key to work. With the patch applied, turn the
+  for the chroma key to work. With the Lighting Engine applied, turn the
   instrument lighting knobs up after dark and the cockpit keys
   correctly. Day flying with the knobs off is unchanged.
+- **Display exports.** The in-cockpit display overlays are turned off so
+  they can't float over your physical screens; see Display exports below.
 
 This is the one feature that modifies files in the DCS installation (the
-F-16C cockpit model, its lighting parameters, and the cockpit shader),
-so applying it shows a Windows administrator prompt. The manager keeps
-pristine backups of the original files, and **Restore original** puts
-them back at any time.
+aircraft's cockpit model, its lighting parameters, the cockpit shaders,
+and its display scripts), so applying it shows a Windows administrator
+prompt. The manager keeps pristine backups of the original files, and
+**Restore original** puts them all back at any time.
 
 !!! warning "One-time slow DCS start"
-    Applying or restoring the patch clears DCS's compiled-shader
+    Applying or restoring the Lighting Engine clears DCS's compiled-shader
     caches, and the **next DCS launch rebuilds them: DCS can sit at a
     frozen-looking screen for 10 to 30 minutes**. This is normal,
     happens once, and must not be interrupted; do not end the DCS
-    process. Every launch after that is normal speed.
+    process. Every launch after that is normal speed. Applying again for
+    a livery or display update skips the rebuild; only a shader change,
+    such as switching the key color, triggers it.
 
 Two things to know:
 
-- **DCS updates and repairs quietly undo the patch.** Nothing breaks; the
-  cockpit simply goes back to dark nights. Re-apply the patch from this page
-  after updating.
+- **DCS updates and repairs quietly undo it.** Nothing breaks; the pill
+  reads "Partially applied" and the cockpit behaves stock again until you
+  click **Apply** on this page.
 - **Strict multiplayer servers** with pure-client integrity checks will flag
-  the modified cockpit model. Use **Restore original** before flying on
-  those servers, and re-apply afterward.
+  the modified files. Use **Restore original** before flying on those
+  servers, and apply again afterward.
 
 ## Display exports
 
@@ -151,13 +154,13 @@ display hooks sit on top of Helios's.
 
 ## Choosing the key color
 
-The Headset section of the VR Passthrough page offers two chroma key
-colors, magenta and blue, with a sample square of each. The choice
-applies to every aircraft. Switching recolors the installed cockpit
-livery on the spot, and the Lighting Engine generates its
-shaders for the same color, so re-apply the patch after switching
-(that is one shader rebuild). Magenta is the proven default. Blue is
-offered because it is less noticeable after Virtual Desktop's video
+The Chromakey settings section of the VR Passthrough page offers two
+chroma key colors, magenta and blue, with a sample square of each. The
+choice applies to every aircraft. Switching recolors the installed
+cockpit livery on the spot, and the Lighting Engine generates its
+shaders for the same color, so it reads "Partially applied" until you
+click **Apply** again (that is one shader rebuild). Magenta is the
+proven default. Blue is less noticeable after Virtual Desktop's video
 compression: any fringe the encoder leaves at the passthrough edge is
 dark blue rather than bright pink.
 
@@ -166,22 +169,20 @@ dark blue rather than bright pink.
 On the headset, use Virtual Desktop with the **VDXR** runtime and
 **HEVC 10-bit** at the highest bitrate your setup sustains. In the
 passthrough settings, enable chroma keying with the values for the
-key color you chose. The app shows the same values in a popup after
-the Lighting Engine is applied.
+key color you chose. The app shows the same values under the selected
+key, and again in a popup after the Lighting Engine is applied.
 
 | Setting | Magenta | Blue |
 | --- | --- | --- |
-| Key color (red, green, blue) | 153, 0, 153 | 0, 0, 120 |
+| Key color (red, green, blue) | 153, 0, 153 | 0, 0, 180 |
 | Similarity | about 17 percent | about 9 percent |
 | Smoothness | about 12 percent | about 9 percent |
 | Opacity | 100 percent | 100 percent |
 
-The magenta values assume the Lighting Engine is applied: it
-outputs a dimmed key that reduces the pink edge fringe, and the old
-255/0/255 key no longer matches. The blue values are a separate
-setup; do not carry either key's Similarity and Smoothness over to the
-other. Tune Similarity and Smoothness a point or two to
-your lighting.
+Both sets assume the Lighting Engine is applied, since its shaders pin
+the exact key color DCS outputs. The two keys are separate setups; do
+not carry either key's Similarity and Smoothness over to the other.
+Tune Similarity and Smoothness a point or two to your lighting.
 
 Turn off Virtual Desktop's video sharpening; it amplifies color fringing at
 the passthrough edges. For night flying, apply the Lighting Engine and
@@ -222,8 +223,9 @@ shifts the landmarks you aligned to.
 
 The profile selector at the top of the page chooses which aircraft
 everything on the page operates on. Profiles that ship with the manager
-(the F-16C today) carry everything built in: the right folders, the right
-settings, the loader workaround, and the night patch where one exists.
+(the F-16C and F/A-18C today) carry everything built in: the right
+folders, the right settings, the loader workaround, and the Lighting
+Engine.
 
 **Add profile...** wires in an aircraft the manager doesn't ship a profile
 for yet. You'll need the cockpit unit folder name (the folder DCS uses
@@ -244,29 +246,28 @@ improvements ship as soon as they're ready.
 
 ## Troubleshooting
 
-- **The cockpit isn't magenta in DCS.** Restart DCS completely; liveries
+- **The cockpit isn't keyed in DCS.** Restart DCS completely; liveries
   only load at startup. Then check all three status pills on the page are
-  green and that **Options → Special → F-16C → Customized Cockpit** shows
-  the passthrough livery.
+  green and that **Options → Special → (your aircraft) → Customized
+  Cockpit** shows the passthrough livery.
 - **Glare or reflections punch holes in the passthrough.** Run **Apply
-  all** under Recommended DCS settings with DCS closed. If you changed
+  all** under Recommended VR settings with DCS closed. If you changed
   graphics settings recently, re-run it; DCS sometimes reintroduces
   reflections.
 - **The cockpit is green or dark at night, or virtual parts have a pink
   tint.** Apply the Lighting Engine, then turn the instrument
   lighting knobs up at night. If either symptom returns after a DCS
-  update, re-apply the patch.
-- **Display symbology floats over your physical screens.** Turn on
-  **display exports**. If it's already on and a display came back after a
-  DCS update, the update restored the stock scripts; re-apply it.
-- **A multiplayer server rejects you.** Use **Restore original** in the
-  cockpit lighting section and **Turn off** under display exports, fly,
-  then re-apply both afterward.
+  update, apply it again.
+- **Display symbology floats over your physical screens.** The Lighting
+  Engine isn't fully applied; its pill reads "Partially applied" after a
+  DCS update restores the stock display scripts. Click **Apply**.
+- **A multiplayer server rejects you.** Use **Restore original** under
+  Lighting Engine, fly, then apply it again afterward.
 - **Thin dark trim markings on some panel edges** are a known cosmetic
   residual of the current livery and are purely visual.
 - **A thin pink fringe at the passthrough boundary** comes from the
   headset video stream's color compression, not from DCS: video codecs
   store color at reduced resolution, smearing the key slightly across
   edges. HEVC 10-bit (or AV1 10-bit), the highest bitrate your link
-  sustains, and the VDXR runtime keep it minimal. A dedicated
-  treatment is planned.
+  sustains, and the VDXR runtime keep it minimal, and the blue key makes
+  whatever remains far less visible than magenta's pink.

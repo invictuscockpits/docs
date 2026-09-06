@@ -44,4 +44,5 @@ survive every DCS update and pass multiplayer integrity check.
 - [Install a Livery](install-a-livery.md)
 - [The Library](library.md)
 - [Settings](settings.md)
+- [VR Passthrough Cockpit](vr-passthrough.md)
 - [FAQ](faq.md)

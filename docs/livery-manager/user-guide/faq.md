@@ -23,10 +23,12 @@ livery pack so everyone sees the same paint.
 
 ## Will this get me kicked by integrity check?
 
-No. Liveries in `Saved Games` are exactly where DCS wants user content, and
-multiplayer integrity check doesn't inspect them. IC problems come from
-modified files **inside the game installation**, which this manager never
-touches.
+Not for liveries. Liveries in `Saved Games` are exactly where DCS wants
+user content, and multiplayer integrity check doesn't inspect them. IC
+problems come from modified files **inside the game installation**, which
+livery installs never touch. The one feature that does is the VR Passthrough
+page's Lighting Engine; strict servers will flag it, and **Restore original**
+puts the stock files back before you fly there.
 
 ## What archive formats work?
 

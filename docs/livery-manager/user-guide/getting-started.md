@@ -16,9 +16,11 @@ Grab the latest **Invictus-Livery-Manager-Setup.exe** from the
 
 Double-click the installer and follow the wizard. It's signed by Invictus
 Machine LLC, so Windows won't flag it as coming from an unknown publisher, and
-it installs **just for you**, with no administrator rights needed. The manager
-never needs elevation to run either, because it only ever writes into your own
-Saved Games folder.
+it installs **just for you**, with no administrator rights needed. Installing
+liveries never needs elevation either, because that only writes into your own
+Saved Games folder; the one exception is the VR Passthrough page's Lighting
+Engine, which modifies files in the DCS installation and asks for permission
+when you apply it.
 
 ## First launch
 
