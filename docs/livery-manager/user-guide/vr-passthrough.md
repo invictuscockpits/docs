@@ -279,6 +279,9 @@ improvements ship as soon as they're ready.
   assigned. Check the viewport name in your active monitor setup file,
   and that your display tool's patch is still present in the DCS
   scripts; the Lighting Engine keeps whatever it finds there.
+- **A button does nothing, or its spinner never stops.** The app writes
+  a log at `%APPDATA%\Invictus Cockpit Systems\Invictus Livery
+  Manager\ivlm.log`; attach it when you report the problem.
 - **A multiplayer server rejects you.** Use **Restore original** under
   Lighting Engine, fly, then apply it again afterward.
 - **A thin pink fringe at the passthrough boundary** comes from the
