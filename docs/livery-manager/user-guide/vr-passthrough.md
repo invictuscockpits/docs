@@ -97,8 +97,11 @@ resolution. Everything else, including your resolution, is left alone.
 This is the one feature that modifies files in the DCS installation (the
 aircraft's cockpit model, its lighting parameters, the cockpit shaders,
 and its display scripts), so applying it shows a Windows administrator
-prompt. The manager keeps pristine backups of the original files, and
-**Restore original** puts them all back at any time.
+prompt. The manager keeps pristine backups of the model, lighting, and
+shader files, and **Restore original** puts them back at any time. The
+display scripts are edited in place: only the Lighting Engine's own
+marked lines are added or removed, so viewport lines from other tools
+are never touched.
 
 !!! warning "One-time slow DCS start"
     Applying or restoring the Lighting Engine clears DCS's compiled-shader
@@ -124,10 +127,20 @@ With the passthrough livery, the keyed display screens show your real
 pit, but DCS would still draw the display symbology in the virtual
 cockpit, so MFD pages, DED lines, and RWR contacts would float over
 your physical screens. The Lighting Engine turns those in-cockpit
-overlays off. A display with an export viewport assigned in your DCS
-monitor setup renders only on your physical screen, whatever the
-viewport is named, so Helios and AIM Cockpit Manager layouts both
-work; a display without one renders nowhere.
+overlays off and nothing else. Any export viewport a display already
+has, assigned by your DCS monitor setup, Helios, AIM Cockpit Manager, a
+community export mod, or a hand edit, under any name, is kept exactly
+as it is, and the display renders only there. A display with no
+viewport at all is rendered to a single pixel off screen, because DCS
+only updates a display it renders: hardware that reads the displays
+through DCS-BIOS keeps receiving live values, and nothing shows in
+the cockpit.
+
+If another tool patches the display scripts after the Lighting Engine
+(a Helios or AIM update, for example), the pill reads "Partially
+applied" and the overlay may return until you click **Apply**, which
+puts the Lighting Engine's lines back on top. Nothing that tool added
+is lost.
 
 The viewport names to use in your monitor setup are `LEFT_MFCD`,
 `RIGHT_MFCD`, `EHSI`, `DED`, `RWR`, `CMDS`, and `UHF_RADIO` for the
@@ -260,7 +273,12 @@ improvements ship as soon as they're ready.
   update, apply it again.
 - **Display symbology floats over your physical screens.** The Lighting
   Engine isn't fully applied; its pill reads "Partially applied" after a
-  DCS update restores the stock display scripts. Click **Apply**.
+  DCS update restores the stock display scripts, or after another tool
+  patches them. Click **Apply**.
+- **A display went dark on your physical screen.** Its viewport isn't
+  assigned. Check the viewport name in your active monitor setup file,
+  and that your display tool's patch is still present in the DCS
+  scripts; the Lighting Engine keeps whatever it finds there.
 - **A multiplayer server rejects you.** Use **Restore original** under
   Lighting Engine, fly, then apply it again afterward.
 - **A thin pink fringe at the passthrough boundary** comes from the
