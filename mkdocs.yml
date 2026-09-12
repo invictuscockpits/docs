@@ -103,6 +103,7 @@ nav:
           - VR Passthrough Cockpit: livery-manager/user-guide/vr-passthrough.md
           - Settings: livery-manager/user-guide/settings.md
           - FAQ: livery-manager/user-guide/faq.md
+          - End User License Agreement: livery-manager/user-guide/end-user-license-agreement.md
   - HOTAS Configurator:
       - User Guide:
           - hotas-configurator/user-guide/index.md
