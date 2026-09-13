@@ -94,6 +94,11 @@ nav:
               - FAQ: cockpit-manager/user-guide/faq.md
               - Glossary: cockpit-manager/user-guide/glossary.md
               - Get Support: cockpit-manager/user-guide/get-support.md
+      - Airframes:
+          - cockpit-manager/airframes/index.md
+          - F-16C: cockpit-manager/airframes/f16c.md
+          - A-10C: cockpit-manager/airframes/a10c.md
+          - F/A-18C: cockpit-manager/airframes/fa18c.md
   - Livery Manager:
       - User Guide:
           - livery-manager/user-guide/index.md
