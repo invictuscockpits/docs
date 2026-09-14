@@ -1,6 +1,6 @@
 # F/A-18C
 
-Every panel the manager knows on the F/A-18C, with every switch, knob, lamp and gauge on it, in the order the Cockpit Inventory page lists them. The Docs button on a panel in the manager opens that panel's section on this page.
+Every panel the manager knows on the F/A-18C, with every switch, knob, lamp and gauge on it, in the order the Console Panels page lists them. The Docs button on a panel in the manager opens that panel's section on this page.
 
 > [!NOTE]
 > This airframe was generated from the simulator's own cockpit data. Panels marked **draft** have not been checked against a real cockpit yet, so names and grouping can still change. Wiring you record against a draft panel is kept when it is renamed.
