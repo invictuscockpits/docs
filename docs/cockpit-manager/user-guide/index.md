@@ -15,6 +15,7 @@ The **AIM network** is the backbone of your Invictus cockpit. Each panel board (
 - Installs the sim integration for DCS World and Falcon BMS.
 - Puts your MFDs, DED, RWR, HUD, and EHSI on extra monitors in both sims.
 - Updates itself and your board firmware over the air. No USB cables after the first flash.
+- Works with your own Arduino, Teensy, Raspberry Pi Pico or ESP32 boards too, with an Open Hardware key.
 
 ## Where to start
 
@@ -34,6 +35,7 @@ The **AIM network** is the backbone of your Invictus cockpit. Each panel board (
 | Set up Falcon BMS | [Set Up Falcon BMS](set-up-falcon-bms.md) |
 | Put displays on extra monitors | [Cockpit Displays in DCS](cockpit-displays-in-dcs.md) or [Cockpit Displays in BMS](cockpit-displays-in-bms.md) |
 | Set up my VFT5 stick | [VFT5 Side-Stick](vft5-side-stick.md) |
+| Use my own Arduino, Teensy, Pico or ESP32 | [Open Hardware](open-hardware.md) |
 | Wire indicator lights or segment displays | [Indicator and Caution Lights](indicator-and-caution-lights.md) |
 | Fix something that's not working | [Troubleshooting](troubleshooting.md) |
 | Update the manager or board firmware | [Update the Manager](update-the-manager.md) |

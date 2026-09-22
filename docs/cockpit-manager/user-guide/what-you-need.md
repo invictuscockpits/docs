@@ -29,6 +29,8 @@ Install whichever you plan to use before running through the sim setup steps.
 
 You'll need at least one configured AIM board to get anything working. A **Sidewinder** (46 GPIOs, 8 Potentiometers, 2 I2c Channels, and 2 SPI Channels) or a **Phoenix** (16 GPIOs, 8 I2C channels). See the product pages at invictuscockpits.com for details on what's in each board.
 
+From version 2.0 you can also build panels on your own **Arduino, Teensy, Raspberry Pi Pico or ESP32** boards. They plug in over USB and need an Open Hardware key. See [Open Hardware](open-hardware.md).
+
 The **VFT5 force-transducer side-stick** connects via USB separately from the board network and has its own section: [VFT5 Side-Stick](vft5-side-stick.md).
 
 ## What you do *not* need

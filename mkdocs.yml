@@ -81,6 +81,8 @@ nav:
               - Indicator and Caution Lights: cockpit-manager/user-guide/indicator-and-caution-lights.md
           - VFT5 Side-Stick:
               - VFT5 Side-Stick: cockpit-manager/user-guide/vft5-side-stick.md
+          - Open Hardware:
+              - Open Hardware: cockpit-manager/user-guide/open-hardware.md
           - Session Tools:
               - Hot Start: cockpit-manager/user-guide/hot-start.md
               - Display Layout: cockpit-manager/user-guide/display-layout.md
