@@ -9,6 +9,8 @@ Reading it is simple: **the first red light from the top is where the problem is
 
 If you're working with support, a screenshot of this page answers most of the questions we'd otherwise have to ask one at a time.
 
+Open Hardware boards connect over USB and are not part of these checks. They appear on the **DIY Devices** page instead.
+
 ---
 
 ## The six lights

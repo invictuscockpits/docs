@@ -12,7 +12,7 @@
 
 ### 1. Open the DCS Integration card
 
-From the manager home page, click the **DCS** icon, then scroll down to the **DCS Integration** card.
+On the manager's **Home** page, pick **DCS World** under Sim Output, then click **Set up DCS** on the **DCS Integration** card.
 
 ![DCS Integration card showing detected DCS variants and install status](images/dcs-setup-button.png)
 
@@ -48,7 +48,7 @@ If DCS is installed somewhere unusual and the manager can't find it, the path tu
 
 ### 4. Launch DCS
 
-Start DCS World and load into the F-16C. The integration activates automatically. No in-game steps required.
+Start DCS World and load into the airframe selected on the Home page. The integration activates automatically. No in-game steps required.
 
 ### 5. Confirm the connection
 
@@ -66,8 +66,8 @@ Flip a switch on your cockpit panel. The corresponding switch in DCS should move
 |---|---|
 | Status stays at "Not installed" after installing | Check that DCS has been launched at least once so the Saved Games folder exists, then reinstall. |
 | Status shows "Installed" but never "Connected" | Make sure DCS is running and you're loaded into a mission, not sitting on the main menu. |
-| Controls reach the manager but nothing happens in DCS | Confirm you're in the F-16C. The integration is aircraft-specific. Other aircraft are not yet supported. |
-| A switch moves in the manager live view but not in DCS | The control may not be simulated in DCS. Hover the control in the manager. The tooltip will say if it's not modeled. |
+| Controls reach the manager but nothing happens in DCS | Confirm the airframe selected on the Home page matches the aircraft you're flying. The integration follows that choice. |
+| A switch changes in Console Panels but not in DCS | The control may not be simulated in DCS. In the wizard's Pins step, a control without a **DCS** tag isn't modeled. |
 | The RWR display fix says no F-16C module was found | Your DCS may be installed on a different drive. In the DCS Integration card, click **Set folder…** and choose your main DCS folder (the one with `Mods` and `bin`). |
 
 ---

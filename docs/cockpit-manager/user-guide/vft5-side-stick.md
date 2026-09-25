@@ -15,7 +15,7 @@ Plug the VFT5 into any USB port on your PC using the supplied USB-C cable. Windo
 Once connected, the manager detects the stick and unlocks the **Firmware** and **Profiles** pages.
 
 > [!NOTE]
-> The VFT5 shows up as **VFT Gen 5 Controller** in Windows Settings → Bluetooth & devices → Controllers and in `joy.cpl`. The exact button and POV hat count shown depends on the grip profile currently saved to the stick.
+> The VFT5 shows up as **Viper Force Transducer** in Windows Settings → Bluetooth & devices → Controllers and in `joy.cpl`. The exact button and POV hat count shown depends on the grip profile currently saved to the stick.
 
 ---
 
@@ -60,7 +60,7 @@ The VFT5 appears as a standard HID joystick in DCS and BMS. Assign its axes and 
 
 **DCS:** Options → Controls → select the VFT5 device → bind axes and buttons.
 
-**BMS:** Setup → Controllers → find the VFT Gen 5 Controller → bind axes.
+**BMS:** Setup → Controllers → find the Viper Force Transducer → bind axes.
 
 The X and Y axes correspond to pitch and roll force. BMS and DCS both treat them as standard joystick axes.
 

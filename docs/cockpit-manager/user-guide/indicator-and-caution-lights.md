@@ -4,11 +4,11 @@
 
 There are two distinct output types covered here:
 
-- **Indicator lights**: individual lamps (gear lights, FLCS PWR, master caution, etc.) each driven by one GPIO pin on the board's I²C GPIO expander.
+- **Indicator lights**: individual lamps (gear lights, FLCS PWR, master caution, etc.) each driven by one GPIO pin.
 - **Caution panel**: the full 32-lamp caution/advisory panel driven by a TLC59281 shift-register chain over SPI.
 
 > [!NOTE]
-> Physical indicator and caution output requires **firmware v2.2.0 or newer**. Check your board's firmware version on the Firmware page before wiring.
+> On AIM boards, physical indicator and caution output requires **firmware v2.2.0 or newer**. Check your board's firmware version on the Firmware page before wiring. Open Hardware boards drive indicator lamps from any pin (see the wiring table on [Open Hardware](open-hardware.md)); the caution panel needs an AIM board's SPI channel.
 
 ---
 
@@ -64,7 +64,7 @@ The **/BLANK** (output enable) pin should be pulled low to enable outputs. If yo
 
 ## Check it worked
 
-In the manager, go to the **Panels** page and select a panel with indicators. Load into a mission in DCS. Trigger the relevant cockpit state (put the gear down, activate master caution, etc.). The corresponding lamp on your panel should light.
+In **Avionics → Console Panels**, find a lamp, click its **⋯** button and choose **Test lamp**. Every cell of that indicator lights for three seconds, no sim needed. Then load into a mission in DCS and trigger the relevant cockpit state (put the gear down, activate master caution, etc.). The corresponding lamp on your panel should light.
 
 For the caution panel, trigger a caution condition in DCS (engine fault, fuel low, etc.) and verify the correct lamp lights.
 
@@ -80,4 +80,4 @@ For the caution panel, trigger a caution condition in DCS (engine fault, fuel lo
 
 ---
 
-**See also:** **UHF and CMDS Displays**, [Assign Controls to Pins](assign-controls-to-pins.md), [Update Board Firmware](update-board-firmware.md)
+**See also:** [Assign Controls to Pins](assign-controls-to-pins.md), [Update Board Firmware](update-board-firmware.md)

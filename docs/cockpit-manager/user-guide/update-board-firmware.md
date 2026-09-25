@@ -7,6 +7,9 @@
 - The board is powered on and showing as connected (green dot) on the Network page.
 - You have a firmware `.bin` file for your board type (see below).
 
+> [!NOTE]
+> Open Hardware boards don't use this page. Their firmware is installed over USB from the **Install the firmware** card on the DIY Devices page; see [Open Hardware](open-hardware.md).
+
 > [!TIP]
 > OTA (over-the-air, meaning over the cockpit network) is the normal update path. You do not need to open anything or touch the board. USB flashing is a fallback for boards that are too new to have OTA-capable firmware already on them.
 

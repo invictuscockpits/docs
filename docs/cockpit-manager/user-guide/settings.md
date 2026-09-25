@@ -58,7 +58,7 @@ Draws RTTClient's cockpit display windows above other windows on secondary monit
 
 **Show control hints** *(default: on)*
 
-Shows a description when you hover a cockpit control in the Panels view. Useful while learning the panels; turn off for a cleaner view once you know the layout.
+Shows a short description when you hover a button or control in the manager. Turn off for a cleaner view once you know your way around.
 
 **Hint display delay** *(default: 400 ms)*
 

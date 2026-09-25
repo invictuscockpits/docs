@@ -66,6 +66,7 @@ nav:
               - Network Health: cockpit-manager/user-guide/network-health.md
               - Add Your First Board: cockpit-manager/user-guide/add-your-first-board.md
               - Assign Controls to Pins: cockpit-manager/user-guide/assign-controls-to-pins.md
+              - Resistor Ladder Rotary Switches: cockpit-manager/user-guide/resistor-ladder-rotary-switches.md
               - Test and Calibrate: cockpit-manager/user-guide/test-and-calibrate.md
               - Swap or Replace a Board: cockpit-manager/user-guide/swap-or-replace-a-board.md
           - DCS World:
@@ -83,7 +84,6 @@ nav:
               - VFT5 Side-Stick: cockpit-manager/user-guide/vft5-side-stick.md
           - Open Hardware:
               - Open Hardware: cockpit-manager/user-guide/open-hardware.md
-              - Resistor Ladder Rotary Switches: cockpit-manager/user-guide/resistor-ladder-rotary-switches.md
           - Session Tools:
               - Hot Start: cockpit-manager/user-guide/hot-start.md
               - Display Layout: cockpit-manager/user-guide/display-layout.md

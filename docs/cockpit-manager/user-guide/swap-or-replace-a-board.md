@@ -14,7 +14,7 @@ This is useful when a board needs to be exchanged under warranty, or when you're
 ## Export the config from the source board
 
 1. Open the **Network** page and click the board you want to export from.
-2. Click **Export Config**. The manager saves a `.json` file. Save it somewhere you'll find it, like your desktop.
+2. Click **Export config**. The manager saves a `.json` file. Save it somewhere you'll find it, like your desktop.
 
 ![Export Config button on a configured board's detail panel](images/swap-export-config.png)
 
@@ -25,7 +25,7 @@ This is useful when a board needs to be exchanged under warranty, or when you're
 
 ## Import the config onto the replacement board
 
-1. Click the replacement board (the one showing **NEW** or **UNCONFIGURED**), then click **Register** to open the setup wizard.
+1. Click **Configure now** in the **New board detected** prompt, or click the replacement board in the Network list (the one showing **NEW** or **UNCONFIG**) and then **Configure**, to open the setup wizard.
 2. On the wizard's first step (**Identity**), click **Import config from file…** instead of filling in the fields by hand.
 3. Select the `.json` file you exported. The wizard fills in the name, panels, pin assignments, and calibration from the file.
 4. Click through to the **Review** step and **Save & Upload** to push the full configuration to the replacement board.
@@ -43,7 +43,7 @@ A Sidewinder config imported onto a Phoenix (or vice versa) will import what it 
 - **GPIO pins** that exist on the source board but not the destination are left unassigned. You'll see them highlighted in the pin assignment view.
 - **ADC channels** follow the same rule.
 
-After importing, check the live view for each panel and reassign any controls that didn't transfer.
+After importing, check Console Panels for each panel and reassign any controls that didn't transfer.
 
 ---
 
@@ -60,8 +60,12 @@ Removing a board is **reversible**. It goes to a "Recently deleted" bin rather t
 
 ![The Recently deleted dialog listing a removed board with Restore and Empty trash](images/network-recently-deleted.png)
 
+### Open Hardware boards
+
+The **DIY Devices** page has the same **Delete** and **Recently deleted**. Deleting a USB board also resets the board itself, so it comes back as a new device; restoring it from Recently deleted sends its setup straight back.
+
 > [!NOTE]
-> Removing a board from the manager doesn't reset the board itself. If you plug the old board back in, it will reappear as a new board. You can then import a saved config onto it. See [Export the config from the source board](#export-the-config-from-the-source-board) above for why keeping a config backup is a good habit.
+> Removing an AIM board from the manager doesn't reset the board itself. If you plug the old board back in, it will reappear as a new board. You can then import a saved config onto it. See [Export the config from the source board](#export-the-config-from-the-source-board) above for why keeping a config backup is a good habit.
 
 ---
 

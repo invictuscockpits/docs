@@ -1,10 +1,12 @@
-﻿# Troubleshooting
+# Troubleshooting
 
 Quick-reference for common problems. Each section links to the relevant wiki page for full context.
 
 ---
 
 ## Board won't appear on the Network page
+
+This section is about AIM boards on the cockpit network. An Open Hardware board over USB appears on the **DIY Devices** page instead; see **A USB board doesn't show up** below.
 
 > [!TIP]
 > From manager **1.6.0**, start with [Network Health](network-health.md) (Network sidebar, **Network health** button). It checks every layer in order and the first red light tells you exactly which of the steps below to look at, so you don't have to walk them all.
@@ -37,15 +39,26 @@ The board reboots to apply its new configuration. Wait 15-20 seconds. It will re
 
 ---
 
+## A USB board doesn't show up
+
+Open Hardware boards appear on the **DIY Devices** page, not the Network page.
+
+- Use a USB cable that carries data. Many charger cables carry power only.
+- Close the Arduino IDE and any serial monitor; they hold the port.
+- A board that has never had the manager's firmware is not detected until you install it from the **Install the firmware** card. See [Open Hardware](open-hardware.md).
+- Give the board ten seconds after plugging it in before you replug it.
+
+---
+
 ## A switch doesn't respond when operated
 
-Switch states are visible in the **Avionics → Panels** view. The manager reflects the state of your physical panels directly. It is not synced to the sim. When you operate a switch on the panel, the corresponding control in the Panels view should toggle. When you click a switch in the manager, it can trigger an action in the sim.
+Switch states are visible in **Avionics → Console Panels**: the **Live** column reflects your physical panel directly, not the sim. When you operate a switch on the panel, its row should change. The arrow buttons beside it drive the control from the manager and send it to the sim.
 
 If a switch doesn't respond when physically operated:
 
 - Confirm the control is assigned to a GPIO pin. Without a pin assignment the board doesn't know which input to listen to. See [Assign Controls to Pins](assign-controls-to-pins.md).
 - Check your wiring: one switch leg to the GPIO pin, the other to GND. Polarity doesn't matter.
-- The board must be saved and rebooted after any pin assignment change.
+- A pin change takes effect after **Save & Upload** in the wizard. An AIM board restarts for a moment; an Open Hardware board applies it at once.
 - Try a different GPIO pin. A damaged pin won't respond even with correct wiring.
 
 ---
@@ -54,15 +67,15 @@ If a switch doesn't respond when physically operated:
 
 When you turn a multi-position rotary, the display jumps to the new position, flicks back to the old one for a moment, then settles. This happens because the switch's contacts pass through a gap between positions, and a too-short settle window lets that in-between moment read as a real change.
 
-The manager already guards rotaries with a 100 ms settle window by default. If a particular switch still does this (contact style varies between rotary brands), right-click that control in the panels view and choose **Adjust response time** (manager 1.6.0 and later), then raise the value until the snap-back stops. Saving sends the change to the board, which restarts for a moment.
+The manager already guards rotaries with a 100 ms settle window by default. If a particular switch still does this (contact style varies between rotary brands), click the ⋯ button on that control's row in Console Panels and choose **Adjust response time…**, then raise the value until the snap-back stops. Saving sends the change to the board, which restarts for a moment.
 
 ---
 
 ## A potentiometer reads jitter or wrong values
 
-- If the pot is not yet wired, right-click it in the live view and select **Mute**. Unwired pots float and show noise.
-- Confirm the supply wire goes to **3.3V**, not 5V. Using 5V on a pot channel can damage the board.
-- Run calibration: right-click the pot → **Calibrate**, sweep full range several times, then Save. See [Test and Calibrate](test-and-calibrate.md).
+- If the pot is not yet wired, click its ⋯ button in Console Panels and choose **Mute this control**. Unwired pots float and show noise.
+- On an AIM board, confirm the supply wire goes to **3.3V**, not 5V. Using 5V on a pot channel can damage the board.
+- Run calibration: ⋯ → **Calibrate range…**, sweep full range several times, then Save. See [Test and Calibrate](test-and-calibrate.md).
 - Keep wiring runs under 1 meter. Long unshielded runs pick up noise.
 
 ---
@@ -70,8 +83,8 @@ The manager already guards rotaries with a 100 ms settle window by default. If a
 ## Controls appear in the manager but do nothing in DCS
 
 - Confirm the DCS integration is installed (green "Installed" on the DCS Integration card on the home page). See [Set Up DCS](set-up-dcs.md).
-- Confirm DCS is running and you are loaded into a mission with an F-16C. The integration is aircraft-specific.
-- Hover the control in the manager. If the tooltip says the control is not modeled in DCS, DCS doesn't simulate that function.
+- Confirm DCS is running and you are loaded into the airframe selected on the manager's Home page. The integration follows that choice.
+- Check the control in the wizard's Pins step. A control without a **DCS** tag isn't simulated in DCS.
 - Confirm the correct sim is selected in the manager (DCS, not BMS).
 
 ---

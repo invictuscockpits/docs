@@ -4,12 +4,12 @@
 
 ## Before you begin
 
-- You are setting up BMS. If you're only using DCS, you don't need this driver. Panel boards communicate over the network without it.
+- You are setting up BMS. If you're only using DCS, you don't need this driver. The boards talk to the manager without it.
 - The manager is running. See [Install the Manager](install-the-manager.md).
 
 ## What this driver does
 
-BMS reads game controllers using standard HID (joystick) input. Your cockpit panels are network devices, not USB controllers, so the manager installs an **AIM Ghost Joystick** virtual driver that creates up to five virtual joystick devices on your PC. The manager bridges network input from your boards to these virtual devices, and BMS reads them like any other controller.
+BMS reads game controllers using standard HID (joystick) input. Your cockpit panels are not game controllers, so the manager installs an **AIM Ghost Joystick** virtual driver that creates up to five virtual joystick devices on your PC. The manager bridges input from your boards to these virtual devices, and BMS reads them like any other controller.
 
 The driver is **EV-signed** (Extended Validation code signed by Invictus Machine LLC) and does not require  any Windows security changes.
 
@@ -25,7 +25,7 @@ The top of the dialog shows the **AIM GHOST JOYSTICKS** status.
 
 1. Click **Install driver**. Windows will prompt for administrator permission. Click **Yes**.
 2. The manager installs the driver and the status updates. This takes a few seconds.
-3. Click **Create [N] devices** to create the virtual joystick instances. The number shown matches what the F-16C catalog needs (typically 4).
+3. Click **Create [N] devices** to create the virtual joystick instances. The number shown matches what the airframe needs (four for the F-16C).
 4. The status changes to **[N] of [N] devices ready**.
 
 ![AIM GHOST JOYSTICKS status reading all devices ready in the BMS keyfile dialog](images/bms-driver-ready.png)

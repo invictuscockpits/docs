@@ -2,7 +2,10 @@
 
 **What you'll do:** give your PC a second IP address on the cockpit subnet so the manager can find your boards.
 
-Your boards and the manager talk to each other on a private subnet, `10.24.6.x`. Your PC needs to have the address `10.24.6.1` on the Ethernet adapter that's connected to the cockpit switch. This doesn't affect your internet connection; your other adapter (Wi-Fi or the one plugged into your router) keeps working normally.
+> [!NOTE]
+> This page is for AIM boards. Open Hardware boards plug in over USB and need none of it; see [Open Hardware](open-hardware.md).
+
+Your AIM boards and the manager talk to each other on a private subnet, `10.24.6.x`. Your PC needs to have the address `10.24.6.1` on the Ethernet adapter that's connected to the cockpit switch. This doesn't affect your internet connection; your other adapter (Wi-Fi or the one plugged into your router) keeps working normally.
 
 > [!NOTE]
 > Cockpits set up before manager v1.5.0 used the older `192.168.100.x` range. Those boards keep working without any changes: the Fix button binds both cockpit addresses, and brand-new boards (which start on the older range until configured) are found automatically. New boards are assigned `10.24.6.x` addresses going forward. The range moved because `192.168.100.1` is also the diagnostic address of every cable modem, which caused conflicts for cable-internet households.

@@ -153,7 +153,7 @@ On the Pico, the numbers are the GP numbers printed next to the pins, not the pi
 | "The board did not answer" during install | Check the board and port you picked. For a Pro Micro, Leonardo or Micro, press reset twice quickly and click Install again within eight seconds. |
 | The install finished but the board never appears | Unplug it and plug it back in. Give it ten seconds. |
 | The wizard offers pins that do not match my board | Plug the board in and open Edit setup again. The pin list comes from the board itself. |
-| A switch reads backwards | In Console Panels, click the ⋯ button on the control’s row and choose Invert switch wiring. |
+| A switch reads backwards | In Console Panels, click the ⋯ button on the control's row and choose Invert switch wiring. |
 | Learn mode recorded the wrong pin on a three-position toggle | Move the switch to the center first, then to the position the prompt asks for, and learn it again. |
 | The lamp lights in the manager but not on the board | Check the LED direction and the resistor. The lamp's cell is wired to the pin assigned to that slot. |
 

@@ -26,7 +26,7 @@ Restoring puts the archived files back exactly as they were. As a safety net, th
 - **EXPORT CONFIG…** writes a single file containing the manager's configuration: boards and pin assignments, calibrations, display assignments, settings, and launch sequence.
 - **IMPORT…** loads one on another machine (or after a reinstall).
 
-Export a config file whenever your cockpit reaches a state you'd hate to rebuild. Your boards themselves keep their own configuration onboard, so this is about the manager-side state: names, layouts, calibrations, and preferences.
+Export a config file whenever your cockpit reaches a state you'd hate to rebuild. AIM boards keep their own configuration onboard, and the manager holds the setup for Open Hardware boards and sends it whenever they connect, so an export carries everything the manager knows: boards and pins, names, layouts, calibrations, and preferences.
 
 ---
 

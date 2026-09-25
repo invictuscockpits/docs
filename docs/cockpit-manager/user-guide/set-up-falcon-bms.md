@@ -15,7 +15,7 @@
 
 ## How BMS integration works
 
-BMS reads cockpit inputs from HID joystick devices, not from the network directly. The manager creates up to three **AIM Ghost Joystick** virtual devices on your PC, then generates a keyfile (`Invictus AIM F-16.key`) that maps every cockpit control to a button or axis on one of those virtual devices. Your physical boards send button presses over the network to the manager, which forwards them to the virtual joysticks, which BMS reads as standard controller input.
+BMS reads cockpit inputs from HID joystick devices, not from the network directly. The manager creates the **AIM Ghost Joystick** virtual devices the airframe needs (four for the F-16C) on your PC, then generates a keyfile (`Invictus AIM F-16.key`) that maps every cockpit control to a button or axis on one of those virtual devices. Your physical boards send button presses to the manager, which forwards them to the virtual joysticks, which BMS reads as standard controller input.
 
 ---
 
@@ -31,7 +31,7 @@ On the manager home page, find the **BMS KEYFILE** card and click **Setup BMS ke
 
 The top section of the dialog shows the **AIM GHOST JOYSTICKS** status. If it reads **Not installed**, click **Install driver**. Windows will ask for administrator permission. This is required to install the device driver.
 
-After the driver installs, click **Create [N] devices** to create the virtual joystick instances the catalog needs (usually 3 for a full F-16C setup).
+After the driver installs, click **Create [N] devices** to create the virtual joystick instances the catalog needs (four for the F-16C).
 
 The status changes to **[N] of [N] devices ready** once everything is set. See [Install the Virtual-Joystick Driver](install-the-virtual-joystick-driver.md) for more detail if anything goes wrong.
 
