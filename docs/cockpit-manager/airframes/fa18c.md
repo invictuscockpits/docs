@@ -1035,11 +1035,15 @@ SAI Cage Knob, (LMB) Pull to cage (hold RMB and rotate MW to uncage)/(MW) Adjust
 
 **Altimeter 100 foot Ptr** · Needle gauge · display
 
+Gauge. Shows the sim's value on a needle.
+
 ### STANDBY PRESSURE ALTIMETER AAU-52/A: ALTIMETER 1000 FOOT COUNT
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
 **Altimeter 1000 foot Count** · Needle gauge · display
+
+Gauge. Shows the sim's value on a needle.
 
 ### STANDBY PRESSURE ALTIMETER AAU-52/A: ALTIMETER 10000 FOOT COUNT
 
@@ -1047,11 +1051,15 @@ SAI Cage Knob, (LMB) Pull to cage (hold RMB and rotate MW to uncage)/(MW) Adjust
 
 **Altimeter 10000 foot Count** · Needle gauge · display
 
+Gauge. Shows the sim's value on a needle.
+
 ### STANDBY PRESSURE ALTIMETER AAU-52/A: PRESSURE SETTING 0
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
 **pressure setting 0** · Needle gauge · display
+
+Gauge. Shows the sim's value on a needle.
 
 ### STANDBY PRESSURE ALTIMETER AAU-52/A: PRESSURE SETTING 1
 
@@ -1059,11 +1067,15 @@ SAI Cage Knob, (LMB) Pull to cage (hold RMB and rotate MW to uncage)/(MW) Adjust
 
 **pressure setting 1** · Needle gauge · display
 
+Gauge. Shows the sim's value on a needle.
+
 ### STANDBY PRESSURE ALTIMETER AAU-52/A: PRESSURE SETTING 2
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
 **pressure setting 2** · Needle gauge · display
+
+Gauge. Shows the sim's value on a needle.
 
 ### STANDBY ATTITUDE INDICATOR (GAUGE): SAI PITCH
 
@@ -1071,11 +1083,15 @@ SAI Cage Knob, (LMB) Pull to cage (hold RMB and rotate MW to uncage)/(MW) Adjust
 
 **SAI Pitch** · Needle gauge · display
 
+Gauge. Shows the sim's value on a needle.
+
 ### STANDBY ATTITUDE INDICATOR (GAUGE): SAI BANK
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
 **SAI Bank** · Needle gauge · display
+
+Gauge. Shows the sim's value on a needle.
 
 ### STANDBY ATTITUDE INDICATOR (GAUGE): SAI RATE OF TURN
 
@@ -1083,11 +1099,15 @@ SAI Cage Knob, (LMB) Pull to cage (hold RMB and rotate MW to uncage)/(MW) Adjust
 
 **SAI Rate Of Turn** · Needle gauge · display
 
+Gauge. Shows the sim's value on a needle.
+
 ### AIRSPEED
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
 **Airspeed** · Needle gauge · display
+
+Gauge. Shows the sim's value on a needle.
 
 ### VARIOMETER
 
@@ -1095,11 +1115,15 @@ SAI Cage Knob, (LMB) Pull to cage (hold RMB and rotate MW to uncage)/(MW) Adjust
 
 **Variometer** · Needle gauge · display
 
+Gauge. Shows the sim's value on a needle.
+
 ### HYDRAULIC GAUGES: HYD IND BRAKE
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
 **Hyd Ind Brake** · Needle gauge · display
+
+Gauge. Shows the sim's value on a needle.
 
 ### HYDRAULIC GAUGES: HYD IND LEFT
 
@@ -1107,11 +1131,15 @@ SAI Cage Knob, (LMB) Pull to cage (hold RMB and rotate MW to uncage)/(MW) Adjust
 
 **Hyd Ind Left** · Needle gauge · display
 
+Gauge. Shows the sim's value on a needle.
+
 ### HYDRAULIC GAUGES: HYD IND RIGHT
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
 **Hyd Ind Right** · Needle gauge · display
+
+Gauge. Shows the sim's value on a needle.
 
 ### RADAR ALTIMETER (GAUGE): ALTITUDE POINTER ID2163 A
 
@@ -1119,11 +1147,15 @@ SAI Cage Knob, (LMB) Pull to cage (hold RMB and rotate MW to uncage)/(MW) Adjust
 
 **Altitude Pointer ID2163 A** · Needle gauge · display
 
+Gauge. Shows the sim's value on a needle.
+
 ### RADAR ALTIMETER (GAUGE): MIN HEIGHT INDICATOR ID2163 A
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
 **Min Height Indicator ID2163 A** · Needle gauge · display
+
+Gauge. Shows the sim's value on a needle.
 
 ## Center Pedestal
 
@@ -1212,6 +1244,8 @@ ECM Mode Switch, XMIT/REC/BIT/STBY/OFF
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
 **Cockpit Pressure Altimeter** · Needle gauge · display
+
+Gauge. Shows the sim's value on a needle.
 
 ## Right Console
 
@@ -1407,11 +1441,15 @@ LST/NFLR Switch, ON/OFF
 
 **Voltmeter U** · Needle gauge · display
 
+Gauge. Shows the sim's value on a needle.
+
 ### ELECTRICAL GAUGES: VOLTMETER E
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
 **Voltmeter E** · Needle gauge · display
+
+Gauge. Shows the sim's value on a needle.
 
 ## Stick and Throttle
 
@@ -1475,11 +1513,15 @@ Exterior Lights Switch, ON/OFF
 
 **CLOCK currtime hours** · Needle gauge · display
 
+Gauge. Shows the sim's value on a needle.
+
 ### CLOCK: CLOCK CURRTIME MINUTES
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
 **CLOCK currtime minutes** · Needle gauge · display
+
+Gauge. Shows the sim's value on a needle.
 
 ### CLOCK: CLOCK ELAPSED TIME SECONDS
 
@@ -1487,8 +1529,12 @@ Exterior Lights Switch, ON/OFF
 
 **CLOCK elapsed time seconds** · Needle gauge · display
 
+Gauge. Shows the sim's value on a needle.
+
 ### CLOCK: CLOCK ELAPSED TIME MINUTES
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
 **CLOCK elapsed time minutes** · Needle gauge · display
+
+Gauge. Shows the sim's value on a needle.
