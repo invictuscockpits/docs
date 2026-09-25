@@ -83,6 +83,7 @@ nav:
               - VFT5 Side-Stick: cockpit-manager/user-guide/vft5-side-stick.md
           - Open Hardware:
               - Open Hardware: cockpit-manager/user-guide/open-hardware.md
+              - Resistor Ladder Rotary Switches: cockpit-manager/user-guide/resistor-ladder-rotary-switches.md
           - Session Tools:
               - Hot Start: cockpit-manager/user-guide/hot-start.md
               - Display Layout: cockpit-manager/user-guide/display-layout.md

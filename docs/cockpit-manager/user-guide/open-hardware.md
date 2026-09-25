@@ -79,7 +79,7 @@ The wizard is the same one AIM boards use, minus the network step:
 
 1. **Identity.** Give the board a name.
 2. **Panels.** Pick the panels this board carries.
-3. **Pins.** Assign each switch, lamp and knob to a pin. The wizard offers exactly the pins your board has, using the board's own numbering. See [Pin numbers by board](#pin-numbers-by-board) below.
+3. **Pins.** Assign each switch, lamp and knob to a pin. The wizard offers exactly the pins your board has, using the board's own numbering. See [Pin numbers by board](#pin-numbers-by-board) below. A rotary switch defaults to one analog input through a resistor ladder, which saves a pin per position. See [Resistor Ladder Rotary Switches](resistor-ladder-rotary-switches.md).
 4. **Review.** Click **Save & Upload**. The device starts using the setup right away, with no restart.
 
 The manager keeps your setup and sends it to the board every time it connects, so you can edit it later whether or not the board is plugged in.
@@ -92,7 +92,7 @@ The board's inputs use built-in pull-ups, so every switch closes to ground.
 |---|---|
 | Two-position toggle, pushbutton | One leg to the assigned pin, the other to GND |
 | Three-position toggle | Center leg to GND, each end to its assigned pin |
-| Rotary switch | Common to GND, each position to its assigned pin |
+| Rotary switch | One analog input through a resistor ladder (the default, see [Resistor Ladder Rotary Switches](resistor-ladder-rotary-switches.md)), or common to GND and each position to its assigned pin |
 | Encoder | Common to GND, A and B to the two assigned pins |
 | Potentiometer | Outer legs to the board's 3.3 V (or 5 V on a 5 V board) and GND, wiper to the assigned analog pin |
 | Indicator lamp | Assigned pin, through a resistor of about 330 Ω, to an LED, to GND |
@@ -123,15 +123,15 @@ The wizard uses each board's own pin numbers, so the number on the board's silks
 | Board | Switches and lamps | Dimmable lamps | Analog inputs |
 |---|---|---|---|
 | Raspberry Pi Pico | GP1 to GP22 | All of them | GP26, GP27, GP28 |
-| Arduino Nano | 2 to 12, and A0 to A3 as 14 to 17 | 3, 5, 6, 9, 10, 11 | A4 to A7 |
-| Arduino Uno, Pro Mini | 2 to 12, and A0 to A3 as 14 to 17 | 3, 5, 6, 9, 10, 11 | A4, A5 |
+| Arduino Nano | 2 to 12, A0 to A3 | 3, 5, 6, 9, 10, 11 | A4 to A7 |
+| Arduino Uno, Pro Mini | 2 to 12, A0 to A3 | 3, 5, 6, 9, 10, 11 | A4, A5 |
 | Arduino Mega 2560 | 2 to 12 and 14 to 53 | 2 to 12, 44, 45, 46 | A0 to A15 |
 | Pro Micro | 1 to 10, 14, 15, 16 | 3, 5, 6, 9, 10 | A0 to A3 |
 | Leonardo, Micro | 1 to 12 | 3, 5, 6, 9, 10, 11 | A0 to A5 |
-| Teensy 4.0 | 1 to 12 | All of them | 14 to 23 |
-| Teensy 4.1 | 1 to 12 and the rest of its digital pins | Most of them | 14 to 23, 38 to 41 |
-| Teensy 3.1, 3.2 | 1 to 12 | 3, 4, 5, 6, 9, 10 | 14 to 23 |
-| Teensy LC | 1 to 12 | 3, 4, 6, 9, 10 | 14 to 23 |
+| Teensy 4.0 | 1 to 12 | All of them | A0 to A9 |
+| Teensy 4.1 | 1 to 12 and the rest of its digital pins | Most of them | A0 to A9, A14 to A17 |
+| Teensy 3.1, 3.2 | 1 to 12 | 3, 4, 5, 6, 9, 10 | A0 to A9 |
+| Teensy LC | 1 to 12 | 3, 4, 6, 9, 10 | A0 to A9 |
 
 On the Pico, the numbers are the GP numbers printed next to the pins, not the pin count along the board edge. GP1 is the second pin from the corner.
 
