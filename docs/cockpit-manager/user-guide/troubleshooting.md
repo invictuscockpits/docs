@@ -27,6 +27,16 @@ If Hyper-V, WSL, or a VM hypervisor is installed, its virtual switch (`vEthernet
 
 ---
 
+## A board says it needs its configuration sent again
+
+Version 2.1.0 gave eight F-16C controls their own identifiers. They had been sharing one with a control on another panel, so they did nothing or fired the wrong thing: ICP DRIFT and FLIR GAIN, ANTI G TEST, and the ENGINE START RUN and MKR BCN lamps. Your saved wiring was carried across, but a board wired to one of them is still running its old setup.
+
+- **AIM boards:** open the board on the Network page and click **Send configuration** on the notice. The board restarts for a moment.
+- **Open Hardware boards** are sent the corrected setup on their own when they connect.
+- If one board carries both the ICP and EXT LIGHTING panels, a pin wired to DRIFT, FLIR GAIN or FLASH STEADY may be ambiguous. The notice then names the two controls. Open the wizard, set the pin for both, and click Save & Upload.
+
+---
+
 ## Board appears but shows UNCONFIGURED
 
 The board booted but hasn't been set up yet, or a previous save didn't complete. Click the board row to open the setup wizard. See [Add Your First Board](add-your-first-board.md).

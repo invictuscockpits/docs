@@ -6,4 +6,4 @@ One page per airframe the manager can drive. Each page walks the cockpit panel b
 |---|---|---|---|
 | [F-16C](f16c.md) | 54 | 236 | hand built |
 | [A-10C](a10c.md) | 44 | 390 | hand built |
-| [F/A-18C](fa18c.md) | 94 | 444 | generated, draft |
+| [F/A-18C](fa18c.md) | 94 | 444 | coming soon |
