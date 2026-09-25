@@ -1,6 +1,6 @@
 # Airframes
 
-One page per airframe the manager can drive. Each page lists the cockpit panel by panel, the way the Console Panels page in the manager does, and is where the manager's Docs buttons land.
+One page per airframe the manager can drive. Each page walks the cockpit panel by panel, the way the Console Panels page in the manager does, with what every control and position does, and is where the manager's Docs buttons land.
 
 | Airframe | Panels | Controls | Status |
 |---|---|---|---|
