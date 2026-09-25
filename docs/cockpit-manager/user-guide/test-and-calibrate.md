@@ -30,6 +30,7 @@ The arrow buttons beside the live state drive the control from the manager, whic
 | Pot doesn't move | Wrong analog channel or a wiring issue; see below |
 | Pot moves but is noisy or jittery | Long wiring run picking up noise, or an unwired analog channel; see below |
 | Rotary switch shows the wrong position | On a ladder-wired rotary, calibrate the positions; see below |
+| A knob on a rotary encoder jumps 20 percent per click, or runs backwards | Calibrate the encoder; see below |
 
 ---
 
@@ -51,6 +52,16 @@ If the result doesn't look right, the bar starts mid-range or stops short, click
 ## Calibrate a ladder-wired rotary switch
 
 A rotary switch wired through a resistor ladder reports a voltage, and the manager needs to know which voltage means which position. Click its **⋯** button, choose **Calibrate positions…**, and park the switch on each position in turn. The full steps are on [Resistor Ladder Rotary Switches](resistor-ladder-rotary-switches.md).
+
+## Calibrate an encoder-wired knob
+
+A pot wired as a rotary encoder counts clicks. Encoders differ in how many steps they report per click, and knobs differ in how many clicks should span the travel, so the manager learns both from you.
+
+1. Click the knob's **⋯** button and choose **Calibrate encoder…**.
+2. Turn the knob exactly five clicks in one direction. The dialog counts the steps and shows how many that is per click. If the count stays at zero, the knob is at the end of its travel: turn it the other way.
+3. Set **Clicks from one end of the travel to the other**. Twenty is a good default for a volume or brightness knob.
+4. Tick **Reverse direction** if the value runs the wrong way.
+5. Click **Save**. The setup is sent to the board again with the new count range.
 
 ## Test a lamp
 

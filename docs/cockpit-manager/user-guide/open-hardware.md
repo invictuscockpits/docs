@@ -79,7 +79,7 @@ The wizard is the same one AIM boards use, minus the network step:
 
 1. **Identity.** Give the board a name.
 2. **Panels.** Pick the panels this board carries.
-3. **Pins.** Assign each switch, lamp and knob to a pin. The wizard offers exactly the pins your board has, using the board's own numbering. See [Pin numbers by board](#pin-numbers-by-board) below. A rotary switch defaults to one analog input through a resistor ladder, which saves a pin per position. See [Resistor Ladder Rotary Switches](resistor-ladder-rotary-switches.md).
+3. **Pins.** Assign each switch, lamp and knob to a pin. The wizard offers exactly the pins your board has, using the board's own numbering. See [Pin numbers by board](#pin-numbers-by-board) below. A rotary switch defaults to one analog input through a resistor ladder, which saves a pin per position. See [Resistor Ladder Rotary Switches](resistor-ladder-rotary-switches.md). A pot can be wired as a rotary encoder on two pins instead of an analog input; pick it on the pot's row.
 4. **Review.** Click **Save & Upload**. The device starts using the setup right away, with no restart.
 
 The manager keeps your setup and sends it to the board every time it connects, so you can edit it later whether or not the board is plugged in.
@@ -93,7 +93,7 @@ The board's inputs use built-in pull-ups, so every switch closes to ground.
 | Two-position toggle, pushbutton | One leg to the assigned pin, the other to GND |
 | Three-position toggle | Center leg to GND, each end to its assigned pin |
 | Rotary switch | One analog input through a resistor ladder (the default, see [Resistor Ladder Rotary Switches](resistor-ladder-rotary-switches.md)), or common to GND and each position to its assigned pin |
-| Encoder | Common to GND, A and B to the two assigned pins |
+| Encoder, or a pot wired as one | Common to GND, A and B to the two assigned pins. Calibrate it from Console Panels after the upload |
 | Potentiometer | Outer legs to the board's 3.3 V (or 5 V on a 5 V board) and GND, wiper to the assigned analog pin |
 | Indicator lamp | Assigned pin, through a resistor of about 330 Ω, to an LED, to GND |
 

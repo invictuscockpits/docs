@@ -50,6 +50,12 @@ Yes. Wire it through a resistor ladder to one analog channel instead of one pin 
 
 ---
 
+**Can I use a rotary encoder instead of a potentiometer?**
+
+Yes, for any pot. In the wizard's Pins step change the pot's wiring to **Rotary encoder, two pins**, wire the encoder's common to GND and A and B to the two pins, then run **Calibrate encoder…** from Console Panels so the manager knows how many clicks span the travel. The sim still sees a pot. See [Test and Calibrate](test-and-calibrate.md).
+
+---
+
 **Can I use 5V for potentiometers?**
 
 Not on an AIM board. Use the board's **3.3V** supply pin for pots. Feeding 5V into a potentiometer channel will damage the board. On an Open Hardware board, use that board's own supply: 3.3 V on a Pico or ESP32, and 5 V is fine on a 5 V Arduino.

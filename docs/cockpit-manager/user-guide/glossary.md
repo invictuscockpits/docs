@@ -48,6 +48,8 @@
 
 **P1-P8**: The eight analog potentiometer channels on a Sidewinder board. Numbered separately from GPIO pins.
 
+**Rotary encoder**: A knob with click stops that reports steps as it turns, on two pins, rather than a position. Any pot in the catalog can be wired as one; the manager counts the clicks and keeps the knob's value.
+
 **Resistor ladder**: A chain of equal resistors that lets a rotary switch put a different voltage on one analog channel at each position, so the switch takes one input instead of one pin per position. See [Resistor Ladder Rotary Switches](resistor-ladder-rotary-switches.md).
 
 **RTT Client**: A BMS application (`RTTClient64.exe`, in `[BMS install]\Tools\RTTRemote\`) that reads cockpit display textures exported by BMS and renders them into windows on secondary monitors on the **same PC**. This is what the manager configures via **Apply BMS Displays**.

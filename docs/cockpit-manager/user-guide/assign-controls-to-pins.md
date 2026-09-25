@@ -26,7 +26,9 @@ Every control on the board's panels is listed under its panel, with a dropdown f
 | Three-position toggle | Two GPIO pins, one per end position |
 | Rotary encoder | Two GPIO pins, A then B |
 | Rotary switch | One GPIO pin per position, or one analog channel through a resistor ladder. See [Resistor Ladder Rotary Switches](resistor-ladder-rotary-switches.md) |
-| Potentiometer, Hall-effect sensor | One analog channel: P1 to P8 on a Sidewinder, an analog pin on an Open Hardware board. The Phoenix has no analog channels |
+| Potentiometer, Hall-effect sensor | One analog channel: P1 to P8 on a Sidewinder, an analog pin on an Open Hardware board. The Phoenix has no analog channels. Or a rotary encoder on two GPIO pins, A then B; see below |
+
+Every pot's row also offers **Rotary encoder, two pins**. Pick it to wire a click-stop encoder in place of the pot: the board counts the clicks and the manager keeps the knob's value, so the sim still sees a pot. Twenty clicks span the travel until you calibrate it; see [Test and Calibrate](test-and-calibrate.md).
 
 Under each control's name, a **DCS** tag and a **BMS** tag show which sims model it. A control with neither still reads in the manager; it just has nothing to drive.
 
@@ -73,7 +75,7 @@ If the controls are already wired, skip the planning and let the manager find th
 3. Click a control in the list, then move it on the panel. The manager watches every pin and records the one that moved.
 4. Repeat for each control, then click **Done**. The new wiring is sent to the board.
 
-Read each prompt. A two-position toggle is learned on the leg that means ON. A three-position toggle is learned one end at a time, starting from the center. A rotary switch is learned one position at a time; one wired through a resistor ladder is learned like a pot, by turning it.
+Read each prompt. A two-position toggle is learned on the leg that means ON. A three-position toggle is learned one end at a time, starting from the center. A rotary switch is learned one position at a time; one wired through a resistor ladder is learned like a pot, by turning it. A pot wired as a rotary encoder is learned one click at a time, two clicks in all.
 
 Learn mode works on Open Hardware boards, and on AIM boards with panel firmware 2.5.0 or newer. See [Update Board Firmware](update-board-firmware.md).
 
@@ -81,7 +83,7 @@ Learn mode works on Open Hardware boards, and on AIM boards with panel firmware 
 
 With your pin lists in hand, wire each control to its assigned pin.
 
-**AIM boards.** Switches and lamps use one GPIO pin with the other leg to **GND**; no pull-up resistor is needed. Rotary encoders use two GPIO pins plus GND. Pots use a potentiometer channel with **3.3 V** and GND on the outer legs and the wiper to the channel. **Never feed 5 V into a pot channel. It will damage the board.** All board headers use JST PH connectors.
+**AIM boards.** Switches and lamps use one GPIO pin with the other leg to **GND**; no pull-up resistor is needed. Rotary encoders use two GPIO pins plus GND: the encoder's common to GND, A and B to the two pins. If it counts the wrong way, swap the two pins in the wizard or tick Reverse direction in its calibration. Pots use a potentiometer channel with **3.3 V** and GND on the outer legs and the wiper to the channel. **Never feed 5 V into a pot channel. It will damage the board.** All board headers use JST PH connectors.
 
 **Open Hardware boards.** The same idea with the board's own pins and supply. See the wiring table on [Open Hardware](open-hardware.md).
 
