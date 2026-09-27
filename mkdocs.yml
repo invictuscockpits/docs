@@ -101,6 +101,7 @@ nav:
           - cockpit-manager/airframes/index.md
           - F-16C: cockpit-manager/airframes/f16c.md
           - A-10C: cockpit-manager/airframes/a10c.md
+          - F-15C: cockpit-manager/airframes/f15c.md
           - F/A-18C: cockpit-manager/airframes/fa18c.md
   - Livery Manager:
       - User Guide:

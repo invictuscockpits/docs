@@ -5,1451 +5,1995 @@ Every panel the manager knows on the F/A-18C, in the order the Console Panels pa
 > [!NOTE]
 > This airframe was generated from the simulator's own cockpit data. Panels marked **draft** have not been checked against a real cockpit yet, so names and grouping can still change. Wiring you record against a draft panel is kept when it is renamed.
 
-Controls: 444. Panels: 94.
+Controls: 361. Panels: 57.
 
 ## Left Console
 
-### CONTROL SYSTEM (LEFT CONSOLE)
+### FIRE TEST
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**RUD TRIM Control** · Potentiometer · 1 analog input
+The fire and bleed air leak test switch, forward on the left console.
 
-**T/O TRIM Button** · Push button · 1 pin
+**FIRE TEST** · 3-position toggle, spring return · 2 pins
 
-**FCS RESET Button** · Push button · 1 pin
+Tests the fire warning and bleed air leak detection loops. Spring-loaded back to the center.
+**TEST A:** Checks loop A: the three fire lights, both bleed lights and the voice warnings come on.
+**NORM:** Normal position.
+**TEST B:** Checks loop B the same way.
 
-**GAIN Switch Cover** · 2-position toggle · 1 pin
-
-GAIN Switch Cover, OPEN/CLOSE
-
-**GAIN Switch** · 2-position toggle · 1 pin
-
-GAIN Switch, NORM/ORIDE
-
-**Throttles Friction Adjusting Lever** · Potentiometer · 1 analog input
-
-### ELECTRIC SYSTEM (LEFT CONSOLE)
+### GROUND POWER
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Generator TIE Control Switch Cover** · 2-position toggle · 1 pin
+External power switch and the four ground power switches that feed aircraft systems while parked on a power cart.
 
-Generator TIE Control Switch Cover, OPEN/CLOSE
+**EXT PWR** · 3-position toggle · 2 pins
 
-**Generator TIE Control Switch** · 2-position toggle · 1 pin
+Connects external power once the ground crew has plugged it in.
+**RESET:** Spring-loaded. Hold briefly to reset the external power monitor.
+**NORM:** External power is used when it is available.
+**OFF:** External power disconnected.
 
-Generator TIE Control Switch, NORM/RESET
+**GND PWR 1** · 3-position toggle, spring return · 2 pins
 
-**External Power Switch** · 3-position toggle · 2 pins
+Selects which part of power group 1 runs from external power. Hold in A ON or B ON for three seconds and it stays there while external power is connected.
+**A ON:** Group A powered.
+**AUTO:** Normal, no ground power override.
+**B ON:** Group B powered.
 
-External Power Switch, RESET/NORM/OFF
+**GND PWR 2** · 3-position toggle, spring return · 2 pins
 
-**Ground Power Switch 1** · 3-position toggle, spring return · 2 pins
+Same as GND PWR 1, for power group 2.
 
-Ground Power Switch 1, A ON/AUTO/B ON
+**GND PWR 3** · 3-position toggle, spring return · 2 pins
 
-**Ground Power Switch 2** · 3-position toggle, spring return · 2 pins
+Same as GND PWR 1, for power group 3.
 
-Ground Power Switch 2, A ON/AUTO/B ON
+**GND PWR 4** · 3-position toggle, spring return · 2 pins
 
-**Ground Power Switch 3** · 3-position toggle, spring return · 2 pins
+Same as GND PWR 1, for power group 4.
 
-Ground Power Switch 3, A ON/AUTO/B ON
-
-**Ground Power Switch 4** · 3-position toggle, spring return · 2 pins
-
-Ground Power Switch 4, A ON/AUTO/B ON
-
-### CB (LEFT CONSOLE)
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**CB FCS CHAN 1** · Push button · 1 pin
-
-CB FCS CHAN 1, ON/OFF
-
-**CB FCS CHAN 2** · Push button · 1 pin
-
-CB FCS CHAN 2, ON/OFF
-
-**CB SPD BRK** · Push button · 1 pin
-
-CB SPD BRK, ON/OFF
-
-**CB LAUNCH BAR** · Push button · 1 pin
-
-CB LAUNCH BAR, ON/OFF
-
-**MC Switch** · 3-position toggle, spring return · 2 pins
-
-MC Switch, 1 OFF/NORM/2 OFF
-
-### POWER PLANT
+### GEN TIE
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**APU Control Switch** · Push button · 1 pin
+The guarded generator tie switch on the outboard edge of the left console.
 
-APU Control Switch, ON/OFF
+**GEN TIE** · 2-position toggle · 1 pin
 
-**Engine Crank Switch** · 3-position toggle, spring return · 2 pins
+Guarded. Resets the generator tie after a fault so one generator can power both buses again. The GEN TIE caution lights while it is in RESET.
+**NORM:** Normal, guard closed.
+**RESET:** Resets the generator tie.
 
-Engine Crank Switch, LEFT/OFF/RIGHT
-
-**Fire and Bleed Air Test Switch** · 3-position toggle, spring return · 2 pins
-
-Fire and Bleed Air Test Switch, (RMB) TEST A/(LMB) TEST B
-
-### HYDRAULIC SYSTEM
+### EXTERIOR LIGHTS
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Hydraulic Isolate Override Switch** · 2-position toggle · 1 pin
+Position, formation and strobe light controls. None of them work unless the exterior lights master switch on the left throttle is ON.
 
-Hydraulic Isolate Override Switch, NORM/ORIDE
+**POSITION** · Potentiometer · 1 analog input
 
-### FUEL SYSTEM
+Brightness of the red, green and white position lights, from OFF to BRT.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**FORMATION** · Potentiometer · 1 analog input
 
-**Internal Wing Tank Fuel Control Switch** · 2-position toggle · 1 pin
+Brightness of the formation light strips, from OFF to BRT.
 
-Internal Wing Tank Fuel Control Switch, INHIBIT/NORM
+**STROBE** · 3-position toggle · 2 pins
 
-**Probe Control Switch** · 3-position toggle · 2 pins
+Red anti-collision strobes on the tails.
+**BRT:** Full brightness.
+**OFF:** Strobes off.
+**DIM:** Reduced brightness.
 
-Probe Control Switch, EXTEND/RETRACT/EMERG EXTD
-
-**Fuel Dump Switch** · Push button · 1 pin
-
-Fuel Dump Switch, ON/OFF
-
-**External Centerline Tank Fuel Control Switch** · 3-position toggle · 2 pins
-
-External Centerline Tank Fuel Control Switch, STOP/NORM/ORIDE
-
-**External Wing Tanks Fuel Control Switch** · 3-position toggle · 2 pins
-
-External Wing Tanks Fuel Control Switch, STOP/NORM/ORIDE
-
-### COCKPIT MECHANICS (LEFT CONSOLE)
+### FUEL
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Shoulder Harness Control Handle** · 2-position toggle · 1 pin
+Fuel control panel: internal wing tank transfer, refueling probe, fuel dump and external tank transfer.
 
-Shoulder Harness Control Handle, LOCK/UNLOCK
+**INTR WING** · 2-position toggle · 1 pin
 
-**Seat Height Adjustment Switch** · 3-position toggle, spring return · 2 pins
+Controls fuel transfer from the internal wing tanks.
+**NORM:** Wing tanks transfer normally.
+**INHIBIT:** Wing tanks are held full.
 
-Seat Height Adjustment Switch, UP/HOLD/DOWN
+**PROBE** · 3-position toggle · 2 pins
 
-### EXTERIOR LIGHTS (LEFT CONSOLE)
+Moves the air refueling probe.
+**EXTEND:** Probe out for tanking.
+**RETRACT:** Probe stowed.
+**EMERG EXTD:** Extends the probe using emergency power when normal extension fails.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**DUMP** · 2-position toggle · 1 pin
 
-**POSITION Lights Dimmer Control** · Potentiometer · 1 analog input
+Dumps internal fuel overboard down to the reserve level.
+**ON:** Dumping.
+**OFF:** Not dumping.
+DCS flips this switch on each press, so the manager presses it only when the sim and the panel disagree.
 
-**FORMATION Lights Dimmer Control** · Potentiometer · 1 analog input
+**EXT TANK CTR** · 3-position toggle · 2 pins
 
-**STROBE Lights Switch** · 3-position toggle · 2 pins
+Transfer from the centerline drop tank.
+**STOP:** No transfer.
+**NORM:** Transfers when the internal tanks call for it.
+**ORIDE:** Transfers even with weight on wheels.
 
-STROBE Lights Switch, BRT/OFF/DIM
+**EXT TANK WING** · 3-position toggle · 2 pins
 
-### COCKPIT LIGHTS (LEFT CONSOLE)
+Transfer from the wing drop tanks.
+**STOP:** No transfer.
+**NORM:** Transfers when the internal tanks call for it.
+**ORIDE:** Transfers even with weight on wheels.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**HOOK BYPASS Switch** · Push button · 1 pin
-
-HOOK BYPASS Switch, FIELD/CARRIER
-
-### OXYGEN SYSTEM
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**OBOGS Control Switch** · 2-position toggle · 1 pin
-
-OBOGS Control Switch, ON/OFF
-
-**OXY Flow Knob** · Potentiometer · 1 analog input
-
-### INTERCOM (LEFT CONSOLE)
+### APU AND ENGINE CRANK
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**VOX Volume Control Knob** · Potentiometer · 1 analog input
+APU start switch, the engine crank switch used to start each engine from APU air, and the APU READY light.
 
-**ICS Volume Control Knob** · Potentiometer · 1 analog input
+**APU** · 2-position toggle · 1 pin
 
-**RWR Volume Control Knob** · Potentiometer · 1 analog input
+Starts the APU. The switch is held electrically in ON and drops back to OFF about a minute after the second generator comes on line.
+**ON:** Starts the APU.
+**OFF:** Shuts the APU down.
 
-**WPN Volume Control Knob** · Potentiometer · 1 analog input
+**APU READY** · Lamp · output
 
-**MIDS B Volume Control Knob** · Potentiometer · 1 analog input
+Green light: the APU is running and ready to crank an engine.
 
-**MIDS A Volume Control Knob** · Potentiometer · 1 analog input
+**ENG CRANK** · 3-position toggle, spring return · 2 pins
 
-**TACAN Volume Control Knob** · Potentiometer · 1 analog input
+Sends APU air to one engine's starter. Held electrically, it returns to OFF by itself once that engine's generator is on line.
+**LEFT:** Cranks the left engine.
+**OFF:** No engine cranking.
+**RIGHT:** Cranks the right engine. Starting the right engine first gives brake pressure.
 
-**AUX Volume Control Knob** · Potentiometer · 1 analog input
-
-**Comm Relay Switch** · 3-position toggle · 2 pins
-
-Comm Relay Switch, CIPHER/OFF/PLAIN
-
-**COMM G XMT Switch** · 3-position toggle · 2 pins
-
-COMM G XMT Switch, COMM 1/OFF/COMM 2
-
-**IFF Master Switch** · 2-position toggle · 1 pin
-
-IFF Master Switch, EMER/NORM
-
-**IFF Mode 4 Switch** · 3-position toggle · 2 pins
-
-IFF Mode 4 Switch, DIS/AUD /DIS/OFF
-
-**CRYPTO Switch** · 3-position toggle, spring return · 2 pins
-
-CRYPTO Switch, HOLD/NORM/ZERO
-
-**ILS UFC/MAN Switch** · 2-position toggle · 1 pin
-
-ILS UFC/MAN Switch, UFC/MAN
-
-**ILS Channel Selector Switch** · Rotary selector · 20 pins, or 1 analog input
-
-Positions: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.
-
-### ANTENNA SELECTOR
+### FCS
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**COMM 1 Antenna Selector Switch** · 3-position toggle · 2 pins
+Flight control system panel: rudder trim, takeoff trim, FCS reset and the guarded GAIN switch.
 
-COMM 1 Antenna Selector Switch, UPPER/AUTO/LOWER
+**RUD TRIM** · Potentiometer · 1 analog input
 
-**IFF Antenna Selector Switch** · 3-position toggle · 2 pins
+Rudder trim knob. It biases the flight control computers; the pedals do not move.
 
-IFF Antenna Selector Switch, UPPER/BOTH/LOWER
+**T/O TRIM** · Push button · 1 pin
 
-### CMDS (LEFT CONSOLE)
+Button in the center of the rudder trim knob. On the ground, hold it to set roll and yaw trim to neutral and the stabilators to 12 degrees nose up for takeoff. TRIM shows on the DDI until it is let go.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**FCS RESET** · Push button · 1 pin
 
-**Dispense Button - Push to dispense flares and chaff** · Push button · 1 pin
+Resets flight control system faults that have cleared.
 
-### HELMET (LEFT CONSOLE)
+**GAIN** · 2-position toggle · 1 pin
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Guarded. Switches the flight controls to fixed gains when air data is bad.
+**NORM:** Normal gains, guard closed.
+**ORIDE:** Fixed gains for a failed air data system.
 
-**NUC WPN Switch** · 2-position toggle · 1 pin
-
-NUC WPN Switch, ENABLE/DISABLE (no function)
-
-**Left Video Sensor BIT Initiate Pushbutton - Push to initiate BIT** · Push button · 1 pin
-
-### OTHER (LEFT CONSOLE)
+### COMMUNICATION
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**gauge 71** · Lamp · output
+Communication control panel: audio volumes, radio relay and transmit selection, IFF master and Mode 4, crypto, and the ILS channel.
 
-**gauge 74** · Lamp · output
+**VOX** · Potentiometer · 1 analog input
 
-**Left Throttle** · Lamp · output
+Volume for voice-operated intercom.
 
-**Right Throttle** · Lamp · output
+**ICS** · Potentiometer · 1 analog input
 
-**internal Lights 0** · Lamp · output
+Intercom volume.
 
-**internal Lights 1** · Lamp · output
+**RWR** · Potentiometer · 1 analog input
 
-**internal Lights 2** · Lamp · output
+Radar warning receiver tone volume.
 
-**internal Lights 8** · Lamp · output
+**WPN** · Potentiometer · 1 analog input
 
-**internal Lights 3** · Lamp · output
+Weapon tone volume, such as the Sidewinder seeker growl.
 
-**internal Lights 4** · Lamp · output
+**MIDS B** · Potentiometer · 1 analog input
 
-**internal Lights 5** · Lamp · output
+Volume for MIDS voice channel B.
 
-**internal Lights 6** · Lamp · output
+**MIDS A** · Potentiometer · 1 analog input
 
-**Finger Lift 0** · Lamp · output
+Volume for MIDS voice channel A.
 
-**Finger Lift 1** · Lamp · output
+**TCN** · Potentiometer · 1 analog input
 
-**WCA Group Lightness 0** · Lamp · output
+TACAN identifier tone volume.
 
-**WCA Group Lightness 1** · Lamp · output
+**AUX** · Potentiometer · 1 analog input
 
-**WCA Group Lightness 2** · Lamp · output
+Auxiliary audio volume.
 
-**pilot draw** · Lamp · output
+**COMM RLY** · 3-position toggle · 2 pins
 
-**gauge 890** · Lamp · output
+Relays one radio through the other.
+**CIPHER:** Relay in secure mode.
+**OFF:** No relay.
+**PLAIN:** Relay in plain mode.
 
-**gauge 891** · Lamp · output
+**G XMT** · 3-position toggle · 2 pins
 
-**gauge 899** · Lamp · output
+Transmits on the guard frequency with the selected radio.
+**COMM 1:** Guard on radio 1.
+**OFF:** Normal.
+**COMM 2:** Guard on radio 2.
 
-**gauge 900** · Lamp · output
+**IFF MASTER** · 2-position toggle · 1 pin
 
-**gauge 901** · Lamp · output
+**NORM:** Normal replies.
+**EMER:** Replies to every interrogation with the emergency code.
 
-**gauge 902** · Lamp · output
+**MODE 4** · 3-position toggle · 2 pins
 
-**gauge 903** · Lamp · output
+How Mode 4 interrogations are reported to you.
+**DIS/AUD:** Valid interrogations show M4 OK; unknown ones also give an IFF voice alert.
+**DIS:** Valid interrogations show M4 OK; unknown ones give no warning.
+**OFF:** No indication either way.
 
-**gauge 904** · Lamp · output
+**CRYPTO** · 3-position toggle, spring return · 2 pins
 
-**gauge 905** · Lamp · output
+Handles the stored Mode 4 keys. Spring-loaded to NORM from ZERO.
+**HOLD:** Keeps the keys through shutdown. Works only with the gear down.
+**NORM:** Keys are erased when the jet is shut down.
+**ZERO:** Erases the keys immediately. Mode 4 stops working.
 
-**gauge 906** · Lamp · output
+**ILS** · 2-position toggle · 1 pin
 
-**gauge 907** · Lamp · output
+Where the ILS channel comes from.
+**UFC:** Set the channel on the UFC.
+**MAN:** Use the channel knob on this panel.
 
-**gauge 908** · Lamp · output
+**ILS CHANNEL** · Rotary selector · 20 pins, or 1 analog input
 
-**gauge 909** · Lamp · output
+Manual ILS channel, 1 to 20. Used when the ILS switch is in MAN.
 
-**gauge 920** · Lamp · output
-
-**gauge 921** · Lamp · output
-
-**gauge 922** · Lamp · output
-
-**gauge 923** · Lamp · output
-
-**gauge 924** · Lamp · output
-
-**gauge 930** · Lamp · output
-
-**gauge 931** · Lamp · output
-
-**gauge 932** · Lamp · output
-
-**gauge 933** · Lamp · output
-
-**gauge 934** · Lamp · output
-
-**gauge 935** · Lamp · output
-
-**gauge 936** · Lamp · output
-
-### APU CONTROL PANEL
+### ANTENNA SELECT
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**CPT LTS APU READY** · Lamp · output
+Antenna selection for radio 1 and the IFF transponder.
 
-## Glare Shield
+**COMM 1 ANT** · 3-position toggle · 2 pins
 
-### FIRE SYSTEMS
+**UPPER:** Upper antenna.
+**AUTO:** Picks the better antenna.
+**LOWER:** Lower antenna.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**IFF ANT** · 3-position toggle · 2 pins
 
-**Fire Extinguisher Pushbutton** · Push button · 1 pin
+**UPPER:** Upper antenna.
+**BOTH:** Both antennas, the normal setting.
+**LOWER:** Lower antenna.
 
-**APU Fire Warning/Extinguisher Light** · 2-position toggle · 1 pin
-
-**Left Engine/AMAD Fire Warning/Extinguisher Light - (LMB) depress/(RMB) cover control** · 3-position toggle · 2 pins
-
-**Right Engine/AMAD Fire Warning/Extinguisher Light - (LMB) depress/(RMB) cover control** · 3-position toggle · 2 pins
-
-### AOA INDEXER LIGHTS
+### OXYGEN
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**CPT LTS AOA HIGH** · Lamp · output
+Onboard oxygen generating system (OBOGS) controls.
 
-**CPT LTS AOA CENTER** · Lamp · output
+**OBOGS** · 2-position toggle · 1 pin
 
-**CPT LTS AOA LOW** · Lamp · output
+**ON:** Oxygen system running.
+**OFF:** Oxygen system off.
 
-### LH ADVISORY AND THREAT WARNING INDICATOR PANEL
+**OXY FLOW** · Potentiometer · 1 analog input
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Oxygen flow valve, from OFF to maximum.
 
-**CPT LTS FIRE LEFT** · Lamp · output
-
-**CPT LTS MASTER CAUTION** · Lamp · output
-
-**CPT LTS GO** · Lamp · output
-
-**CPT LTS NO GO** · Lamp · output
-
-**CPT LTS L BLEED** · Lamp · output
-
-**CPT LTS R BLEED** · Lamp · output
-
-**CPT LTS SPD BRK** · Lamp · output
-
-**CPT LTS STBY** · Lamp · output
-
-**CPT LTS L BAR RED** · Lamp · output
-
-**CPT LTS REC** · Lamp · output
-
-**CPT LTS L BAR GREEN** · Lamp · output
-
-**CPT LTS XMIT** · Lamp · output
-
-**CPT LTS ASPJ OH** · Lamp · output
-
-### RH ADVISORY AND THREAT WARNING INDICATOR PANEL
+### MC AND HYD ISOL
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**CPT LTS FIRE RIGHT** · Lamp · output
+Mission computer power and the hydraulic isolate override, aft on the left console.
 
-**CPT LTS FIRE APU** · Lamp · output
+**MC** · 3-position toggle, spring return · 2 pins
 
-**CPT LTS RCDR ON** · Lamp · output
+Turns off one mission computer. Spring-loaded from both ends.
+**1 OFF:** Mission computer 1 off.
+**NORM:** Both on.
+**2 OFF:** Mission computer 2 off.
 
-**CPT LTS DISP** · Lamp · output
+**HYD ISOL** · 2-position toggle · 1 pin
 
-**CPT LTS SPARE RH1** · Lamp · output
+**NORM:** Normal hydraulic isolation.
+**ORIDE:** Overrides the isolation valves for a ground test.
 
-**CPT LTS SPARE RH2** · Lamp · output
-
-**CPT LTS SPARE RH3** · Lamp · output
-
-**CPT LTS SPARE RH4** · Lamp · output
-
-**CPT LTS SPARE RH5** · Lamp · output
-
-**CPT LTS SAM** · Lamp · output
-
-**CPT LTS AI** · Lamp · output
-
-**CPT LTS AAA** · Lamp · output
-
-**CPT LTS CW** · Lamp · output
-
-### MASTER ARM LIGHTS
+### LEFT WALL
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**CPT LTS READY** · Lamp · output
+The left cockpit wall: the essential circuit breakers, the countermeasures dispense button and the nuclear weapons switch.
 
-**CPT LTS DISCH** · Lamp · output
+**CB FCS CHAN 1** · 2-position toggle · 1 pin
 
-**CPT LTS AA** · Lamp · output
+Circuit breaker for flight control channel 1. Pull to open it.
+**ON:** Pushed in.
+**OFF:** Pulled out.
 
-**CPT LTS AG** · Lamp · output
+**CB FCS CHAN 2** · 2-position toggle · 1 pin
 
-## Main Panel, Left
+Circuit breaker for flight control channel 2.
+**ON:** Pushed in.
+**OFF:** Pulled out.
 
-### GEAR SYSTEM
+**CB SPD BRK** · 2-position toggle · 1 pin
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Circuit breaker for the speed brake.
+**ON:** Pushed in.
+**OFF:** Pulled out.
 
-**Landing Gear Control Handle** · 3-position toggle · 2 pins
+**CB LAUNCH BAR** · 2-position toggle · 1 pin
 
-Landing Gear Control Handle, (RMB)UP/(LMB)DOWN/(MW)EMERGENCY DOWN
+Circuit breaker for the launch bar. Pulling it removes power from the launch bar system.
+**ON:** Pushed in.
+**OFF:** Pulled out.
 
-**Down Lock Override Button - Push to unlock** · Push button · 1 pin
+**DISPENSE** · Push button · 1 pin
 
-**Anti Skid Switch** · 2-position toggle · 1 pin
+The large red button. Dispenses chaff and flares with the current program.
 
-Anti Skid Switch, ON/OFF
+**NUC WPN** · 2-position toggle · 1 pin
 
-**Emergency/Parking Brake Handle** · 3-position toggle · 2 pins
+**ENABLE:** Enable.
+**DISABLE:** Disable.
+Not modeled in DCS, so it does nothing in the sim.
 
-Emergency/Parking Brake Handle, (LMB)Rotate Left/(RMB)Rotate Right/(MW)Pull-Stow
-
-**Launch Bar Control Switch** · Push button · 1 pin
-
-Launch Bar Control Switch, EXTEND/RETRACT
-
-**Arresting Hook Handle** · 2-position toggle · 1 pin
-
-Arresting Hook Handle, UP/DOWN
-
-### COCKPIT MECHANICS (MAIN PANEL)
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**Canopy Jettison Handle Unlock Button - Press to unlock** · Push button · 1 pin
-
-**Canopy Jettison Handle - Pull to jettison** · 2-position toggle · 1 pin
-
-### EXTERIOR LIGHTS (MAIN PANEL)
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**LDG/TAXI LIGHT Switch** · 2-position toggle · 1 pin
-
-LDG/TAXI LIGHT Switch, ON/OFF
-
-### COCKPIT LIGHTS (MAIN PANEL)
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**MASTER CAUTION Reset Button - Press to reset** · Push button · 1 pin
-
-### MASTER ARM PANEL (MAIN PANEL)
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**Master Mode Button** · Push button · 1 pin
-
-Master Mode Button, A/A
-
-**Master Mode Button** · Push button · 1 pin
-
-Master Mode Button, A/G
-
-**Master Arm Switch** · 2-position toggle · 1 pin
-
-Master Arm Switch, ARM/SAFE
-
-**Emergency Jettison Button** · Push button · 1 pin
-
-**Station Jettison Select Button, CENTER** · 2-position toggle · 1 pin
-
-**Station Jettison Select Button, LEFT IN** · 2-position toggle · 1 pin
-
-**Station Jettison Select Button, LEFT OUT** · 2-position toggle · 1 pin
-
-**Station Jettison Select Button, RIGHT IN** · 2-position toggle · 1 pin
-
-**Station Jettison Select Button, RIGHT OUT** · 2-position toggle · 1 pin
-
-**Selective Jettison Pushbutton** · Push button · 1 pin
-
-**Selective Jettison Knob** · Rotary selector · 5 pins, or 1 analog input
-
-Selective Jettison Knob, L FUS MSL/SAFE/R FUS MSL/ RACK/LCHR /STORES
-
-**IR Cooling Switch** · 3-position toggle · 2 pins
-
-IR Cooling Switch, ORIDE/NORM/OFF
-
-### LEFT DDI
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**Left MDI Brightness Selector Knob** · 3-position toggle · 2 pins
-
-Left MDI Brightness Selector Knob, OFF/NIGHT/DAY
-
-**Left MDI Brightness Control Knob** · Potentiometer · 1 analog input
-
-**Left MDI Contrast Control Knob** · Potentiometer · 1 analog input
-
-**Left MDI PB 1** · Push button · 1 pin
-
-**Left MDI PB 2** · Push button · 1 pin
-
-**Left MDI PB 3** · Push button · 1 pin
-
-**Left MDI PB 4** · Push button · 1 pin
-
-**Left MDI PB 5** · Push button · 1 pin
-
-**Left MDI PB 6** · Push button · 1 pin
-
-**Left MDI PB 7** · Push button · 1 pin
-
-**Left MDI PB 8** · Push button · 1 pin
-
-**Left MDI PB 9** · Push button · 1 pin
-
-**Left MDI PB 10** · Push button · 1 pin
-
-**Left MDI PB 11** · Push button · 1 pin
-
-**Left MDI PB 12** · Push button · 1 pin
-
-**Left MDI PB 13** · Push button · 1 pin
-
-**Left MDI PB 14** · Push button · 1 pin
-
-**Left MDI PB 15** · Push button · 1 pin
-
-**Left MDI PB 16** · Push button · 1 pin
-
-**Left MDI PB 17** · Push button · 1 pin
-
-**Left MDI PB 18** · Push button · 1 pin
-
-**Left MDI PB 19** · Push button · 1 pin
-
-**Left MDI PB 20** · Push button · 1 pin
-
-**Heading Set Switch** · 3-position toggle, spring return · 2 pins
-
-**Course Set Switch** · 3-position toggle, spring return · 2 pins
-
-### IFEI
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**IFEI Mode Button** · Push button · 1 pin
-
-**IFEI QTY Button** · Push button · 1 pin
-
-**IFEI Up Arrow Button** · Push button · 1 pin
-
-**IFEI Down Arrow Button** · Push button · 1 pin
-
-**IFEI ZONE Button** · Push button · 1 pin
-
-**IFEI ET Button** · Push button · 1 pin
-
-**IFEI Brightness Control Knob** · Potentiometer · 1 analog input
-
-**IFEI lt** · Lamp · output
-
-**IFEI buttons lt** · Lamp · output
-
-### INTERCOM (MAIN PANEL)
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**Warning Tone Silence Button - Push to silence** · Push button · 1 pin
-
-### HELMET (MAIN PANEL)
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**HMD OFF/BRT Knob** · Potentiometer · 1 analog input
-
-**Selector Switch** · 3-position toggle · 2 pins
-
-Selector Switch, HMD/LDDI/RDDI
-
-**Selector Switch** · 3-position toggle · 2 pins
-
-Selector Switch, HUD/LDIR/RDDI
-
-**Mode Selector Switch** · 3-position toggle · 2 pins
-
-Mode Selector Switch, MAN/OFF/AUTO
-
-**HUD Video BIT Initiate Pushbutton - Push to initiate BIT** · Push button · 1 pin
-
-### FLAPS, LANDING GEAR AND STORES INDICATOR PANEL
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**CPT LTS CTR** · Lamp · output
-
-**CPT LTS LI** · Lamp · output
-
-**CPT LTS LO** · Lamp · output
-
-**CPT LTS RI** · Lamp · output
-
-**CPT LTS RO** · Lamp · output
-
-**CPT LTS FLAPS** · Lamp · output
-
-**CPT LTS HALF FLAPS** · Lamp · output
-
-**CPT LTS FULL FLAPS** · Lamp · output
-
-**CPT LTS LEFT GEAR** · Lamp · output
-
-**CPT LTS NOSE GEAR** · Lamp · output
-
-**CPT LTS RIGHT GEAR** · Lamp · output
+## Left Vertical Panel
 
 ### LANDING GEAR
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**CPT LTS LDG GEAR HANDLE** · Lamp · output
+Landing gear handle with its warning light, emergency gear extension and the gear-related switches on the left vertical panel.
 
-## Main Panel, Center
+**GEAR HANDLE** · 2-position toggle · 1 pin
+
+The wheel-shaped gear handle. It cannot be raised with weight on the wheels or with the launch bar down.
+**UP:** Gear up.
+**DOWN:** Gear down.
+
+**GEAR HANDLE LIGHT** · Lamp · output
+
+Red light in the gear handle. On while the gear is moving or a main gear link is not locked.
+
+**EMERG GEAR** · 2-position toggle · 1 pin
+
+Emergency gear extension: the gear handle turned 90 degrees and pulled. The gear falls free and locks.
+**NORM:** Handle in normal position.
+**EMERG DOWN:** Handle turned and pulled.
+
+**DOWN LOCK ORIDE** · Push button · 1 pin
+
+Push to release the lock that stops the gear handle going up with weight on wheels.
+
+**WARN TONE SILENCE** · Push button · 1 pin
+
+Silences the landing gear warning tone.
+
+**LAUNCH BAR** · 2-position toggle · 1 pin
+
+Extends the launch bar for a catapult launch. It only extends with weight on wheels.
+**EXTEND:** Launch bar down.
+**RETRACT:** Launch bar up.
+
+**FLAP** · 3-position toggle · 2 pins
+
+Picks the flight control mode for the flaps.
+**AUTO:** Flaps scheduled with angle of attack. Up on the ground.
+**HALF:** Takeoff and landing flaps, up to 30 degrees, below 250 knots.
+**FULL:** Full landing flaps, up to 45 degrees, below 250 knots.
+
+**LDG/TAXI LIGHT** · 2-position toggle · 1 pin
+
+The light on the nose gear. It only comes on with the gear handle down and the gear down.
+**ON:** Light on.
+**OFF:** Light off.
+
+**ANTI SKID** · 2-position toggle · 1 pin
+
+**ON:** Anti-skid braking, for runway landings.
+**OFF:** Anti-skid off, as used on the carrier.
+
+**HOOK BYPASS** · 2-position toggle · 1 pin
+
+Sets how the AOA indexer behaves with the hook up. Held in FIELD by a solenoid; it drops to CARRIER when the hook comes down or power is removed.
+**FIELD:** Indexer lights stay steady with the hook up.
+**CARRIER:** Indexer lights flash if the hook is up.
+
+### SELECTIVE JETTISON
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Selective jettison knob with the JETT push button in its center.
+
+**SEL JETT** · Rotary selector · 5 pins, or 1 analog input
+
+Picks what is jettisoned from the stations chosen with the station jettison buttons. Works with the gear up and the master arm on.
+**L FUS MSL:** Left fuselage missile.
+**SAFE:** Nothing selected.
+**R FUS MSL:** Right fuselage missile.
+**RACK/LCHR:** The stores with their racks or launchers.
+**STORES:** The stores only.
+
+**JETT** · Push button · 1 pin
+
+Push button in the center of the knob. Jettisons what the knob and station buttons select.
+
+### BRAKES
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Emergency and parking brake handle with the brake accumulator pressure gauge, lower left on the main instrument panel.
+
+**BRAKE HANDLE ROTATE** · 3-position toggle, spring return · 2 pins
+
+Turns the emergency and parking brake handle. Turn it counterclockwise and pull for the parking brake; stow it straight for the emergency brake.
+**CCW:** Toward PARK.
+**CW:** Back toward EMERG.
+
+**BRAKE HANDLE PULL** · 2-position toggle · 1 pin
+
+Pulls the emergency and parking brake handle out, or stows it.
+**STOW:** Handle stowed, brakes released.
+**PULL:** Handle pulled, brakes applied.
+
+**BRAKE PRESSURE** · Needle gauge · display<br>
+BRAKE ACCUMULATOR PRESSURE
+
+Brake accumulator pressure. About 3,000 psi is normal; the red line marks 2,000 psi.
+
+### CANOPY JETTISON
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Canopy jettison handle on the left canopy sill, just aft of the instrument panel.
+
+**CANOPY JETT UNLOCK** · Push button · 1 pin
+
+Unlocks the canopy jettison handle.
+
+**CANOPY JETT** · 2-position toggle · 1 pin
+
+Pull aft to jettison the canopy.
+**PUSH:** Stowed.
+**PULL:** Jettisons the canopy.
+
+## Left Instrument Panel
+
+### MASTER ARM
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Master mode buttons, master arm switch and emergency jettison button, top left of the instrument panel.
+
+**A/A** · Push button · 1 pin
+
+Selects the air-to-air master mode.
+
+**A/A LIGHT** · Lamp · output
+
+Air-to-air master mode selected.
+
+**A/G** · Push button · 1 pin
+
+Selects the air-to-ground master mode.
+
+**A/G LIGHT** · Lamp · output
+
+Air-to-ground master mode selected.
+
+**MASTER ARM** · 2-position toggle · 1 pin
+
+**ARM:** Weapons can be released or jettisoned.
+**SAFE:** Weapon release is blocked.
+
+**EMERG JETT** · Push button · 1 pin
+
+Hold for about half a second to jettison the stores on stations 2, 3, 5, 7 and 8.
+
+### LEFT ENGINE FIRE
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Left engine fire warning light, a guarded push button, and the fire extinguisher button with its READY and DISCH lights.
+
+**L FIRE** · 2-position toggle · 1 pin
+
+Guarded push button with the red FIRE light. Lift the guard and push to shut off fuel to the left engine and arm the extinguisher. Push again to open the fuel valve.
+**OUT:** Normal.
+**IN:** Fuel off, extinguisher armed.
+
+**L FIRE LIGHT** · Lamp · output
+
+Fire detected in the left engine or its accessory bay.
+
+**FIRE EXT** · Push button · 1 pin
+
+Discharges the fire bottle into the engine or APU whose fire button is pushed in.
+
+**READY** · Lamp · output
+
+The fire bottle is armed.
+
+**DISCH** · Lamp · output
+
+The fire bottle has been discharged.
+
+### MASTER CAUTION
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+The MASTER CAUTION light, which is also its reset button.
+
+**MASTER CAUTION** · Push button · 1 pin
+
+Push to reset the master caution. Also restacks the caution messages.
+
+**MASTER CAUTION LIGHT** · Lamp · output
+
+Comes on with any caution.
+
+### LEFT WARNING LIGHTS
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Warning, caution and advisory lights on the left side of the glare shield.
+
+**L BLEED** · Lamp · output
+
+Bleed air leak or fire in the left engine ducting. The left bleed valve closes.
+
+**R BLEED** · Lamp · output
+
+Bleed air leak or fire in the right engine ducting.
+
+**SPD BRK** · Lamp · output
+
+The speed brake is not fully in.
+
+**STBY** · Lamp · output
+
+The ECM jammer is warming up.
+
+**L BAR RED** · Lamp · output
+
+Launch bar fault. The nose gear cannot retract.
+
+**L BAR GREEN** · Lamp · output
+
+Launch bar down with weight on wheels.
+
+**REC** · Lamp · output
+
+A threat radar is looking at you.
+
+**XMIT** · Lamp · output
+
+The ECM jammer is transmitting.
+
+**GO** · Lamp · output
+
+Countermeasures self-test passed.
+
+**NO GO** · Lamp · output
+
+Countermeasures self-test failed.
+
+**ASPJ OH** · Lamp · output
+
+The jammer is overheating.
+
+### STATION JETTISON AND GEAR LIGHTS
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Station jettison select buttons over the landing gear and flap position lights.
+
+**CTR** · 2-position toggle · 1 pin
+
+Selects the centerline station for jettison. Lit when selected.
+**OFF:** Not selected.
+**ON:** Selected.
+
+**CTR LIGHT** · Lamp · output
+
+Centerline station selected.
+
+**LI** · 2-position toggle · 1 pin
+
+Selects the left inboard station.
+
+**LI LIGHT** · Lamp · output
+
+Left inboard station selected.
+
+**LO** · 2-position toggle · 1 pin
+
+Selects the left outboard station.
+
+**LO LIGHT** · Lamp · output
+
+Left outboard station selected.
+
+**RI** · 2-position toggle · 1 pin
+
+Selects the right inboard station.
+
+**RI LIGHT** · Lamp · output
+
+Right inboard station selected.
+
+**RO** · 2-position toggle · 1 pin
+
+Selects the right outboard station.
+
+**RO LIGHT** · Lamp · output
+
+Right outboard station selected.
+
+**NOSE** · Lamp · output
+
+Nose gear down and locked.
+
+**LEFT** · Lamp · output
+
+Left main gear down and locked.
+
+**RIGHT** · Lamp · output
+
+Right main gear down and locked.
+
+**HALF** · Lamp · output
+
+HALF flaps selected and below 250 knots.
+
+**FULL** · Lamp · output
+
+FULL flaps selected and below 250 knots.
+
+**FLAPS** · Lamp · output
+
+Flaps not where the switch asks: above 250 knots, a flap fault, spin recovery or GAIN in ORIDE.
+
+### IFEI
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Integrated fuel and engine indicator: engine RPM, temperature, fuel flow, nozzle and oil for each engine, fuel quantity, bingo and the clock. The buttons page through it.
+
+**MODE** · Push button · 1 pin
+
+Two presses bring up the date and time for setting.
+
+**QTY** · Push button · 1 pin
+
+Steps through the tank quantities: total and internal, feed, transfer, wing, external and centerline.
+
+**UP ARROW** · Push button · 1 pin
+
+Raises the bingo fuel setting, or the value being set.
+
+**DOWN ARROW** · Push button · 1 pin
+
+Lowers the bingo fuel setting, or the value being set.
+
+**ZONE** · Push button · 1 pin
+
+Switches the time between local and zulu.
+
+**ET** · Push button · 1 pin
+
+Elapsed time: press to start, again to stop, again to resume. Hold to reset.
+
+**IFEI BRT** · Potentiometer · 1 analog input
+
+Display brightness. Only works with the lighting MODE switch in NITE or NVG.
+
+### VIDEO RECORD
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Video recorder selectors on the lower left of the instrument panel.
+
+**HMD/LDDI/RDDI** · 3-position toggle · 2 pins
+
+Picks what one recorder channel records.
+**HMD:** Helmet display.
+**LDDI:** Left DDI.
+**RDDI:** Right DDI.
+
+**HUD/LDDI/RDDI** · 3-position toggle · 2 pins
+
+Picks what the other recorder channel records.
+**HUD:** Head-up display.
+**LDDI:** Left DDI.
+**RDDI:** Right DDI.
+
+**REC MODE** · 3-position toggle · 2 pins
+
+**MAN:** Records continuously.
+**OFF:** Recorder off.
+**AUTO:** Records when a weapon is released.
+
+### LEFT DDI
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Left digital display indicator with its 20 push buttons and its brightness and contrast knobs.
+
+**LDDI MODE** · Rotary selector · 3 pins, or 1 analog input
+
+**OFF:** Display off.
+**NIGHT:** Dimmer brightness range.
+**DAY:** Brighter range.
+
+**LDDI BRT** · Potentiometer · 1 analog input
+
+Display brightness.
+
+**LDDI CONT** · Potentiometer · 1 analog input
+
+Display contrast.
+Not modeled in DCS, so it does nothing in the sim.
+
+**LDDI PB 1** · Push button · 1 pin
+
+Push button 1. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 2** · Push button · 1 pin
+
+Push button 2. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 3** · Push button · 1 pin
+
+Push button 3. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 4** · Push button · 1 pin
+
+Push button 4. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 5** · Push button · 1 pin
+
+Push button 5. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 6** · Push button · 1 pin
+
+Push button 6. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 7** · Push button · 1 pin
+
+Push button 7. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 8** · Push button · 1 pin
+
+Push button 8. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 9** · Push button · 1 pin
+
+Push button 9. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 10** · Push button · 1 pin
+
+Push button 10. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 11** · Push button · 1 pin
+
+Push button 11. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 12** · Push button · 1 pin
+
+Push button 12. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 13** · Push button · 1 pin
+
+Push button 13. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 14** · Push button · 1 pin
+
+Push button 14. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 15** · Push button · 1 pin
+
+Push button 15. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 16** · Push button · 1 pin
+
+Push button 16. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 17** · Push button · 1 pin
+
+Push button 17. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 18** · Push button · 1 pin
+
+Push button 18. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 19** · Push button · 1 pin
+
+Push button 19. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+**LDDI PB 20** · Push button · 1 pin
+
+Push button 20. Number 1 is the lowest on the left side; the numbers run clockwise.
+
+## Center Instrument Panel
+
+### AOA INDEXER
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Approach angle of attack indexer to the left of the HUD. Works with the gear down and in the air.
+
+**AOA HIGH** · Lamp · output
+
+Slow: angle of attack too high.
+
+**AOA ON SPEED** · Lamp · output
+
+On speed.
+
+**AOA LOW** · Lamp · output
+
+Fast: angle of attack too low.
 
 ### HUD CONTROL PANEL
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**HUD Symbology Reject Switch** · 3-position toggle · 2 pins
+HUD symbology, brightness, video and altitude source controls under the UFC.
 
-HUD Symbology Reject Switch, NORM/REJ 1/REJ 2
+**REJ** · 3-position toggle · 2 pins
 
-**HUD Symbology Brightness Control Knob** · Potentiometer · 1 analog input
+Removes symbology from the HUD.
+**NORM:** All symbology.
+**REJ 1:** Removes Mach, g, bank, the airspeed and altitude boxes and a few more.
+**REJ 2:** Also removes the heading scale, range and timers.
 
-**HUD Symbology Brightness Selector Knob** · 2-position toggle · 1 pin
+**HUD BRT** · Potentiometer · 1 analog input
 
-HUD Symbology Brightness Selector Knob, DAY/NIGHT
+HUD symbol brightness.
 
-**Black Level Control Knob** · Potentiometer · 1 analog input
+**DAY/NIGHT** · 2-position toggle · 1 pin
 
-**HUD Video Control Switch** · 3-position toggle · 2 pins
+**DAY:** Full brightness range.
+**NIGHT:** Dimmer range.
 
-HUD Video Control Switch, W/B /VID/OFF
+**BLK LVL** · Potentiometer · 1 analog input
 
-**Balance Control Knob** · Potentiometer · 1 analog input
+HUD video black level.
 
-**AOA Indexer Control Knob** · Potentiometer · 1 analog input
+**VIDEO** · 3-position toggle · 2 pins
 
-**Altitude Switch** · 2-position toggle · 1 pin
+**W/B:** Video with symbology, white on black.
+**VID:** Video.
+**OFF:** Video off.
 
-Altitude Switch, BARO/RDR
+**BAL** · Potentiometer · 1 analog input
 
-**Attitude Selector Switch** · 3-position toggle · 2 pins
+HUD video balance.
 
-Attitude Selector Switch, INS/AUTO/STBY
+**AOA BRT** · Potentiometer · 1 analog input
 
-### AMPCD
+Brightness of the AOA indexer lights.
+Not modeled in DCS, so it does nothing in the sim.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**ALT** · 2-position toggle · 1 pin
 
-**AMPCD Off/Brightness Control Knob** · Potentiometer · 1 analog input
+**BARO:** Barometric altitude on the HUD.
+**RDR:** Radar altitude on the HUD, marked R, up to 5,000 feet.
 
-**AMPCD Night/Day Brightness Selector, DAY** · Push button · 1 pin
+**ATT** · 3-position toggle · 2 pins
 
-**AMPCD Night/Day Brightness Selector, NGT** · Push button · 1 pin
-
-**AMPCD Symbology Control Switch, UP** · Push button · 1 pin
-
-**AMPCD Symbology Control Switch, DOWN** · Push button · 1 pin
-
-**AMPCD Contrast Control Switch, UP** · Push button · 1 pin
-
-**AMPCD Contrast Control Switch, DOWN** · Push button · 1 pin
-
-**AMPCD Gain Control Switch, UP** · Push button · 1 pin
-
-**AMPCD Gain Control Switch, DOWN** · Push button · 1 pin
-
-**AMPCD PB 1** · Push button · 1 pin
-
-**AMPCD PB 2** · Push button · 1 pin
-
-**AMPCD PB 3** · Push button · 1 pin
-
-**AMPCD PB 4** · Push button · 1 pin
-
-**AMPCD PB 5** · Push button · 1 pin
-
-**AMPCD PB 6** · Push button · 1 pin
-
-**AMPCD PB 7** · Push button · 1 pin
-
-**AMPCD PB 8** · Push button · 1 pin
-
-**AMPCD PB 9** · Push button · 1 pin
-
-**AMPCD PB 10** · Push button · 1 pin
-
-**AMPCD PB 11** · Push button · 1 pin
-
-**AMPCD PB 12** · Push button · 1 pin
-
-**AMPCD PB 13** · Push button · 1 pin
-
-**AMPCD PB 14** · Push button · 1 pin
-
-**AMPCD PB 15** · Push button · 1 pin
-
-**AMPCD PB 16** · Push button · 1 pin
-
-**AMPCD PB 17** · Push button · 1 pin
-
-**AMPCD PB 18** · Push button · 1 pin
-
-**AMPCD PB 19** · Push button · 1 pin
-
-**AMPCD PB 20** · Push button · 1 pin
+Attitude source for the HUD.
+**INS:** Inertial navigation.
+**AUTO:** Picks automatically.
+**STBY:** Standby attitude reference.
 
 ### UFC
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**UFC Function Selector Pushbutton** · Push button · 1 pin
+Up front controller below the HUD: function buttons, option select buttons, keypad, radio volume and channel knobs, ADF switch and brightness.
 
-UFC Function Selector Pushbutton, A/P
+**A/P** · Push button · 1 pin
 
-**UFC Function Selector Pushbutton, IFF** · Push button · 1 pin
+Shows the autopilot modes in the option windows. Does not engage the autopilot by itself.
 
-**UFC Function Selector Pushbutton, TCN** · Push button · 1 pin
+**IFF** · Push button · 1 pin
 
-**UFC Function Selector Pushbutton, ILS** · Push button · 1 pin
+Shows the IFF options.
 
-**UFC Function Selector Pushbutton** · Push button · 1 pin
+**TCN** · Push button · 1 pin
 
-UFC Function Selector Pushbutton, D/L
+Shows the TACAN options and channel.
 
-**UFC Function Selector Pushbutton, BCN** · Push button · 1 pin
+**ILS** · Push button · 1 pin
 
-**UFC Function Selector Pushbutton** · Push button · 1 pin
+Shows the ILS channel and options.
 
-UFC Function Selector Pushbutton, ON/OFF
+**D/L** · Push button · 1 pin
 
-**UFC Option Select Pushbutton 1** · Push button · 1 pin
+Shows the datalink options.
 
-**UFC Option Select Pushbutton 2** · Push button · 1 pin
+**BCN** · Push button · 1 pin
 
-**UFC Option Select Pushbutton 3** · Push button · 1 pin
+Shows the beacon options.
 
-**UFC Option Select Pushbutton 4** · Push button · 1 pin
+**ON/OFF** · Push button · 1 pin
 
-**UFC Option Select Pushbutton 5** · Push button · 1 pin
+Turns the equipment picked with a function button on or off.
 
-**UFC Keyboard Pushbutton, 1** · Push button · 1 pin
+**OSB 1** · Push button · 1 pin
 
-**UFC Keyboard Pushbutton, 2** · Push button · 1 pin
+Option select button 1, the top one. Picks the option shown next to it.
 
-**UFC Keyboard Pushbutton, 3** · Push button · 1 pin
+**OSB 2** · Push button · 1 pin
 
-**UFC Keyboard Pushbutton, 4** · Push button · 1 pin
+Option select button 2.
 
-**UFC Keyboard Pushbutton, 5** · Push button · 1 pin
+**OSB 3** · Push button · 1 pin
 
-**UFC Keyboard Pushbutton, 6** · Push button · 1 pin
+Option select button 3.
 
-**UFC Keyboard Pushbutton, 7** · Push button · 1 pin
+**OSB 4** · Push button · 1 pin
 
-**UFC Keyboard Pushbutton, 8** · Push button · 1 pin
+Option select button 4.
 
-**UFC Keyboard Pushbutton, 9** · Push button · 1 pin
+**OSB 5** · Push button · 1 pin
 
-**UFC Keyboard Pushbutton, 0** · Push button · 1 pin
+Option select button 5, the bottom one.
 
-**UFC Keyboard Pushbutton, CLR** · Push button · 1 pin
+**KEY 1** · Push button · 1 pin
 
-**UFC Keyboard Pushbutton, ENT** · Push button · 1 pin
+Keypad 1.
 
-**UFC I/P Pushbutton** · Push button · 1 pin
+**KEY 2** · Push button · 1 pin
 
-**UFC Emission Control Pushbutton** · Push button · 1 pin
+Keypad 2.
 
-**UFC ADF Function Select Switch** · 3-position toggle · 2 pins
+**KEY 3** · Push button · 1 pin
 
-UFC ADF Function Select Switch, 1/OFF/2
+Keypad 3.
 
-**UFC COMM 1 Volume Control Knob** · Potentiometer · 1 analog input
+**KEY 4** · Push button · 1 pin
 
-**UFC COMM 2 Volume Control Knob** · Potentiometer · 1 analog input
+Keypad 4.
 
-**UFC Brightness Control Knob** · Potentiometer · 1 analog input
+**KEY 5** · Push button · 1 pin
 
-**UFC COMM 1 Channel Selector Knob** · Potentiometer · 1 analog input
+Keypad 5.
 
-**UFC COMM 2 Channel Selector Knob** · Potentiometer · 1 analog input
+**KEY 6** · Push button · 1 pin
 
-## Main Panel, Right
+Keypad 6.
 
-### CONTROL SYSTEM (MAIN PANEL)
+**KEY 7** · Push button · 1 pin
+
+Keypad 7.
+
+**KEY 8** · Push button · 1 pin
+
+Keypad 8.
+
+**KEY 9** · Push button · 1 pin
+
+Keypad 9.
+
+**KEY 0** · Push button · 1 pin
+
+Keypad 0.
+
+**CLR** · Push button · 1 pin
+
+Clears the scratchpad. A second press clears the option windows.
+
+**ENT** · Push button · 1 pin
+
+Enters the scratchpad value.
+
+**I/P** · Push button · 1 pin
+
+IFF identification of position.
+
+**EMCON** · Push button · 1 pin
+
+Stops the radar, radar altimeter and datalink transmitting.
+Not modeled in DCS, so it does nothing in the sim.
+
+**ADF** · 3-position toggle · 2 pins
+
+Automatic direction finding on one of the radios.
+**1:** Radio 1.
+**OFF:** ADF off.
+**2:** Radio 2.
+
+**COMM 1 VOL** · Potentiometer · 1 analog input
+
+Radio 1 volume. Fully counterclockwise turns radio 1 off.
+
+**COMM 2 VOL** · Potentiometer · 1 analog input
+
+Radio 2 volume. Fully counterclockwise turns radio 2 off.
+
+**UFC BRT** · Potentiometer · 1 analog input
+
+Brightness of the option and scratchpad windows.
+
+**COMM 1 CHAN** · Potentiometer · 1 analog input
+
+Radio 1 channel knob: channels 1 to 20, then manual, guard, cue and maritime. Turns without end, so wire an encoder.
+
+**COMM 1 PULL** · Push button · 1 pin
+
+Pull the radio 1 channel knob to show the channel and frequency in the scratchpad for editing.
+
+**COMM 2 CHAN** · Potentiometer · 1 analog input
+
+Radio 2 channel knob, the same as radio 1. Wire an encoder.
+
+**COMM 2 PULL** · Push button · 1 pin
+
+Pull the radio 2 channel knob to edit its channel in the scratchpad.
+
+### AMPCD
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**FLAP Switch** · 3-position toggle · 2 pins
+Center color display with its 20 push buttons, rocker switches and brightness knob, plus the heading and course set switches at its top corners.
 
-FLAP Switch, AUTO/HALF/FULL
+**AMPCD BRT** · Potentiometer · 1 analog input
 
-**Spin Recovery Switch Cover** · 2-position toggle · 1 pin
+Turns the display on and sets its brightness.
 
-Spin Recovery Switch Cover, OPEN/CLOSE
+**NGT** · Push button · 1 pin
 
-**Spin Recovery Switch** · 2-position toggle · 1 pin
+Night brightness: automatic brightness control.
 
-Spin Recovery Switch, RCVY/NORM
+**DAY** · Push button · 1 pin
 
-**Wing Fold Control Handle** · 2-position toggle · 1 pin
+Day brightness: set with the brightness knob.
 
-Wing Fold Control Handle, (RMB)CW/(LMB)CCW/ (MW)PULL/STOW
+**SYM UP** · Push button · 1 pin
 
-### ECS (MAIN PANEL)
+Sharper, dimmer symbols.
+
+**SYM DOWN** · Push button · 1 pin
+
+Wider, brighter symbols.
+
+**GAIN UP** · Push button · 1 pin
+
+Raises the video background brightness.
+
+**GAIN DOWN** · Push button · 1 pin
+
+Lowers the video background brightness.
+
+**CONT UP** · Push button · 1 pin
+
+Raises the contrast.
+
+**CONT DOWN** · Push button · 1 pin
+
+Lowers the contrast.
+
+**HDG** · 3-position toggle, spring return · 2 pins
+
+Heading set switch. Spring-loaded to the center; hold to move the heading bug.
+**RIGHT:** Increase.
+**LEFT:** Decrease.
+
+**CRS** · 3-position toggle, spring return · 2 pins
+
+Course set switch. Spring-loaded to the center; hold to move the course line.
+**RIGHT:** Increase.
+**LEFT:** Decrease.
+
+**AMPCD PB 1** · Push button · 1 pin
+
+Push button 1.
+
+**AMPCD PB 2** · Push button · 1 pin
+
+Push button 2.
+
+**AMPCD PB 3** · Push button · 1 pin
+
+Push button 3.
+
+**AMPCD PB 4** · Push button · 1 pin
+
+Push button 4.
+
+**AMPCD PB 5** · Push button · 1 pin
+
+Push button 5.
+
+**AMPCD PB 6** · Push button · 1 pin
+
+Push button 6.
+
+**AMPCD PB 7** · Push button · 1 pin
+
+Push button 7.
+
+**AMPCD PB 8** · Push button · 1 pin
+
+Push button 8.
+
+**AMPCD PB 9** · Push button · 1 pin
+
+Push button 9.
+
+**AMPCD PB 10** · Push button · 1 pin
+
+Push button 10.
+
+**AMPCD PB 11** · Push button · 1 pin
+
+Push button 11.
+
+**AMPCD PB 12** · Push button · 1 pin
+
+Push button 12.
+
+**AMPCD PB 13** · Push button · 1 pin
+
+Push button 13.
+
+**AMPCD PB 14** · Push button · 1 pin
+
+Push button 14.
+
+**AMPCD PB 15** · Push button · 1 pin
+
+Push button 15.
+
+**AMPCD PB 16** · Push button · 1 pin
+
+Push button 16.
+
+**AMPCD PB 17** · Push button · 1 pin
+
+Push button 17.
+
+**AMPCD PB 18** · Push button · 1 pin
+
+Push button 18.
+
+**AMPCD PB 19** · Push button · 1 pin
+
+Push button 19.
+
+**AMPCD PB 20** · Push button · 1 pin
+
+Push button 20.
+
+### ALR-67
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Left Louver** · Potentiometer · 1 analog input
+Radar warning receiver control panel in the lower center of the instrument panel.
 
-**Right Louver** · Potentiometer · 1 analog input
+**RWR POWER** · 2-position toggle · 1 pin
+
+Turns the radar warning receiver on and off. With power on, the legends on the panel's buttons light.
+**ON:** On.
+**OFF:** Off.
+
+**POWER LIGHT** · Lamp · output
+
+POWER legend: the receiver is on.
+
+**DISPLAY** · Push button · 1 pin
+
+Limits the threat display to the six highest priority emitters, marked L in the status circle. Press again to show them all.
+
+**DISPLAY LIGHT** · Lamp · output
+
+DISPLAY legend.
+
+**LIMIT LIGHT** · Lamp · output
+
+The display is limited to six emitters.
+
+**SPECIAL** · Push button · 1 pin
+
+Special threat display mode.
+
+**SPECIAL LIGHT** · Lamp · output
+
+SPECIAL legend.
+
+**OFFSET** · Push button · 1 pin
+
+Spreads out overlapping threat symbols on the azimuth display. Press again to undo.
+
+**ENABLE LIGHT** · Lamp · output
+
+Offset is on.
+
+**OFFSET LIGHT** · Lamp · output
+
+OFFSET legend.
+
+**BIT** · Push button · 1 pin
+
+Shows the current self-test status on the azimuth display.
+
+**BIT LIGHT** · Lamp · output
+
+BIT legend.
+
+**FAIL LIGHT** · Lamp · output
+
+The periodic self-test found a failure.
+
+**DMR** · Potentiometer · 1 analog input
+
+Brightness of the lights on this panel.
+
+**AUDIO** · Potentiometer · 1 analog input
+
+Audio level.
+Not modeled in DCS, so it does nothing in the sim.
+
+**DIS TYPE** · Rotary selector · 5 pins, or 1 analog input
+
+Which threat type gets display priority, shown in the status circle.
+**N:** Normal.
+**I:** Air intercept radars.
+**A:** Anti-aircraft artillery.
+**U:** Unknown emitters.
+**F:** Friendly emitters.
+
+### DISPENSER AND ECM JETT
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Countermeasures dispenser switch and the ECM jettison button.
+
+**DISPENSER** · 3-position toggle · 2 pins
+
+**BYPASS:** Bypasses the programs: the throttle dispense switch releases two chaff forward, two flares aft.
+**ON:** Programs available after a five second self-test.
+**OFF:** Dispenser off.
+
+**ECM JETT** · 2-position toggle · 1 pin
+
+Releases all chaff and flares on board. Works only in the air, and lights when pressed.
+**OFF:** Out.
+**ON:** Pushed.
+
+**ECM JETT LIGHT** · Lamp · output
+
+ECM jettison selected.
+
+### ECM
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+ALQ-165 jammer mode switch.
+
+**ECM MODE** · Rotary selector · 5 pins, or 1 analog input
+
+**OFF:** Jammer off.
+**STBY:** Warming up; the STBY light is on for about five minutes.
+**BIT:** Self-test.
+**REC:** Receive only.
+**XMIT:** Jams threats.
+
+**AUX REL** · 2-position toggle · 1 pin
+
+Auxiliary release.
+**ENABLE:** Enabled.
+**NORM:** Normal.
+
+### LOWER INSTRUMENTS
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+The cabin pressure altimeter and the standby clock.
+
+**CABIN ALT** · Needle gauge · display<br>
+CABIN PRESSURE ALTIMETER
+
+Cockpit pressure altitude, 0 to 50,000 feet.
+
+**CLOCK** · Aircraft clock · display<br>
+STANDBY CLOCK
+
+Time of day with an elapsed time function.
+
+**hour hand** · Needle · 0 to 12 · 4 pins when physical
+
+**elapsed minutes** · Needle · 0 to 60 · 4 pins when physical
+
+**elapsed seconds** · Needle · 0 to 60 · 4 pins when physical
+
+**minute hand** · Needle · 0 to 60 · 4 pins when physical
+
+## Right Instrument Panel
+
+### LOCK SHOOT
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Lock and shoot lights on the canopy bow above the HUD.
+
+**LOCK** · Lamp · output
+
+Radar is tracking a single target inside maximum range.
+
+**SHOOT** · Lamp · output
+
+Weapon release conditions are met. Flashes inside no-escape range.
+
+**SHOOT STROBE** · Lamp · output
+
+Flashes with a valid shot.
+
+### RIGHT ENGINE AND APU FIRE
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Right engine fire warning light and the APU fire light, both push buttons.
+
+**R FIRE** · 2-position toggle · 1 pin
+
+Guarded push button with the red FIRE light. Lift the guard and push to shut off fuel to the right engine and arm the extinguisher.
+**OUT:** Normal.
+**IN:** Fuel off, extinguisher armed.
+
+**R FIRE LIGHT** · Lamp · output
+
+Fire detected in the right engine bay.
+
+**APU FIRE** · 2-position toggle · 1 pin
+
+Push to shut off the APU and arm the extinguisher for it.
+**OUT:** Normal.
+**IN:** APU fuel off, extinguisher armed.
+
+**APU FIRE LIGHT** · Lamp · output
+
+Fire detected in the APU bay.
+
+### RIGHT WARNING LIGHTS
+
+*Draft: generated from the simulator, not yet checked against a real cockpit.*
+
+Recorder, dispenser and threat warning lights on the right side of the glare shield.
+
+**RCDR ON** · Lamp · output
+
+The video recorder is running.
+
+**DISP** · Lamp · output
+
+A dispense program is ready for the detected threat and waits for your consent.
+
+**SAM** · Lamp · output
+
+A surface-to-air missile radar is locked on.
+
+**AI** · Lamp · output
+
+A hostile air intercept radar is locked on.
+
+**AAA** · Lamp · output
+
+A radar-directed anti-aircraft gun is tracking.
+
+**CW** · Lamp · output
+
+A continuous wave radar, probably guiding a missile.
 
 ### RIGHT DDI
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Right MDI Brightness Selector Knob** · 3-position toggle · 2 pins
+Right digital display indicator, the same as the left one.
 
-Right MDI Brightness Selector Knob, OFF/NIGHT/DAY
+**RDDI MODE** · Rotary selector · 3 pins, or 1 analog input
 
-**Right MDI Brightness Control Knob** · Potentiometer · 1 analog input
+**OFF:** Display off.
+**NIGHT:** Dimmer brightness range.
+**DAY:** Brighter range.
 
-**Right MDI Contrast Control Knob** · Potentiometer · 1 analog input
+**RDDI BRT** · Potentiometer · 1 analog input
 
-**Right MDI PB 1** · Push button · 1 pin
+Display brightness.
 
-**Right MDI PB 2** · Push button · 1 pin
+**RDDI CONT** · Potentiometer · 1 analog input
 
-**Right MDI PB 3** · Push button · 1 pin
+Display contrast.
+Not modeled in DCS, so it does nothing in the sim.
 
-**Right MDI PB 4** · Push button · 1 pin
+**RDDI PB 1** · Push button · 1 pin
 
-**Right MDI PB 5** · Push button · 1 pin
+Push button 1.
 
-**Right MDI PB 6** · Push button · 1 pin
+**RDDI PB 2** · Push button · 1 pin
 
-**Right MDI PB 7** · Push button · 1 pin
+Push button 2.
 
-**Right MDI PB 8** · Push button · 1 pin
+**RDDI PB 3** · Push button · 1 pin
 
-**Right MDI PB 9** · Push button · 1 pin
+Push button 3.
 
-**Right MDI PB 10** · Push button · 1 pin
+**RDDI PB 4** · Push button · 1 pin
 
-**Right MDI PB 11** · Push button · 1 pin
+Push button 4.
 
-**Right MDI PB 12** · Push button · 1 pin
+**RDDI PB 5** · Push button · 1 pin
 
-**Right MDI PB 13** · Push button · 1 pin
+Push button 5.
 
-**Right MDI PB 14** · Push button · 1 pin
+**RDDI PB 6** · Push button · 1 pin
 
-**Right MDI PB 15** · Push button · 1 pin
+Push button 6.
 
-**Right MDI PB 16** · Push button · 1 pin
+**RDDI PB 7** · Push button · 1 pin
 
-**Right MDI PB 17** · Push button · 1 pin
+Push button 7.
 
-**Right MDI PB 18** · Push button · 1 pin
+**RDDI PB 8** · Push button · 1 pin
 
-**Right MDI PB 19** · Push button · 1 pin
+Push button 8.
 
-**Right MDI PB 20** · Push button · 1 pin
+**RDDI PB 9** · Push button · 1 pin
 
-### STANDBY PRESSURE ALTIMETER AAU-52/A
+Push button 9.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**RDDI PB 10** · Push button · 1 pin
 
-**AAU-52 Altimeter Pressure Setting Knob** · Potentiometer · 1 analog input
+Push button 10.
 
-### RADAR ALTIMETER HEIGHT INDICATOR
+**RDDI PB 11** · Push button · 1 pin
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Push button 11.
 
-**Push to Test Switch** · Potentiometer · 1 analog input
+**RDDI PB 12** · Push button · 1 pin
 
-Push to Test Switch, (LMB) activate BIT checks/(MW) rotate clockwise to apply power and set low altitude index pointer
+Push button 12.
 
-### STANDBY ATTITUDE INDICATOR
+**RDDI PB 13** · Push button · 1 pin
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Push button 13.
 
-**SAI Cage Knob** · Push button · 1 pin
+**RDDI PB 14** · Push button · 1 pin
 
-SAI Cage Knob, (LMB) Pull to cage (hold RMB and rotate MW to uncage)/(MW) Adjust miniature airplane
+Push button 14.
 
-**SAI Test Button - Push to test** · Push button · 1 pin
+**RDDI PB 15** · Push button · 1 pin
 
-### RWR (MAIN PANEL)
+Push button 15.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**RDDI PB 16** · Push button · 1 pin
 
-**RWR Intensity Knob** · Potentiometer · 1 analog input
+Push button 16.
 
-### OTHER (MAIN PANEL)
+**RDDI PB 17** · Push button · 1 pin
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Push button 17.
 
-**SAI Slip Ball** · Lamp · output
+**RDDI PB 18** · Push button · 1 pin
 
-**SAI Off flag** · Lamp · output
+Push button 18.
 
-**SAI vertical pointer** · Lamp · output
+**RDDI PB 19** · Push button · 1 pin
 
-**SAI horisontal pointer** · Lamp · output
+Push button 19.
 
-**Emerg Gear Down Handle** · Lamp · output
+**RDDI PB 20** · Push button · 1 pin
 
-**Emerg Park Brake Handle** · Lamp · output
+Push button 20.
 
-**Off Flag ID2163 A** · Lamp · output
-
-**Green Lamp ID2163 A** · Lamp · output
-
-**Left Wheel Brake** · Lamp · output
-
-**Right Wheel Brake** · Lamp · output
-
-**Camera Adjustment** · Lamp · output
-
-### MAP GAIN CONTROL PANEL ASSY
+### IR COOL AND HMD
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**CPT LTS SPN** · Lamp · output
+Sidewinder seeker cooling switch and the helmet display brightness knob.
 
-### STANDBY ATTITUDE INDICATOR (GAUGE)
+**IR COOL** · 3-position toggle · 2 pins
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Cooling for the Sidewinder seekers.
+**ORIDE:** Cools all seekers now.
+**NORM:** Cools the selected missile.
+**OFF:** No cooling.
 
-**SAI manual pitch adjustment** · Lamp · output
+**HMD** · Potentiometer · 1 analog input
 
-### HEIGHT INDICATOR
+Turns the helmet display on and sets its brightness.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**CPT LTS LOW ALT WARN** · Lamp · output
-
-### ARRESTING HOOK CONTROL HANDLE
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**CPT LTS HOOK** · Lamp · output
-
-### CAUTION LIGHT INDICATOR PANEL
+### SPIN RECOVERY
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**CPT LTS CK SEAT** · Lamp · output
+Guarded spin recovery switch and the SPN light. The real jet's manuals forbid using it; DCS models it anyway.
 
-**CPT LTS APU ACC** · Lamp · output
+**SPIN** · 2-position toggle · 1 pin
 
-**CPT LTS BATT SW** · Lamp · output
+Guarded. Puts the flight controls into spin recovery mode.
+**NORM:** Spin recovery engages by itself when its conditions are met.
+**RCVY:** Spin recovery mode whenever the airspeed is about 120 knots.
 
-**CPT LTS FCS HOT** · Lamp · output
+**SPN** · Lamp · output
 
-**CPT LTS GEN TIE** · Lamp · output
+Spin recovery mode.
 
-**CPT LTS SPARE CTN1** · Lamp · output
-
-**CPT LTS FUEL LO** · Lamp · output
-
-**CPT LTS FCES** · Lamp · output
-
-**CPT LTS SPARE CTN2** · Lamp · output
-
-**CPT LTS L GEN** · Lamp · output
-
-**CPT LTS R GEN** · Lamp · output
-
-**CPT LTS SPARE CTN3** · Lamp · output
-
-### STANDBY PRESSURE ALTIMETER AAU-52/A: ALTIMETER 100 FOOT PTR
+### STANDBY INSTRUMENTS
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Altimeter 100 foot Ptr** · Needle gauge · display
+Standby attitude reference, airspeed, altimeter and vertical velocity indicators with their knobs.
 
-Gauge. Shows the sim's value on a needle.
+**SARI** · Standby ADI · display<br>
+STANDBY ATTITUDE REFERENCE INDICATOR
 
-### STANDBY PRESSURE ALTIMETER AAU-52/A: ALTIMETER 1000 FOOT COUNT
+Self-contained gyro for pitch and roll, with a turn needle and slip ball below. An OFF flag shows when it loses power or is caged.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**pitch** · Needle · -1.5708 to 1.5708 · 4 pins when physical
 
-**Altimeter 1000 foot Count** · Needle gauge · display
+**bank** · Needle · -3.14159 to 3.14159 · 4 pins when physical
 
-Gauge. Shows the sim's value on a needle.
+**horizontal pointer** · Needle · -1 to 1 · 4 pins when physical
 
-### STANDBY PRESSURE ALTIMETER AAU-52/A: ALTIMETER 10000 FOOT COUNT
+**miniature airplane** · Needle · 0 to 1 · 4 pins when physical
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**slip ball** · Needle · -1 to 1 · 4 pins when physical
 
-**Altimeter 10000 foot Count** · Needle gauge · display
+**turn needle** · Needle · -4.5 to 4.5 · 4 pins when physical
 
-Gauge. Shows the sim's value on a needle.
+**vertical pointer** · Needle · -1 to 1 · 4 pins when physical
 
-### STANDBY PRESSURE ALTIMETER AAU-52/A: PRESSURE SETTING 0
+**SAI CAGE** · Push button · 1 pin
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Pull to cage the standby attitude indicator.
 
-**pressure setting 0** · Needle gauge · display
+**SAI PITCH ADJ** · Potentiometer · 1 analog input
 
-Gauge. Shows the sim's value on a needle.
+Turn the cage knob to set the zero-pitch mark. Wire an encoder.
 
-### STANDBY PRESSURE ALTIMETER AAU-52/A: PRESSURE SETTING 1
+**SAI TEST** · Push button · 1 pin
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Tests the standby attitude indicator.
 
-**pressure setting 1** · Needle gauge · display
+**STBY AIRSPEED** · Needle gauge · display<br>
+STANDBY AIRSPEED INDICATOR
 
-Gauge. Shows the sim's value on a needle.
+Indicated airspeed, 60 to 850 knots, straight from the left pitot.
 
-### STANDBY PRESSURE ALTIMETER AAU-52/A: PRESSURE SETTING 2
+**STBY ALTIMETER** · Altimeter · display<br>
+STANDBY ALTIMETER
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Barometric altitude. The pointer turns once per 1,000 feet and the drum reads thousands. The window shows the pressure setting, set with ALT SET.
 
-**pressure setting 2** · Needle gauge · display
+**100 ft pointer** · Needle · 0 to 1000 · 4 pins when physical
 
-Gauge. Shows the sim's value on a needle.
+**pressure drum, last digit** · Needle · 0 to 10 · 4 pins when physical
 
-### STANDBY ATTITUDE INDICATOR (GAUGE): SAI PITCH
+**pressure drum, middle digit** · Needle · 0 to 10 · 4 pins when physical
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**pressure drum, first digits** · Needle · 26 to 31 · 4 pins when physical
 
-**SAI Pitch** · Needle gauge · display
+**10,000 ft drum** · Needle · 0 to 9 · 4 pins when physical
 
-Gauge. Shows the sim's value on a needle.
+**1,000 ft drum** · Needle · -1 to 10 · 4 pins when physical
 
-### STANDBY ATTITUDE INDICATOR (GAUGE): SAI BANK
+**ALT SET** · Potentiometer · 1 analog input
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Altimeter setting knob. Also feeds the air data computer. Wire an encoder.
 
-**SAI Bank** · Needle gauge · display
+**STBY VVI** · VVI · display<br>
+STANDBY VERTICAL VELOCITY INDICATOR
 
-Gauge. Shows the sim's value on a needle.
+Rate of climb or descent, up to 6,000 feet per minute.
 
-### STANDBY ATTITUDE INDICATOR (GAUGE): SAI RATE OF TURN
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**SAI Rate Of Turn** · Needle gauge · display
-
-Gauge. Shows the sim's value on a needle.
-
-### AIRSPEED
+### RWR AZIMUTH INDICATOR
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Airspeed** · Needle gauge · display
+Brightness knob of the threat azimuth display on the right side of the instrument panel.
 
-Gauge. Shows the sim's value on a needle.
+**RWR BRT** · Potentiometer · 1 analog input
 
-### VARIOMETER
+Brightness of the threat display.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+## Right Vertical Panel
 
-**Variometer** · Needle gauge · display
-
-Gauge. Shows the sim's value on a needle.
-
-### HYDRAULIC GAUGES: HYD IND BRAKE
+### ARRESTING HOOK
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Hyd Ind Brake** · Needle gauge · display
+Arresting hook handle with the HOOK light.
 
-Gauge. Shows the sim's value on a needle.
+**HOOK** · 2-position toggle · 1 pin
 
-### HYDRAULIC GAUGES: HYD IND LEFT
+**UP:** Hook up.
+**DOWN:** Hook down for an arrested landing.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**HOOK LIGHT** · Lamp · output
 
-**Hyd Ind Left** · Needle gauge · display
+The hook is moving or is not where the handle says.
 
-Gauge. Shows the sim's value on a needle.
-
-### HYDRAULIC GAUGES: HYD IND RIGHT
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**Hyd Ind Right** · Needle gauge · display
-
-Gauge. Shows the sim's value on a needle.
-
-### RADAR ALTIMETER (GAUGE): ALTITUDE POINTER ID2163 A
+### WING FOLD
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Altitude Pointer ID2163 A** · Needle gauge · display
+Wing fold handle: pull it out, then turn it to fold or spread the outer wings.
 
-Gauge. Shows the sim's value on a needle.
+**WING FOLD** · Rotary selector · 3 pins, or 1 analog input
 
-### RADAR ALTIMETER (GAUGE): MIN HEIGHT INDICATOR ID2163 A
+Turns the pulled-out handle.
+**FOLD:** Folds the wings.
+**HOLD:** Stops them where they are.
+**SPREAD:** Spreads the wings.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**WING FOLD PULL** · 2-position toggle · 1 pin
 
-**Min Height Indicator ID2163 A** · Needle gauge · display
+Pull the handle out before turning it; push it in to lock spread wings.
+**STOW:** Pushed in.
+**PULL:** Pulled out.
 
-Gauge. Shows the sim's value on a needle.
-
-## Center Pedestal
-
-### COCKPIT MECHANICS (CENTER PEDESTAL)
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**Rudder Pedal Adjust Lever** · Push button · 1 pin
-
-### MASTER ARM PANEL (CENTER PEDESTAL)
+### RADAR ALTIMETER
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Auxiliary Release Switch** · 2-position toggle · 1 pin
+Radar altitude indicator, 0 to 5,000 feet, with its low altitude warning.
 
-Auxiliary Release Switch, ENABLE/NORM
+**RADAR ALT** · Needle gauge · display<br>
+RADAR ALTITUDE
 
-### RWR (CENTER PEDESTAL)
+Height above the ground or water from 0 to 5,000 feet.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**altitude pointer** · Needle · -10 to 5100 ft · 4 pins when physical
 
-**ALR-67 POWER Pushbutton** · 2-position toggle · 1 pin
+**low altitude index** · Needle · -0.03 to 1 ft · 4 pins when physical
 
-**ALR-67 DISPLAY Pushbutton** · Push button · 1 pin
+**RADALT SET** · Potentiometer · 1 analog input
 
-**ALR-67 SPECIAL Pushbutton** · Push button · 1 pin
+Turn clockwise to switch it on and set the low altitude warning. Wire an encoder.
 
-**ALR-67 OFFSET Pushbutton** · Push button · 1 pin
+**RADALT BIT** · Push button · 1 pin
 
-**ALR-67 BIT Pushbutton** · Push button · 1 pin
+Push the knob to test the radar altimeter.
 
-**ALR-67 DMR Control Knob** · Potentiometer · 1 analog input
+**LOW ALT** · Lamp · output
 
-**ALR-67 AUDIO Control Knob (no function)** · Potentiometer · 1 analog input
+Below the low altitude warning setting.
 
-**ALR-67 DIS TYPE Switch** · Rotary selector · 5 pins, or 1 analog input
+**RADALT GREEN** · Lamp · output
 
-ALR-67 DIS TYPE Switch, N/I/A/U/F
+Built-in test light.
 
-**Fail lt** · Lamp · output
-
-**Bit lt** · Lamp · output
-
-**Enable lt** · Lamp · output
-
-**Offset lt** · Lamp · output
-
-**Special lt** · Lamp · output
-
-**Limit lt** · Lamp · output
-
-**Display lt** · Lamp · output
-
-**Lower lt** · Lamp · output
-
-**Rwr Lights Brightness** · Lamp · output
-
-### CMDS (CENTER PEDESTAL)
+### HYDRAULIC PRESSURE
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**DISPENSER Switch** · 3-position toggle · 2 pins
+Hydraulic pressure for system 1 (left) and system 2 (right).
 
-DISPENSER Switch, BYPASS/ON/OFF
+**HYD PRESS** · Needle gauge · display<br>
+HYDRAULIC PRESSURE
 
-**ECM JETT JETT SEL Button - Push to jettison** · 2-position toggle · 1 pin
+System 1 powers only the flight controls; system 2 also runs the speed brake and the other hydraulic parts.
 
-**ecm Jett** · Lamp · output
+**system 1** · Needle · 0 to 5000 psi · 4 pins when physical
 
-### ICMCP
+**system 2** · Needle · 0 to 5000 psi · 4 pins when physical
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**ECM Mode Switch** · Rotary selector · 5 pins, or 1 analog input
-
-ECM Mode Switch, XMIT/REC/BIT/STBY/OFF
-
-### OTHER (CENTER PEDESTAL)
+### CAUTION LIGHTS
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Rudder** · Lamp · output
+The yellow caution lights on the right vertical panel.
 
-### COCKPIT PRESSURE ALTIMETER
+**CK SEAT** · Lamp · output
+
+The ejection seat is not armed.
+
+**APU ACC** · Lamp · output
+
+APU accumulator pressure too low to start.
+
+**BATT SW** · Lamp · output
+
+Battery switch ON.
+
+**FCS HOT** · Lamp · output
+
+Flight control computers are not cooled enough. Try AV COOL EMERG.
+
+**GEN TIE** · Lamp · output
+
+GEN TIE switch in RESET.
+
+**FUEL LO** · Lamp · output
+
+Less than 800 pounds in a feed tank.
+
+**FCES** · Lamp · output
+
+A flight control function has been lost.
+
+**L GEN** · Lamp · output
+
+Left generator off or failed.
+
+**R GEN** · Lamp · output
+
+Right generator off or failed.
+
+### AV COOL
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Cockpit Pressure Altimeter** · Needle gauge · display
+Avionics cooling switch.
 
-Gauge. Shows the sim's value on a needle.
+**AV COOL** · 2-position toggle · 1 pin
+
+**NORM:** Normal avionics cooling.
+**EMERG:** Emergency cooling, used with FCS HOT.
+DCS flips this switch on each press, so the manager presses it only when the sim and the panel disagree.
 
 ## Right Console
 
-### CONTROL SYSTEM (RIGHT CONSOLE)
+### ELECTRICAL
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**FCS BIT Switch** · Push button · 1 pin
+Battery and generator switches with the battery voltmeter.
 
-### ELECTRIC SYSTEM (RIGHT CONSOLE)
+**BATT** · 3-position toggle · 2 pins
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**ON:** Batteries connect automatically when the bus voltage drops.
+**OFF:** Batteries charge but do not connect.
+**ORIDE:** Connects the emergency battery regardless of the utility battery.
 
-**Battery Switch** · 3-position toggle · 2 pins
+**L GEN** · 2-position toggle · 1 pin
 
-Battery Switch, ON/OFF/ORIDE
+**NORM:** Left generator on.
+**OFF:** Left generator off.
 
-**Left Generator Control Switch** · 2-position toggle · 1 pin
+**R GEN** · 2-position toggle · 1 pin
 
-Left Generator Control Switch, NORM/OFF
+**NORM:** Right generator on.
+**OFF:** Right generator off.
 
-**Right Generator Control Switch** · 2-position toggle · 1 pin
+**VOLTMETER** · Needle gauge · display<br>
+BATTERY VOLTMETER
 
-Right Generator Control Switch, NORM/OFF
+Utility and emergency battery voltage, 16 to 30 volts. Both needles sit at 16 with the battery switch OFF.
 
-### ANTI-ICE
+**utility battery** · Needle · 16 to 30 V · 4 pins when physical
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**emergency battery** · Needle · 16 to 30 V · 4 pins when physical
 
-**Pitot Heater Switch** · Push button · 1 pin
-
-Pitot Heater Switch, ON/AUTO
-
-**Engine Anti-Ice Switch** · 3-position toggle · 2 pins
-
-Engine Anti-Ice Switch, ON/OFF/TEST
-
-### CB (RIGHT CONSOLE)
+### ECS
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**CB FCS CHAN 3** · Push button · 1 pin
+Environmental control: bleed air source, cooling and pressurization modes, cabin and suit temperature, engine anti-ice and pitot heat.
 
-CB FCS CHAN 3, ON/OFF
+**BLEED AIR** · Rotary selector · 4 pins, or 1 analog input
 
-**CB FCS CHAN 4** · Push button · 1 pin
+Where the air conditioning takes its air from.
+**R OFF:** Left engine only.
+**NORM:** Both engines.
+**L OFF:** Right engine only.
+**OFF:** No engine bleed air; ram air is used instead.
 
-CB FCS CHAN 4, ON/OFF
+**AUG PULL** · Push button · 1 pin
 
-**CB HOOK** · Push button · 1 pin
+Pull the bleed air knob to let the APU add air on the ground at low power.
 
-CB HOOK, ON/OFF
+**ECS MODE** · 3-position toggle · 2 pins
 
-**CB LG** · Push button · 1 pin
+**AUTO:** Automatic temperature control.
+**MAN:** Manual temperature control.
+**OFF/RAM:** Air conditioning off, ram air.
 
-CB LG, ON/OFF
+**CABIN PRESS** · 3-position toggle · 2 pins
 
-### COCKPIT MECHANICS (RIGHT CONSOLE)
+**NORM:** Normal pressurization.
+**DUMP:** Dumps cabin pressure.
+**RAM/DUMP:** Dumps pressure and brings in ram air.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**CABIN TEMP** · Potentiometer · 1 analog input
 
-**Canopy Control Switch** · 3-position toggle, spring return · 2 pins
+Cabin temperature.
 
-Canopy Control Switch, OPEN/HOLD/CLOSE
+**SUIT TEMP** · Potentiometer · 1 analog input
 
-**Ejection Control Handle (3 times)** · Push button · 1 pin
+Anti-exposure suit temperature.
 
-**Ejection Seat SAFE/ARMED Handle** · 2-position toggle · 1 pin
+**ENG ANTI ICE** · 3-position toggle · 2 pins
 
-Ejection Seat SAFE/ARMED Handle, SAFE/ARMED
+**ON:** Hot air through the engine inlets.
+**OFF:** Off.
+**TEST:** Triggers the ice caution to test it.
 
-**Ejection Seat Manual Override Handle** · 2-position toggle · 1 pin
+**PITOT HEAT** · 2-position toggle · 1 pin
 
-Ejection Seat Manual Override Handle, PULL/PUSH
+**ON:** Heaters on whenever there is power.
+**AUTO:** Heaters on in the air.
+DCS flips this switch on each press, so the manager presses it only when the sim and the panel disagree.
 
-**Hide Stick toggle** · 2-position toggle · 1 pin
-
-### COCKPIT LIGHTS (RIGHT CONSOLE)
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**CONSOLES Lights Dimmer Control** · Potentiometer · 1 analog input
-
-**INST PNL Dimmer Control** · Potentiometer · 1 analog input
-
-**FLOOD Light Dimmer Control** · Potentiometer · 1 analog input
-
-**MODE Switch** · 3-position toggle · 2 pins
-
-MODE Switch, NVG/NITE/DAY
-
-**CHART Light Dimmer Control** · Potentiometer · 1 analog input
-
-**WARN/CAUTION Dimmer Control** · Potentiometer · 1 analog input
-
-**Lights Test Switch** · Push button · 1 pin
-
-Lights Test Switch, TEST/OFF
-
-### ECS (RIGHT CONSOLE)
+### DEFOG
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Bleed Air Knob** · Rotary selector · 4 pins, or 1 analog input
+Windshield defog handle and windshield anti-ice and rain switch.
 
-Bleed Air Knob, R OFF/NORM/L OFF/OFF
+**DEFOG** · Potentiometer · 1 analog input
 
-**Bleed Air Knob, AUG PULL** · Push button · 1 pin
+Blows warm air on the canopy and windshield.
 
-**ECS Mode Switch** · 3-position toggle · 2 pins
+**WINDSHIELD** · 3-position toggle · 2 pins
 
-ECS Mode Switch, AUTO/MAN/ OFF/RAM
+**ANTI ICE:** Hot air on the windshield.
+**OFF:** Off.
+**RAIN:** Rain removal.
 
-**Cabin Pressure Switch** · 3-position toggle · 2 pins
-
-Cabin Pressure Switch, NORM/DUMP/ RAM/DUMP
-
-**Defog Handle** · Potentiometer · 1 analog input
-
-**Cabin Temperature Knob** · Potentiometer · 1 analog input
-
-**Suit Temperature Knob** · Potentiometer · 1 analog input
-
-**AV COOL Switch** · Push button · 1 pin
-
-AV COOL Switch, NORM/EMERG
-
-**Windshield Anti-Ice/Rain Switch** · 3-position toggle · 2 pins
-
-Windshield Anti-Ice/Rain Switch, ANTI ICE/OFF/RAIN
-
-### SENSOR PANEL
+### INTERIOR LIGHTS
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**RADAR Switch (MW to pull)** · Rotary selector · 4 pins, or 1 analog input
+Interior lighting: console, instrument, flood, chart and warning light brightness, the lighting mode and the lights test.
 
-RADAR Switch (MW to pull), OFF/STBY/OPR/EMERG(PULL)
+**CONSOLES** · Potentiometer · 1 analog input
 
-**INS Switch** · Rotary selector · 8 pins, or 1 analog input
+Console and circuit breaker panel lighting, from OFF to BRT.
 
-INS Switch, OFF/CV/GND/NAV/IFA/GYRO/GB/TEST
+**INST PNL** · Potentiometer · 1 analog input
 
-### INTERCOM (RIGHT CONSOLE)
+Instrument panel, UFC and vertical panel lighting.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**FLOOD** · Potentiometer · 1 analog input
 
-**KY-58 Mode Select Knob** · Rotary selector · 4 pins, or 1 analog input
+White flood lights. No effect in NVG.
 
-KY-58 Mode Select Knob, P/C/LD/RV
+**CHART** · Potentiometer · 1 analog input
 
-**KY-58 Volume Control Knob** · Potentiometer · 1 analog input
+Chart light on the canopy arch.
 
-**KY-58 Fill Select Knob** · Rotary selector · 8 pins, or 1 analog input
+**WARN/CAUT** · Potentiometer · 1 analog input
 
-KY-58 Fill Select Knob, Z 1-5/1/2/3/4/5/6/Z ALL
+Brightness of the warning, caution and advisory lights in their low range.
 
-**KY-58 Power Select Knob** · Rotary selector · 3 pins, or 1 analog input
+**MODE** · 3-position toggle · 2 pins
 
-KY-58 Power Select Knob, OFF/ON/TD
+**DAY:** Full brightness.
+**NITE:** Dimmer warning lights.
+**NVG:** Night vision goggle lighting: dim warning lights, console flood lights.
 
-### TARGETING POD, FLIR
+**LT TEST** · 2-position toggle · 1 pin
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Tests the warning, caution and advisory lights, the AOA indexer and the IFEI.
+**TEST:** Test.
+**OFF:** Normal.
+DCS flips this switch on each press, so the manager presses it only when the sim and the panel disagree.
 
-**FLIR Switch** · 3-position toggle · 2 pins
-
-FLIR Switch, ON/STBY/OFF
-
-**LTD/R Switch** · Push button · 1 pin
-
-LTD/R Switch, ARM/SAFE
-
-**LST/NFLR Switch** · 2-position toggle · 1 pin
-
-LST/NFLR Switch, ON/OFF
-
-### HELMET (RIGHT CONSOLE)
+### SENSORS
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Right Video Sensor BIT Initiate Pushbutton - Push to initiate BIT** · Push button · 1 pin
+Sensor power: radar, inertial navigation, targeting pod, laser and laser spot tracker.
 
-### OTHER (RIGHT CONSOLE)
+**RADAR** · Rotary selector · 4 pins, or 1 analog input
+
+Radar power.
+**OFF:** Radar off.
+**STBY:** Warming up, no transmitting.
+**OPR:** Operating.
+**EMERG:** Operates with the safety interlocks bypassed. Pull the knob to reach it.
+
+**INS** · Rotary selector · 8 pins, or 1 analog input
+
+Inertial navigation mode.
+**OFF:** Off.
+**CV:** Carrier alignment.
+**GND:** Ground alignment.
+**NAV:** Navigating.
+**IFA:** In-flight alignment.
+**GYRO:** Gyro mode.
+**GB:** Gyrocompass backup.
+**TEST:** Test.
+
+**FLIR** · 3-position toggle · 2 pins
+
+Targeting pod power.
+**ON:** Pod on.
+**STBY:** Standby, the detector cools down.
+**OFF:** Pod off.
+
+**LTD/R** · 2-position toggle · 1 pin
+
+Lever-locked laser switch. Held in ARM by a magnet when everything else is ready.
+**ARM:** Laser can fire.
+**SAFE:** Laser blocked.
+
+**LST/NFLR** · 2-position toggle · 1 pin
+
+**ON:** Laser spot tracker on.
+**OFF:** Off.
+
+### KY-58
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**gauge 181** · Lamp · output
+Secure voice panel.
 
-### ELECTRICAL GAUGES: VOLTMETER U
+**KY-58 MODE** · Rotary selector · 4 pins, or 1 analog input
+
+**P:** Plain.
+**C:** Cipher.
+**LD:** Load.
+**RV:** Receive variable.
+
+**KY-58 VOL** · Potentiometer · 1 analog input
+
+Secure voice volume.
+
+**KY-58 FILL** · Rotary selector · 8 pins, or 1 analog input
+
+Picks the fill position for the keys.
+
+**KY-58 POWER** · Rotary selector · 3 pins, or 1 analog input
+
+**OFF:** Off.
+**ON:** On.
+**TD:** Time delay.
+
+### RIGHT WALL
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Voltmeter U** · Needle gauge · display
+The right cockpit wall: canopy switch, FCS BIT switch and circuit breakers.
 
-Gauge. Shows the sim's value on a needle.
+**CANOPY** · 3-position toggle, spring return · 2 pins
 
-### ELECTRICAL GAUGES: VOLTMETER E
+Spring-loaded to HOLD from CLOSE.
+**OPEN:** Raises the canopy.
+**HOLD:** Stops it.
+**CLOSE:** Lowers and locks it.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**FCS BIT** · Push button · 1 pin
 
-**Voltmeter E** · Needle gauge · display
+Hold while pressing FCS RESET to start the flight control self-test.
 
-Gauge. Shows the sim's value on a needle.
+**CB FCS CHAN 3** · 2-position toggle · 1 pin
+
+Circuit breaker for flight control channel 3.
+**ON:** Pushed in.
+**OFF:** Pulled out.
+
+**CB FCS CHAN 4** · 2-position toggle · 1 pin
+
+Circuit breaker for flight control channel 4.
+**ON:** Pushed in.
+**OFF:** Pulled out.
+
+**CB HOOK** · 2-position toggle · 1 pin
+
+Circuit breaker for the arresting hook.
+**ON:** Pushed in.
+**OFF:** Pulled out.
+
+**CB LG** · 2-position toggle · 1 pin
+
+Circuit breaker for the landing gear.
+**ON:** Pushed in.
+**OFF:** Pulled out.
 
 ## Stick and Throttle
 
@@ -1457,84 +2001,103 @@ Gauge. Shows the sim's value on a needle.
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Weapon Release Button** · Push button · 1 pin
+The control stick controls DCS lets you click. The rest of the stick is bound as joystick buttons in DCS.
 
-**RECCE Event Mark Switch** · Push button · 1 pin
+**WPN REL** · Push button · 1 pin
 
-**Autopilot/Nosewheel Steering Disengage (Paddle) Switch** · Push button · 1 pin
+Air-to-ground weapon release button.
 
-**Undesignate/Nose Wheel Steer Switch** · Push button · 1 pin
+**RECCE** · Push button · 1 pin
+
+Reconnaissance event mark.
+
+**UNDESIG/NWS** · Push button · 1 pin
+
+Undesignates a target, or toggles nosewheel steering on the ground.
+
+**PADDLE** · Push button · 1 pin
+
+Disengages the autopilot and nosewheel steering while held.
 
 ### THROTTLE
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**Exterior Lights Switch** · 2-position toggle · 1 pin
+Throttle controls DCS lets you click: the exterior lights master switch and the friction lever.
 
-Exterior Lights Switch, ON/OFF
+**EXT LT** · 2-position toggle · 1 pin
 
-## Canopy and Mirrors
+Exterior lights master switch.
+**ON:** Exterior lights work.
+**OFF:** All off.
 
-### MIRRORS
+**FRICTION** · Potentiometer · 1 analog input
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Throttle friction lever.
 
-**Toggle Mirrors** · 2-position toggle · 1 pin
+## Seat and Other
 
-**Toggle Mirrors** · 2-position toggle · 1 pin
-
-**Toggle Mirrors** · 2-position toggle · 1 pin
-
-### LOCK/SHOOT LIGHT ASSY
+### EJECTION SEAT
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**CPT LTS LOCK** · Lamp · output
+Ejection seat handles and adjustments.
 
-**CPT LTS SHOOT** · Lamp · output
+**SEAT ARM** · 2-position toggle · 1 pin
 
-**CPT LTS SHOOT STROBE** · Lamp · output
+Seat safe and arm handle.
+**ARMED:** Seat armed.
+**SAFE:** Seat safe.
 
-### OTHER (CANOPY AND MIRRORS)
+**EJECT** · Push button · 1 pin
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Ejection handle. DCS needs three pulls.
 
-**mirrors draw** · Lamp · output
+**MAN ORIDE** · 2-position toggle · 1 pin
 
-**mirrors draw** · Lamp · output
+Manual override handle.
+**PULL:** Pulled.
+**PUSH:** Stowed.
 
-**mirrors draw** · Lamp · output
+**HARNESS** · 2-position toggle · 1 pin
 
-## Other
+Shoulder harness lock.
+**LOCK:** Locked.
+**UNLOCK:** Free.
 
-### CLOCK: CLOCK CURRTIME HOURS
+**SEAT HEIGHT** · 3-position toggle, spring return · 2 pins
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+Spring-loaded to the center.
+**UP:** Seat up.
+**HOLD:** Stop.
+**DOWN:** Seat down.
 
-**CLOCK currtime hours** · Needle gauge · display
-
-Gauge. Shows the sim's value on a needle.
-
-### CLOCK: CLOCK CURRTIME MINUTES
-
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
-
-**CLOCK currtime minutes** · Needle gauge · display
-
-Gauge. Shows the sim's value on a needle.
-
-### CLOCK: CLOCK ELAPSED TIME SECONDS
+### MISCELLANEOUS
 
 *Draft: generated from the simulator, not yet checked against a real cockpit.*
 
-**CLOCK elapsed time seconds** · Needle gauge · display
+Cockpit controls that belong to no panel: rudder pedal adjustment, air vents and the video sensor tests.
 
-Gauge. Shows the sim's value on a needle.
+**RUDDER PEDAL ADJ** · Push button · 1 pin
 
-### CLOCK: CLOCK ELAPSED TIME MINUTES
+Unlocks the rudder pedals so they can be moved.
 
-*Draft: generated from the simulator, not yet checked against a real cockpit.*
+**LEFT LOUVER** · Potentiometer · 1 analog input
 
-**CLOCK elapsed time minutes** · Needle gauge · display
+Left air vent.
 
-Gauge. Shows the sim's value on a needle.
+**RIGHT LOUVER** · Potentiometer · 1 analog input
+
+Right air vent.
+
+**L VIDEO BIT** · Push button · 1 pin
+
+Starts the left video sensor self-test.
+
+**R VIDEO BIT** · Push button · 1 pin
+
+Starts the right video sensor self-test.
+
+**HUD VIDEO BIT** · Push button · 1 pin
+
+Starts the HUD video self-test.
