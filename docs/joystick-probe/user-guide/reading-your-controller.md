@@ -3,6 +3,23 @@
 Select a device in the sidebar and everything below updates live (about 60 times
 a second), even when the window isn't focused.
 
+## Which device is that?
+
+The sidebar watches every connected device, not just the one you have
+selected. Press a button, move a hat or move an axis on any controller and its
+row lights a green dot with a badge naming the input, such as **Btn 37**,
+**Hat 1** or **Axis 2**. The badge fades after about a second and a half. Click
+the row to open that device.
+
+![Two unselected devices showing activity badges](images/device-activity.png)
+
+> **Crowded setup tip:** with several sticks, throttles and button boxes plugged
+> in, press the control you're unsure about and watch which row lights up. No
+> need to click through each device to find it.
+
+Small wobble on an axis doesn't count as movement, so a noisy pot won't keep a
+row lit.
+
 ## Buttons
 
 Each button lights **green** while held. The BUTTONS header shows the **last

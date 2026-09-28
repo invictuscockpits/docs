@@ -52,9 +52,11 @@ takes about a minute.
 
 ![The main window](images/main-window.png)
 
-- **Sidebar** — your connected controllers. Click one to select it; the selected
+- **Sidebar**: your connected controllers. Click one to select it; the selected
   device's name turns **green**. Plug a controller in and it appears
-  automatically.
+  automatically. Any device you touch shows a green dot and a badge naming the
+  input, even when it isn't selected (see
+  [Which device is that?](reading-your-controller.md#which-device-is-that)).
 - **X / Y pad** — the first two axes plotted as a moving dot, like a radar scope.
 - **Axes** — every axis with its live position, using the familiar joy.cpl names
   (X Axis, Y Axis, Z Axis, X/Y/Z Rotation, Sliders).
