@@ -3,7 +3,7 @@
 ## Requirements
 
 - Windows
-- A connected controller — joystick, throttle, gamepad, or an AIM Ghost Joystick
+- A connected controller: joystick, throttle, gamepad, or an AIM Ghost Joystick
 
 ## Download
 
@@ -14,10 +14,10 @@ Grab the latest **AIM-Joystick-Probe-Setup.exe** from the
 
 Double-click the installer and follow the wizard. It's signed by Invictus
 Machine LLC, so Windows won't flag it as coming from an unknown publisher, and
-it installs **just for you** — no administrator rights needed. The whole thing
+it installs **just for you**, with no administrator rights needed. The whole thing
 takes about a minute.
 
-1. **Choose how to install.** Pick **Install for me only** — this is the
+1. **Choose how to install.** Pick **Install for me only**. This is the
    recommended option and needs no administrator prompt.
 
    ![Select install mode](images/install-1-mode.png)
@@ -57,10 +57,10 @@ takes about a minute.
   automatically. Any device you touch shows a green dot and a badge naming the
   input, even when it isn't selected (see
   [Which device is that?](reading-your-controller.md#which-device-is-that)).
-- **X / Y pad** — the first two axes plotted as a moving dot, like a radar scope.
-- **Axes** — every axis with its live position, using the familiar joy.cpl names
+- **X / Y pad**: the first two axes plotted as a moving dot, like a radar scope.
+- **Axes**: every axis with its live position, using the familiar joy.cpl names
   (X Axis, Y Axis, Z Axis, X/Y/Z Rotation, Sliders).
-- **POV Hats** — each hat shown as a direction pad.
-- **Buttons** — every button; each lights green when pressed.
+- **POV Hats**: each hat shown as a direction pad.
+- **Buttons**: every button; each lights green when pressed.
 
 At the bottom of the sidebar are **Visit Wiki** and **Report an Issue** links.

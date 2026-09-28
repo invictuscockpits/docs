@@ -26,20 +26,20 @@ Each button lights **green** while held. The BUTTONS header shows the **last
 button pressed** and how many are currently **held**.
 
 > **Binding tip:** when you're assigning controls in DCS or BMS, press the button
-> on your stick and read its number straight off the **last pressed** readout —
-> no counting rows.
+> on your stick and read its number straight off the **last pressed** readout.
+> No counting rows.
 
 If you see a held count without touching anything, that button may be stuck or
 wired closed.
 
 ## Axes
 
-Axes are listed with the standard Windows names — X Axis, Y Axis, Z Axis,
+Axes are listed with the standard Windows names: X Axis, Y Axis, Z Axis,
 X/Y/Z Rotation, Slider 1/2. The bar fills from the centre toward the current
 position, with the exact value (−1.00 … +1.00) on the right.
 
 > A throttle or slider that rests at one end shows its bar fully filled and a
-> value of −1.00. That's normal — move it and the value changes.
+> value of −1.00. That's normal. Move it and the value changes.
 
 ## X / Y pad
 

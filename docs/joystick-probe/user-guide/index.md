@@ -1,7 +1,7 @@
 # AIM Joystick Probe
 
 A modern joystick tester for Windows that shows a controller's **complete**
-button map — all **128** buttons of an AIM Ghost Joystick — not the 32 that
+button map (all **128** buttons of an AIM Ghost Joystick), not the 32 that
 Windows' built-in **joy.cpl** stops at.
 
 ![AIM Joystick Probe](images/main-window.png)
@@ -14,7 +14,7 @@ Windows' Game Controllers panel (`joy.cpl`) reads sticks through the legacy
 reads the device through DirectInput / RawInput instead, so every button, axis,
 and POV hat shows up.
 
-It works with any controller — it just solves the AIM Ghost Joystick case
+It works with any controller; it just solves the AIM Ghost Joystick case
 especially well.
 
 ## What you can do
@@ -22,7 +22,7 @@ especially well.
 - See live **buttons, axes, and POV hats** for any connected controller
 - View the full **128-button** map, with each AIM Ghost button labelled with its
   **F-16C cockpit control**
-- **Test all** — walk every button and confirm none are dead
+- **Test all**: walk every button and confirm none are dead
 - Read the **last button pressed** (handy when binding in DCS or BMS)
 - Keep the window **always on top** of a running sim
 

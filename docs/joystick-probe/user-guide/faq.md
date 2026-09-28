@@ -6,7 +6,7 @@ Ghost Joysticks have 128, so joy.cpl can't show most of them. AIM Joystick Probe
 reads the device a different way (DirectInput / RawInput) with no such cap.
 
 **Does it work with non-AIM controllers?**
-Yes — any joystick, throttle, or gamepad. The cockpit-control labels only apply
+Yes. It reads any joystick, throttle, or gamepad. The cockpit-control labels only apply
 to AIM Ghost Joysticks; other devices simply show button numbers.
 
 **My throttle/slider axis sits at −1.00. Is it broken?**

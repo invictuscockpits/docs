@@ -9,4 +9,4 @@ available, a banner appears across the top of the window:
 - Click **✕** to dismiss the banner for the current session.
 
 If you're offline, already on the latest version, or there are no releases yet,
-no banner appears — the check fails quietly and never interrupts you.
+no banner appears. The check fails quietly and never interrupts you.
