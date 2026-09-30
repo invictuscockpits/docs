@@ -78,7 +78,7 @@ If your device has firmware older than v2.4.2.0, it is not supported by the curr
 
 To update:  
 1. Download the [Legacy Invictus VFT Configurator](https://invictuscockpits.com/pages/invictus-vft-configurator-software).  
-2. Download the [Latest Firmware Release](https://github.com/invictuscockpits/invictus-ssc-firmware/releases/latest) (you will need the `.bin` file — e.g., `InvictusHOTASv2.4.2.8.bin`).  
+2. Download the [Latest Firmware Release](https://github.com/invictuscockpits/invictus-ssc-firmware/releases/latest) (you will need the `.bin` file, e.g., `InvictusHOTASv2.4.2.8.bin`).  
 3. In the legacy Configurator:  
    - Enter **Flasher Mode**.  
    - Select the `.bin` file and flash firmware.  

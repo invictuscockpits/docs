@@ -2,8 +2,8 @@
 
 Two paths are available for updating firmware on your Invictus device:
 
-1. **Firmware Flasher (Recommended)** — update directly from the Configurator over USB.
-2. **ST-Link Recovery** — emergency recovery for devices that can no longer be reached over USB (corrupt bootloader, bricked device).
+1. **Firmware Flasher (Recommended):** update directly from the Configurator over USB.
+2. **ST-Link Recovery:** emergency recovery for devices that can no longer be reached over USB (corrupt bootloader, bricked device).
 
 ---
 

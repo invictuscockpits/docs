@@ -27,6 +27,6 @@ The Configurator allows you to:
 ## Notes
 
 - **Firmware requirement**: Invictus HOTAS Configurator requires firmware **v2.4.2.0 or later**.  
-- Firmware updates are flashed directly from the Configurator — no separate tools are needed in most cases.  
+- Firmware updates are flashed directly from the Configurator; no separate tools are needed in most cases.  
 - The Configurator is designed specifically for Invictus hardware. It is **not** a general-purpose joystick builder tool.  
 - For open-source firmware reference, see the [FreeJoy project](https://github.com/FreeJoy-Team/FreeJoy).

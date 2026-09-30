@@ -1,6 +1,6 @@
 # Axes Curves
 
-> ⚠️ **Archived — Axes Curves tab is hidden in v2.4.2.4 and later.**  
+> ⚠️ **Archived: the Axes Curves tab is hidden in v2.4.2.4 and later.**  
 > The tab has been removed from the Configurator UI pending a marker-alignment fix. Devices with saved curves in flash retain them, and the feature may return in a future release. This page is preserved for reference.
 
 The **Axes Curves** tab lets you reshape how raw input values are translated into output values seen by Windows and simulators.  

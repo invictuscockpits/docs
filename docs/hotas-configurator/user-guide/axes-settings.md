@@ -81,7 +81,7 @@ This is especially important on the pitch axis, since up and down forces differ.
 - Smooths noisy input.  
 - Levels: **Off, 1–7** (higher = smoother but slower).  
 
-Note: Strain gauges are very sensitive. Filtering can reduce jitter, but at the expense of responsiveness. Use sparingly — for force-sensing grips, **Hysteresis Compensation** is usually the better tool.
+Note: Strain gauges are very sensitive. Filtering can reduce jitter, but at the expense of responsiveness. Use sparingly. For force-sensing grips, **Hysteresis Compensation** is usually the better tool.
 
 ### **Hysteresis Compensation**
 Force-sensing grips exhibit mechanical hysteresis: the flexure doesn't return to exactly the same ADC value after every release, so axis output can drift slightly off zero at rest. A large static deadband hides this but robs you of the fine-control value of a force sensor.

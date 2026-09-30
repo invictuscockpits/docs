@@ -199,7 +199,7 @@ If anchors are accidentally overwritten or corrupted:
   - You are Invictus staff finalizing calibration.
 - Lock anchors to protect against accidental changes; you can unlock them if recalibration is needed.
 - When **Importing Anchors**, only use files that were exported from the same device.
-- Treat anchors as **factory calibration** unique to your device — they cannot be transferred between devices.  
+- Treat anchors as **factory calibration** unique to your device; they cannot be transferred between devices.  
 
 ---
 
