@@ -34,6 +34,16 @@ The arrow buttons beside the live state drive the control from the manager, whic
 
 ---
 
+## Panel backlight
+
+The **Backlight** slider at the top of Console Panels sets the brightness of every panel's backlight, on every board. AIM boards dim the lights on their backlight connectors. On Open Hardware boards, each panel's backlight is the pin you gave it in the setup wizard; see [Open Hardware](open-hardware.md).
+
+![The Backlight slider at the top of Console Panels](images/console-panels-backlight.png)
+
+The manager remembers the level and sets each board to it as the board connects.
+
+---
+
 ## Calibrate a potentiometer
 
 Raw pot readings rarely span the full range the sim expects. Calibration tells the manager where the physical minimum and maximum are, so it can translate them accurately.

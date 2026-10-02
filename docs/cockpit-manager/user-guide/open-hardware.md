@@ -84,6 +84,10 @@ The wizard is the same one AIM boards use, minus the network step:
 
 The manager keeps your setup and sends it to the board every time it connects, so you can edit it later whether or not the board is plugged in.
 
+Every panel also gets a **PANEL BACKLIGHT** row at the end of its controls. It is optional: give it a pin if that panel's backlight runs from this board. Pick a pin that can dim (see [Pin numbers by board](#pin-numbers-by-board) below). The wizard won't finish with a backlight on a pin that can't dim, and Auto-assign leaves these rows alone. The **Backlight** slider on Console Panels then dims every panel together. See [Test and Calibrate](test-and-calibrate.md).
+
+![A panel's backlight row in the wizard, on pin 9 of a Nano](images/open-hardware-backlight-pin.png)
+
 ### 4. Wire it
 
 The board's inputs use built-in pull-ups, so every switch closes to ground.
@@ -96,8 +100,11 @@ The board's inputs use built-in pull-ups, so every switch closes to ground.
 | Encoder, or a pot wired as one | Common to GND, A and B to the two assigned pins. Calibrate it from Console Panels after the upload |
 | Potentiometer | Outer legs to the board's 3.3 V (or 5 V on a 5 V board) and GND, wiper to the assigned analog pin |
 | Indicator lamp | Assigned pin, through a resistor of about 330 Ω, to an LED, to GND |
+| Panel backlight | Assigned pin to the gate of a logic-level N-channel MOSFET, with a 10 kΩ resistor from the gate to GND. The MOSFET's source to GND, its drain to the backlight's negative side, and the backlight's positive side to its own supply. Join that supply's ground to the board's GND |
 
 A board pin can light an LED. It cannot drive a 12 V lamp, a relay or a motor. Anything bigger than an LED needs a driver between the pin and the load.
+
+For a backlight, pick a MOSFET that turns fully on at your board's pin voltage: 3.3 V on a Pico or Teensy, 5 V on most Arduinos.
 
 ### 5. Learn the wiring instead of assigning it
 
@@ -120,7 +127,7 @@ Lamps normally follow the sim. To check a freshly wired one, open **Console Pane
 
 The wizard uses each board's own pin numbers, so the number on the board's silkscreen is the number you pick.
 
-| Board | Switches and lamps | Dimmable lamps | Analog inputs |
+| Board | Switches and lamps | Dimmable (lamps and backlights) | Analog inputs |
 |---|---|---|---|
 | Raspberry Pi Pico | GP1 to GP22 | All of them | GP26, GP27, GP28 |
 | Arduino Nano | 2 to 12, A0 to A3 | 3, 5, 6, 9, 10, 11 | A4 to A7 |
@@ -134,6 +141,42 @@ The wizard uses each board's own pin numbers, so the number on the board's silks
 | Teensy LC | 1 to 12 | 3, 4, 6, 9, 10 | A0 to A9 |
 
 On the Pico, the numbers are the GP numbers printed next to the pins, not the pin count along the board edge. GP1 is the second pin from the corner.
+
+---
+
+## Connect boards over RS-485 (experimental)
+
+> [!NOTE]
+> RS-485 is new and hasn't been tested on every board yet. If a bus gives you trouble, set the board back to USB and tell us with **Report an Issue**.
+
+RS-485 lets several boards share one USB connection. One board, the bus master, plugs into the PC. The others connect to it through RS-485 transceiver modules on a twisted pair, and each one still shows up on the DIY Devices page as its own board.
+
+| Board | On a bus | As the bus master |
+|---|---|---|
+| Arduino Nano, Uno, Pro Mini | Yes. The bus uses its USB pins, so it can't be plugged into USB at the same time | No |
+| Arduino Mega 2560 | Yes | Up to three buses |
+| Pro Micro, Leonardo, Micro | Yes | No |
+| Teensy | Yes | No |
+| Raspberry Pi Pico | Yes | Up to two buses |
+
+### Set up the boards
+
+1. Set each board up over USB first: install the firmware and run the wizard, as above.
+2. With the board plugged in, click **Connection** next to it on the DIY Devices page. Choose **On an RS-485 bus**, give it a **Bus address**, and click **Save**. Every board on the same bus needs its own address, from 1 to 126.
+3. Wire it the way the dialog says: the board's TX pin to the module's DI, its RX pin to RO, and the enable pin to DE and RE tied together.
+4. For the board that plugs into the PC, choose **Bus master** instead, pick how many buses it runs, and click **Save**. Each bus needs its own module. The dialog lists the pins for each one.
+
+![The Connection dialog, setting a Mega up as a board on a bus](images/open-hardware-rs485-connection.png)
+
+### Wire the bus
+
+- Run A to A and B to B on every module, on a twisted pair, and join the GNDs.
+- Only the modules at the two ends of the bus should have a 120 Ω terminating resistor. Many modules come with one fitted. Take it off the modules in between.
+- Match the module to the board. MAX485 modules are 5 V parts for 5 V Arduinos. A Pico or Teensy needs a 3.3 V module, such as one with a MAX3485 or SP3485. A 5 V module can damage a 3.3 V board's pins.
+
+Plug the bus master into the PC. The boards on the bus show up on the DIY Devices page through it.
+
+To take a board off the bus, plug it into USB, click **Connection**, choose **USB to this PC** and click **Save**.
 
 ---
 
@@ -156,6 +199,7 @@ On the Pico, the numbers are the GP numbers printed next to the pins, not the pi
 | A switch reads backwards | In Console Panels, click the ⋯ button on the control's row and choose Invert switch wiring. |
 | Learn mode recorded the wrong pin on a three-position toggle | Move the switch to the center first, then to the position the prompt asks for, and learn it again. |
 | The lamp lights in the manager but not on the board | Check the LED direction and the resistor. The lamp's cell is wired to the pin assigned to that slot. |
+| A board on an RS-485 bus never shows up | Check that each board on the bus has its own address, that A and B aren't swapped, and that only the two end modules have a terminating resistor. |
 
 ---
 

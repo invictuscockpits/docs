@@ -40,6 +40,10 @@ How often the manager refreshes its connection to DCS. The default is fine for n
 
 How often DCS sends cockpit state updates back to the manager. Higher values feel more responsive but use more CPU. 20 Hz is a good balance; 60 Hz is the maximum.
 
+**Sync panels at mission start** *(default: off, experimental)*
+
+When a mission starts in DCS, or you enter the cockpit in BMS, the manager sets the sim's switches and knobs to match your panels. Off, the sim starts the way the mission set it up. The manager asks you to confirm before turning it on.
+
 **BMS display refresh rate** *(default: 30 Hz)*
 
 How often BMS renders the exported cockpit display textures that RTTClient draws on your secondary monitors. Higher is smoother but costs BMS GPU and CPU. This setting takes effect the next time you click **Apply BMS Displays** in the Multi-Display Management dialog and restart BMS.
