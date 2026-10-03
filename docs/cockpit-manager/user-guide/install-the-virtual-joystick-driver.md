@@ -40,7 +40,7 @@ The top of the dialog shows the **AIM GHOST JOYSTICKS** status.
 
 Your installed driver is older than the one this manager version ships. Click **Update driver** and approve the Windows administrator prompt. The manager replaces the driver and rebuilds your joysticks with the same names and numbering, so your keyfile and bindings still apply.
 
-Updating matters: driver **1.0.1.0** (shipped with manager 1.6.2) fixes a bug where the virtual joysticks quietly used far more CPU than they should, even with nothing running. If Task Manager shows `WUDFHost.exe` busy on an idle PC, this is the fix.
+Updating matters. Driver **1.0.2.0** (shipped with manager 2.2.1) sends each switch or axis change once. Earlier drivers sent it 10 to 60 times over, which cost CPU in every program reading the joysticks. Driver **1.0.1.0** (manager 1.6.2) fixed the virtual joysticks using far more CPU than they should with nothing running: if Task Manager shows `WUDFHost.exe` busy on an idle PC, update.
 
 ## Check it worked
 
