@@ -52,15 +52,30 @@ takes about a minute.
 
 ![The main window](images/main-window.png)
 
-- **Sidebar**: your connected controllers. Click one to select it; the selected
-  device's name turns **green**. Plug a controller in and it appears
-  automatically. Any device you touch shows a green dot and a badge naming the
-  input, even when it isn't selected (see
-  [Which device is that?](reading-your-controller.md#which-device-is-that)).
-- **X / Y pad**: the first two axes plotted as a moving dot, like a radar scope.
-- **Axes**: every axis with its live position, using the familiar joy.cpl names
-  (X Axis, Y Axis, Z Axis, X/Y/Z Rotation, Sliders).
-- **POV Hats**: each hat shown as a direction pad.
-- **Buttons**: every button; each lights green when pressed.
+**Sidebar.** Your connected controllers. Click one to select it; the selected
+device's name turns **green**. Plug a controller in and it appears
+automatically. Any device you touch shows a green dot and a badge naming the
+input, even when it isn't selected (see
+[Which device is that?](reading-your-controller.md#which-device-is-that)).
+At the bottom: **Save snapshot**, **Copy diagnostics**, **Visit Wiki** and
+**Report an Issue**.
 
-At the bottom of the sidebar are **Visit Wiki** and **Report an Issue** links.
+**Header.** The selected device's name and counts of its buttons, axes and
+hats, its [report rate](reading-your-controller.md#report-rate) in Hz, and
+the **settings gear** (see
+[Settings](settings-snapshots-and-diagnostics.md#settings)).
+
+**Cards.** Each part of the device has its own card:
+
+- **X / Y**: the first two axes plotted as a moving dot, with a trail
+- **Centering**: where the stick comes to rest each time you let go, magnified
+- **Axes**: every axis with its travel, noise and resolution
+- **History**: the last 5 seconds of one axis or all of them
+- **POV Hats**: each hat as a direction pad
+- **Force Feedback**: test effects on force feedback devices (experimental)
+- **Buttons**: every button; each lights green when pressed
+- **Event Log**: every press, release and hat move, with switch bounce flagged
+
+Click a card's title to collapse it to its header, and the **(i)** in its
+corner to open its section of this guide. Cards only appear when the device
+has what they show, and you can hide any of them in Settings.

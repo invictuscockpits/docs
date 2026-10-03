@@ -7,7 +7,9 @@ joy.cpl can show, which is the main reason this tool exists.
 ## Full 128-button map
 
 Select an **AIM Ghost Joystick** in the sidebar and you'll see all 128 buttons
-and its 8 axes, live.
+and its 8 axes, live. The axes are named the way Windows names them: X Axis,
+Y Axis, Z Axis, X / Y / Z Rotation, then **Dial** and **Slider** for the
+seventh and eighth.
 
 ## Button → cockpit control
 

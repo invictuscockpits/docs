@@ -128,7 +128,11 @@ nav:
           - joystick-probe/user-guide/index.md
           - Getting Started: joystick-probe/user-guide/getting-started.md
           - Reading Your Controller: joystick-probe/user-guide/reading-your-controller.md
+          - Axes and Sensors: joystick-probe/user-guide/axes-and-sensors.md
+          - Event Log: joystick-probe/user-guide/event-log.md
           - Test-All Mode: joystick-probe/user-guide/test-all-mode.md
+          - Force Feedback: joystick-probe/user-guide/force-feedback.md
+          - Settings, Snapshots and Diagnostics: joystick-probe/user-guide/settings-snapshots-and-diagnostics.md
           - AIM Ghost Joysticks: joystick-probe/user-guide/aim-ghost-joysticks.md
           - Updates: joystick-probe/user-guide/updates.md
           - FAQ: joystick-probe/user-guide/faq.md
