@@ -6,7 +6,7 @@
 
 The manager checks for updates against the GitHub releases page for `invictuscockpits/aim-cockpit-manager-releases`. When a newer version is found, a banner appears at the top of the app window. The manager downloads the installer in the background; you run it when ready.
 
-**Auto-check on launch** is on by default. You can turn it off in **Settings → Check for updates on launch** if you prefer to check manually.
+**Automatic checks** are on by default: the manager checks when it starts, every few hours while it runs, and when you open it from the system tray. If a new version comes out while the manager sits in the tray, a Windows notification says so; click it to open the manager. You can turn this off in **Settings → Check for updates automatically**.
 
 ---
 
@@ -24,7 +24,7 @@ When the download completes:
 
 > **AIM Cockpit Manager X.Y.Z is ready to install.**
 
-Click **Run installer**. The installer launches with a standard Windows UAC prompt. Follow the prompts. The installer closes the manager automatically before replacing files.
+Click **Run installer**. The manager checks that the installer is signed by Invictus Machine LLC, then starts it. Follow the prompts. The installer closes the manager automatically before replacing files.
 
 The **View release notes** button opens the GitHub release page in your browser at any point during the process.
 
@@ -32,7 +32,9 @@ The **View release notes** button opens the GitHub release page in your browser 
 
 ## Check for updates manually
 
-Go to **Settings** and click **CHECK NOW** under the Software section. If an update is found, it switches to **GET UPDATE** and the banner appears at the top of the window.
+Click the version number at the bottom of the left sidebar. It shows **Checking for updates…**, then **up to date**, or the new version with the banner at the top of the window.
+
+You can also go to **Settings** and click **CHECK NOW** under the Software section. If an update is found, it switches to **GET UPDATE** and the banner appears.
 
 ---
 
@@ -40,7 +42,9 @@ Go to **Settings** and click **CHECK NOW** under the Software section. If an upd
 
 | Problem | Fix |
 |---|---|
-| No banner appears even though you expect an update | Go to Settings and click CHECK NOW. If it still doesn't find one, confirm the release is published on the releases page. |
+| No banner appears even though you expect an update | Click the version number at the bottom of the sidebar. If it still doesn't find one, confirm the release is published on the releases page. |
+| "Download failed: the download stopped" or "doesn't match the release" | The download was cut off or damaged, so the manager threw it away. Click **Download** again. |
+| "The downloaded installer isn't validly signed" | Click **Download** again. If it keeps happening, get the installer from the releases page. |
 | "GitHub returned HTTP 403" error | The GitHub API rate limit was hit. Wait a few minutes and try again. |
 | Network error | Check your internet connection. The manager needs access to `api.github.com`. |
 | Installer fails to launch | The download may be incomplete. Try clicking Download again to re-fetch. |

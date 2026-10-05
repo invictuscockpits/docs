@@ -22,7 +22,7 @@ Firmware is published on the [aim-panel-firmware releases page](https://github.c
 
 The two are not interchangeable. Download the one matching your board.
 
-From manager v1.5.0, you don't need to visit the page at all: select your board on the Firmware page and click **Check for updates**. If a newer version exists, a banner appears with a **Download** button that stages the correct file for your board automatically; then click **Upload & flash**.
+From manager v1.5.0, you don't need to visit the page at all: select your board on the Firmware page and click **Check for firmware updates**. If a newer version exists, a banner appears with a **Download** button that stages the correct file for your board automatically; then click **Upload & flash**. Otherwise the page says the board is up to date.
 
 ---
 

@@ -109,13 +109,13 @@ Backs up and restores DCS bindings and the BMS keyfile, and exports or imports t
 
 ## Software
 
-**Check for updates on launch** *(default: on)*
+**Check for updates automatically** *(default: on)*
 
-Automatically checks the manager release page each time the app starts and shows a banner if a newer version is available. See [Update the Manager](update-the-manager.md).
+Checks the manager release page when the app starts, then every few hours while it runs, including from the system tray, and shows a banner if a newer version is available. See [Update the Manager](update-the-manager.md).
 
 **Version and update status**
 
-Shows the installed manager version and whether an update is available. The **CHECK NOW** button triggers a manual check. If an update is available, a **GET UPDATE** button opens the releases page. See [Update the Manager](update-the-manager.md).
+Shows the installed manager version and whether an update is available. The **CHECK NOW** button triggers a manual check. The version is also at the bottom of the left sidebar; clicking it checks too. If an update is available, a **GET UPDATE** button opens the releases page. See [Update the Manager](update-the-manager.md).
 
 ---
 
