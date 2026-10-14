@@ -1,12 +1,9 @@
 site_name: Invictus Cockpits Documentation
 site_url: https://docs.invictuscockpits.com
-repo_url: https://github.com/invictuscockpits/docs
-repo_name: invictuscockpits/docs
-edit_uri: edit/main/docs/
 
 theme:
   name: material
-  logo: assets/pilot-logo-white.svg
+  logo: assets/invictus-logo-2026.png
   favicon: assets/favicon.png
   palette:
     - media: "(prefers-color-scheme: dark)"
@@ -32,7 +29,6 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
-    - content.action.edit
 
 extra_css:
   - assets/extra.css
