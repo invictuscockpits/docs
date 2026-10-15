@@ -35,7 +35,7 @@ AIM hardware never needs a key. Buy one at [invictuscockpits.com](https://invict
 
 Clones work. Go by the chip on the board, not the name on the box: an Elegoo board with an ATmega2560 on it is a Mega 2560 as far as the manager is concerned, and one with an ATmega328P is an Uno.
 
-ESP32 boards run the AIM Open Firmware instead of the install card. That firmware is documented separately.
+An ESP32-S2 Mini with an SSD1322 display can be made into a DED or PFLD from the install card too. See [DED and PFLD screens](#ded-and-pfld-screens) below.
 
 > [!TIP]
 > Use a USB cable that carries data. Many cables that come with phone chargers carry power only, and the board will never show up.
@@ -123,6 +123,37 @@ Lamps normally follow the sim. To check a freshly wired one, open **Console Pane
 
 ---
 
+## DED and PFLD screens
+
+An ESP32-S2 Mini with a 3.12 inch SSD1322 OLED (256 by 64, 4-wire SPI) can be a DED or a PFLD. The manager sends it the same lines the cockpit shows, from DCS or BMS. One board runs one screen, so a DED and a PFLD need a board each.
+
+### Install the display firmware
+
+1. Unplug the S2 Mini, hold its **BOOT** button (marked 0 on some boards), and plug it back in.
+2. In the **Install the firmware** card, pick **DED or PFLD display, ESP32-S2 Mini** and the port that appeared, then click **Install**.
+3. When the install finishes, unplug the board and plug it back in.
+
+### Wire the screen
+
+| Display | S2 Mini |
+|---|---|
+| Clock (SCL, CLK) | 7 |
+| Data (SDA, DIN) | 11 |
+| Chip select (CS) | 12 |
+| Data/command (DC) | 9 |
+| Reset (RES) | 5 |
+| Power and ground | 3V3 and GND |
+
+These are the board's usual pins. To use others, wire the screen the way that suits you, then pick the pins in the **Display wiring** card at the bottom of the DIY Devices page and click **Save pins**. The screen restarts on the new pins.
+
+### Pick what it shows
+
+Each display board has its own row under **Your devices**. Set **SHOWS** on that row to **DED** or **PFLD**. It changes right away, and the board remembers it.
+
+The screen shows the AIM logo until the sim sends it something. Start a mission with the manager running.
+
+---
+
 ## Pin numbers by board
 
 The wizard uses each board's own pin numbers, so the number on the board's silkscreen is the number you pick.
@@ -185,6 +216,7 @@ To take a board off the bus, plug it into USB, click **Connection**, choose **US
 - **Edit setup** on the DIY Devices page reopens the wizard for that board.
 - **Delete** removes the board from the manager and resets it. The board forgets its setup and comes back as a new device.
 - **Recently deleted** brings a deleted board back. If it is plugged in, its setup is sent straight back to it.
+- A note like **Firmware v1.4.0 available** on a board's row means the manager has newer firmware for that board. Click **Update** next to it. The board restarts and gets its setup back.
 
 ---
 
@@ -195,6 +227,7 @@ To take a board off the bus, plug it into USB, click **Connection**, choose **US
 | The board is not in the install card's port list | Use a cable that carries data. Close the Arduino IDE. Try another USB port. |
 | "The board did not answer" during install | Check the board and port you picked. For a Pro Micro, Leonardo or Micro, press reset twice quickly and click Install again within eight seconds. |
 | The install finished but the board never appears | Unplug it and plug it back in. Give it ten seconds. |
+| A display screen shows only the AIM logo | It waits for the sim. Start a mission in DCS or BMS with the manager running. |
 | The wizard offers pins that do not match my board | Plug the board in and open Edit setup again. The pin list comes from the board itself. |
 | A switch reads backwards | In Console Panels, click the ⋯ button on the control's row and choose Invert switch wiring. |
 | Learn mode recorded the wrong pin on a three-position toggle | Move the switch to the center first, then to the position the prompt asks for, and learn it again. |
