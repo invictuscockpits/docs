@@ -35,8 +35,9 @@ needs before it will load cockpit liveries from Saved Games. Nothing is
 written into the game installation for this step.
 
 The livery installs under its own name, so your stock cockpit is untouched.
-Switch between the passthrough cockpit and the normal one any time in DCS
-under **Options → Special → F-16C → Customized Cockpit** (or the
+Switch between the passthrough cockpit and the normal one any time with
+**Fly stock cockpit** / **Fly passthrough cockpit** on this page, or in
+DCS under **Options → Special → F-16C → Customized Cockpit** (or the
 matching F/A-18C entry for the Hornet). After installing
 or switching, always close DCS completely and restart it; DCS only scans
 for liveries at startup.
@@ -48,9 +49,9 @@ for liveries at startup.
 !!! note "About that dropdown"
     The Viper's cockpit-livery dropdown has been broken in DCS itself for
     years: the cockpit reads the selection from a different place than the
-    options screen writes it. The manager works around this automatically
-    when it applies your settings, which is also why the dropdown starts
-    working once the manager has set things up.
+    options screen writes it. The manager keeps the two in step whenever
+    it refreshes with DCS closed, and the Lighting Engine fixes the
+    cockpit script itself so the dropdown works on its own.
 
 ## Recommended VR settings
 
