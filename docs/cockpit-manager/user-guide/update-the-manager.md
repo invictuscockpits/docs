@@ -38,6 +38,12 @@ You can also go to **Settings** and click **CHECK NOW** under the Software secti
 
 ---
 
+## See what changed
+
+Click the small **i** next to the version at the bottom of the sidebar. The **About AIM Cockpit Manager** window shows what your version includes and the release notes for every version, with links to this guide and the issue tracker. **Copy details** copies your version information for a support message.
+
+---
+
 ## If something's wrong
 
 | Problem | Fix |

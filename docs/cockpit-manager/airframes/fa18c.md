@@ -1313,13 +1313,13 @@ STANDBY CLOCK
 
 Time of day with an elapsed time function.
 
-**hour hand** · Needle · 0 to 12 · 4 pins when physical
+**hour hand** · Needle · 0 to 12 · 1 to 4 pins when physical, by motor
 
-**elapsed minutes** · Needle · 0 to 60 · 4 pins when physical
+**elapsed minutes** · Needle · 0 to 60 · 1 to 4 pins when physical, by motor
 
-**elapsed seconds** · Needle · 0 to 60 · 4 pins when physical
+**elapsed seconds** · Needle · 0 to 60 · 1 to 4 pins when physical, by motor
 
-**minute hand** · Needle · 0 to 60 · 4 pins when physical
+**minute hand** · Needle · 0 to 60 · 1 to 4 pins when physical, by motor
 
 ## Right Instrument Panel
 
@@ -1542,19 +1542,19 @@ STANDBY ATTITUDE REFERENCE INDICATOR
 
 Self-contained gyro for pitch and roll, with a turn needle and slip ball below. An OFF flag shows when it loses power or is caged.
 
-**pitch** · Needle · -1.5708 to 1.5708 · 4 pins when physical
+**pitch** · Needle · -1.5708 to 1.5708 · 1 to 4 pins when physical, by motor
 
-**bank** · Needle · -3.14159 to 3.14159 · 4 pins when physical
+**bank** · Needle · -3.14159 to 3.14159 · 1 to 4 pins when physical, by motor
 
-**horizontal pointer** · Needle · -1 to 1 · 4 pins when physical
+**horizontal pointer** · Needle · -1 to 1 · 1 to 4 pins when physical, by motor
 
-**miniature airplane** · Needle · 0 to 1 · 4 pins when physical
+**miniature airplane** · Needle · 0 to 1 · 1 to 4 pins when physical, by motor
 
-**slip ball** · Needle · -1 to 1 · 4 pins when physical
+**slip ball** · Needle · -1 to 1 · 1 to 4 pins when physical, by motor
 
-**turn needle** · Needle · -4.5 to 4.5 · 4 pins when physical
+**turn needle** · Needle · -4.5 to 4.5 · 1 to 4 pins when physical, by motor
 
-**vertical pointer** · Needle · -1 to 1 · 4 pins when physical
+**vertical pointer** · Needle · -1 to 1 · 1 to 4 pins when physical, by motor
 
 **SAI CAGE** · Push button · 1 pin
 
@@ -1578,17 +1578,17 @@ STANDBY ALTIMETER
 
 Barometric altitude. The pointer turns once per 1,000 feet and the drum reads thousands. The window shows the pressure setting, set with ALT SET.
 
-**100 ft pointer** · Needle · 0 to 1000 · 4 pins when physical
+**100 ft pointer** · Needle · 0 to 1000 · 1 to 4 pins when physical, by motor
 
-**pressure drum, last digit** · Needle · 0 to 10 · 4 pins when physical
+**pressure drum, last digit** · Needle · 0 to 10 · 1 to 4 pins when physical, by motor
 
-**pressure drum, middle digit** · Needle · 0 to 10 · 4 pins when physical
+**pressure drum, middle digit** · Needle · 0 to 10 · 1 to 4 pins when physical, by motor
 
-**pressure drum, first digits** · Needle · 26 to 31 · 4 pins when physical
+**pressure drum, first digits** · Needle · 26 to 31 · 1 to 4 pins when physical, by motor
 
-**10,000 ft drum** · Needle · 0 to 9 · 4 pins when physical
+**10,000 ft drum** · Needle · 0 to 9 · 1 to 4 pins when physical, by motor
 
-**1,000 ft drum** · Needle · -1 to 10 · 4 pins when physical
+**1,000 ft drum** · Needle · -1 to 10 · 1 to 4 pins when physical, by motor
 
 **ALT SET** · Potentiometer · 1 analog input
 
@@ -1656,9 +1656,9 @@ RADAR ALTITUDE
 
 Height above the ground or water from 0 to 5,000 feet.
 
-**altitude pointer** · Needle · -10 to 5100 ft · 4 pins when physical
+**altitude pointer** · Needle · -10 to 5100 ft · 1 to 4 pins when physical, by motor
 
-**low altitude index** · Needle · -0.03 to 1 ft · 4 pins when physical
+**low altitude index** · Needle · -0.03 to 1 ft · 1 to 4 pins when physical, by motor
 
 **RADALT SET** · Potentiometer · 1 analog input
 
@@ -1687,9 +1687,9 @@ HYDRAULIC PRESSURE
 
 System 1 powers only the flight controls; system 2 also runs the speed brake and the other hydraulic parts.
 
-**system 1** · Needle · 0 to 5000 psi · 4 pins when physical
+**system 1** · Needle · 0 to 5000 psi · 1 to 4 pins when physical, by motor
 
-**system 2** · Needle · 0 to 5000 psi · 4 pins when physical
+**system 2** · Needle · 0 to 5000 psi · 1 to 4 pins when physical, by motor
 
 ### CAUTION LIGHTS
 
@@ -1774,9 +1774,9 @@ BATTERY VOLTMETER
 
 Utility and emergency battery voltage, 16 to 30 volts. Both needles sit at 16 with the battery switch OFF.
 
-**utility battery** · Needle · 16 to 30 V · 4 pins when physical
+**utility battery** · Needle · 16 to 30 V · 1 to 4 pins when physical, by motor
 
-**emergency battery** · Needle · 16 to 30 V · 4 pins when physical
+**emergency battery** · Needle · 16 to 30 V · 1 to 4 pins when physical, by motor
 
 ### ECS
 

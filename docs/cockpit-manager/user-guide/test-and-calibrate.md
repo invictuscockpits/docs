@@ -1,6 +1,6 @@
 # Test and Calibrate
 
-**What you'll do:** verify that every wired control reads correctly in the manager, and calibrate your potentiometers and ladder-wired rotary switches so they map cleanly to the sim.
+**What you'll do:** verify that every wired control reads correctly in the manager, and calibrate your potentiometers, ladder-wired rotary switches and gauge needles so they map cleanly to the sim.
 
 ## Before you begin
 
@@ -31,6 +31,7 @@ The arrow buttons beside the live state drive the control from the manager, whic
 | Pot moves but is noisy or jittery | Long wiring run picking up noise, or an unwired analog channel; see below |
 | Rotary switch shows the wrong position | On a ladder-wired rotary, calibrate the positions; see below |
 | A knob on a rotary encoder jumps 20 percent per click, or runs backwards | Calibrate the encoder; see below |
+| A gauge's type ends in **choose output** | Pick how the gauge is built in its **⋯** menu: **Drive physical needles**, **Show on a screen**, or **Light an LED** where offered |
 
 ---
 
@@ -72,6 +73,20 @@ A pot wired as a rotary encoder counts clicks. Encoders differ in how many steps
 3. Set **Clicks from one end of the travel to the other**. Twenty is a good default for a volume or brightness knob.
 4. Tick **Reverse direction** if the value runs the wrong way.
 5. Click **Save**. The setup is sent to the board again with the new count range.
+
+## Calibrate a gauge
+
+A needle on a motor has to be matched to its dial. Click the gauge's **⋯** button and choose **Calibrate gauge…**. On a gauge with several needles, use the **⋯** button on each needle's row.
+
+The dialog has three sections:
+
+- **CALIBRATION** sets up the motor. A stepper motor has **Steps / degree**, **Zero offset**, **Backlash compensation** and **Total motor travel**. A servo has **Pulse at zero** and **Pulse at full scale**, in microseconds. Every motor has **Gauge sweep**, the angle the dial covers. A 28BYJ-48 or a stepper driver also has **Turns the other way**. A servo that turns the wrong way needs **Pulse at full scale** set lower than **Pulse at zero**.
+- **DIAL** matches the needle to the printed face. Set **Units**, **Min** and **Max**. For a face that isn't linear, drive the needle to a mark on the real face, type that mark's value in **Reading at the needle**, and click **Capture**. The captured points set the needle, with straight lines between them. **Remove** takes one point out and **Clear points** takes them all out. Some gauges, like O2 PRESSURE, follow the sim's own dial curve until you capture points of your own.
+- **TEST POSITION** moves the needle with a slider, or straight to 0, 25, 50, 75 or 100 percent of the sweep, so you can check it against the face.
+
+**Home Motor** drives an X27.168 into its end stop to find zero. A 28BYJ-48 or a stepper driver has no end stop: turn the needle to its rest position with the test slider, or by hand with the board unpowered, and click **Set home here**.
+
+**Apply** sends the settings to the board and saves them. The dialog stays open so you can keep adjusting. **Reset** puts the motor's starting values back. With many captured points the settings scroll, and the buttons stay at the bottom of the dialog.
 
 ## Test a lamp
 

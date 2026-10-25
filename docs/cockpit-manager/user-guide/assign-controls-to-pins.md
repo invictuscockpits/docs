@@ -27,6 +27,10 @@ Every control on the board's panels is listed under its panel, with a dropdown f
 | Rotary encoder | Two GPIO pins, A then B |
 | Rotary switch | One GPIO pin per position, or one analog channel through a resistor ladder. See [Resistor Ladder Rotary Switches](resistor-ladder-rotary-switches.md) |
 | Potentiometer, Hall-effect sensor | One analog channel: P1 to P8 on a Sidewinder, an analog pin on an Open Hardware board. The Phoenix has no analog channels. Or a rotary encoder on two GPIO pins, A then B; see below |
+| A cluster of lamps (an indexer, an eyebrow, the lamps in a button) | One GPIO pin per lamp. See [Indicator and Caution Lights](indicator-and-caution-lights.md) |
+| Gauge needle | Four GPIO pins for an X27.168. On an Open Hardware board, the pins the motor you pick needs. See [Open Hardware](open-hardware.md) |
+
+On an Arduino, Teensy or Pico, a lamp can sit on a MAX7219 lamp matrix instead of a pin of its own. See [Lamps on a MAX7219](open-hardware.md#lamps-on-a-max7219).
 
 Every pot's row also offers **Rotary encoder, two pins**. Pick it to wire a click-stop encoder in place of the pot: the board counts the clicks and the manager keeps the knob's value, so the sim still sees a pot. Twenty clicks span the travel until you calibrate it; see [Test and Calibrate](test-and-calibrate.md).
 

@@ -115,7 +115,7 @@ Checks the manager release page when the app starts, then every few hours while 
 
 **Version and update status**
 
-Shows the installed manager version and whether an update is available. The **CHECK NOW** button triggers a manual check. The version is also at the bottom of the left sidebar; clicking it checks too. If an update is available, a **GET UPDATE** button opens the releases page. See [Update the Manager](update-the-manager.md).
+Shows the installed manager version and whether an update is available. The **CHECK NOW** button triggers a manual check. The version is also at the bottom of the left sidebar; clicking it checks too, and the small **i** next to it opens the About window with the release notes. If an update is available, a **GET UPDATE** button opens the releases page. See [Update the Manager](update-the-manager.md).
 
 ---
 

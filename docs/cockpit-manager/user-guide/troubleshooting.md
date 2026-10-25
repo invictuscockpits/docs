@@ -129,7 +129,7 @@ Your catalog has changed since the last export (a manager update added new bindi
 
 ## Caution panel lamps lit in wrong positions
 
-The TLC59281 daisy-chain bit order is reversed from what the catalog expects. Swap the physical order of the two TLC59281 ICs in the chain. See [Indicator and Caution Lights](indicator-and-caution-lights.md).
+On an AIM board, the TLC59281 daisy-chain bit order is reversed from what the catalog expects. Swap the physical order of the two TLC59281 ICs in the chain. On an Open Hardware board with a MAX7219, check each LED against the exported pinout: anode to its segment line, cathode to its digit line. See [Indicator and Caution Lights](indicator-and-caution-lights.md).
 
 ---
 
@@ -137,8 +137,21 @@ The TLC59281 daisy-chain bit order is reversed from what the catalog expects. Sw
 
 - Confirm firmware is v2.2.0 or newer. Check the Firmware page. See [Update Board Firmware](update-board-firmware.md).
 - For UHF: the MAX7219 requires a 5V supply and 74AHCT125 level shifter on the SPI lines. 3.3V is not sufficient.
+- On an Open Hardware board, check that the UHF panel's **DISPLAY** row in the wizard names what you wired, a MAX7219 or TM1637 modules, and that all its pins are assigned. TM1637 modules need board firmware 1.5.0 or newer. See [Open Hardware](open-hardware.md).
 - Confirm the SPI channel in Step 2 of the board wizard matches the physical wiring.
 - Confirm DCS integration is installed and you're in a cockpit. Displays update from DCS string exports.
+
+---
+
+## A notice about DCS at startup
+
+When the manager starts, it checks its part of DCS and puts right anything that is missing or out of date. The notice says what it did:
+
+- **DCS was updated since your last flight. Restored: …** A DCS update removed the aircraft display patch or your stick bindings, and the manager put them back. Nothing to do.
+- **Updated the AIM script in DCS.** The manager was updated and refreshed its own script in DCS. Nothing to do.
+- **Updated the DCS display setup to match your screens.** The display setup in DCS no longer matched the screens you assigned in the manager, so the manager rewrote it.
+
+If the Home page still says DCS has an older copy of the AIM script after startup, click **Re-install**. See [Set Up DCS](set-up-dcs.md).
 
 ---
 

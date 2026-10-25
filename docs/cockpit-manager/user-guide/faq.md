@@ -74,6 +74,18 @@ Yes. Hall sensors wire the same way as pots (supply, signal to the analog channe
 
 ---
 
+**Can I drive real gauge needles?**
+
+Yes. On Console Panels, set the gauge to **Drive physical needles** and give each needle its pins in the wizard. An AIM board drives an X27.168 gauge stepper. An Open Hardware board can also drive a 28BYJ-48 on a ULN2003, a stepper driver with STEP and DIR inputs, or a hobby servo. Then match each needle to its dial with **Calibrate gauge…**. See [Open Hardware](open-hardware.md) and [Test and Calibrate](test-and-calibrate.md).
+
+---
+
+**Can I run lamps from a MAX7219 instead of a pin each?**
+
+On an Arduino, Teensy or Pico, yes. One MAX7219 runs the whole caution panel, and a lamp matrix of up to four chained MAX7219s can light any other lamps, up to 64 per chip. See [Open Hardware](open-hardware.md).
+
+---
+
 **What PoE switch do I need?**
 
 Any **IEEE 802.3at** (PoE+) managed or unmanaged switch works. AIM boards require 802.3at. They are not compatible with 802.3af-only switches. See [What You Need](what-you-need.md).

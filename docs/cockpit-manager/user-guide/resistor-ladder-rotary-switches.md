@@ -12,7 +12,7 @@ Nothing changes on the board. The board reports the voltage as a number, the way
 
 The resistors sit in a chain between the board's supply and ground. Each position of the switch connects the common terminal to a different point along that chain, so the analog input sees a different fraction of the supply at every click. With equal resistors the steps are evenly spaced, which keeps them easy to tell apart.
 
-The board reads the input as a number from 0 to 4095. When you calibrate, the manager records the number at each position. Afterwards every reading is matched to the nearest recorded position. A reading that falls between two positions, which happens for a moment while the knob is turning, is ignored and the last position holds.
+The board reads the input as a number from 0 to 4095. When you calibrate, the manager records the number at each position. Afterwards every reading is matched to the nearest recorded position. A reading that falls between two positions, which happens for a moment while the knob is turning, is ignored and the last position holds. A new position also has to hold for the knob's response time (100 ms unless you change it) before it counts, so the knob can't flick through another position on its way to the next detent.
 
 ## Build one
 
@@ -89,4 +89,6 @@ Learn mode treats a ladder-wired rotary like any other analog input: with the co
 | The dialog says **Waiting for a reading from the board** | The board is not connected, or the switch's common is not on the assigned analog input |
 | The reading does not change when you turn the switch | The chain has no supply, or the common is on a digital pin instead of an analog one. On a Nano, A0 to A3 are digital pins to the manager; use A4 to A7 |
 | The position flickers between two neighbors | Two readings are too close together. Check for a wrong resistor value, or use a larger value so the steps spread out |
+| The knob reads as another position when it is stopped between two detents | That is what the wiring reports there. Turn it fully onto a detent |
+| The knob is slow to show a new position | Lower its response time: **⋯**, then **Adjust response time…** |
 | **Save** stays disabled | A position was not captured, or two positions captured the same reading |

@@ -21,7 +21,7 @@ Also check:
 **Website:** [invictuscockpits.com](https://invictuscockpits.com)
 
 When you write in, include:
-- Your **manager version** (shown at the bottom of Settings, under Software)
+- Your **manager version**. Click the small **i** next to the version at the bottom of the sidebar and click **Copy details**, then paste it into your message
 - Your **board type** (Sidewinder, Phoenix, or the Open Hardware board model) and **firmware version** (on the Firmware page for AIM boards, on the DIY Devices page for USB boards)
 - Which **sim** you're using (DCS, BMS, or both) and the version
 - A description of what you expected to happen and what actually happened

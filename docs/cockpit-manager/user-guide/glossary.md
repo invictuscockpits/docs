@@ -18,6 +18,8 @@
 
 **DIY Devices**: The page where Open Hardware boards appear, where their firmware is installed, and where the Open Hardware key is entered.
 
+**FFI**: Fuel flow indicator. The F-16's rolling-drum fuel flow counter. An ESP32 display board with a small SH1106 OLED can show it; see [Open Hardware](open-hardware.md).
+
 **GPIO**: General Purpose Input/Output. A digital pin on the board that can read a switch (input) or drive an indicator lamp (output).
 
 **HID**: Human Interface Device. The USB device class that covers keyboards, mice, and game controllers. BMS reads cockpit inputs via HID.
@@ -28,7 +30,11 @@
 
 **Keyfile**: A BMS `.key` file that maps cockpit controls to BMS callbacks. The manager generates `Invictus AIM F-16.key` during BMS setup.
 
+**Lamp matrix**: A MAX7219 on an Open Hardware board used to light lamps instead of giving each lamp a pin of its own. Each chip lights up to 64 LEDs from three pins, and up to four chips can be chained.
+
 **Learn mode**: **Learn wiring** on Console Panels. The manager watches the board's pins while you move each control and records which pin it is on, so you can wire first and assign afterwards.
+
+**MAX7219**: An LED driver chip that runs 7-segment digits or up to 64 single LEDs from three pins (DIN, CLK, LOAD). The manager uses it for the UHF readouts, the caution panel on Open Hardware boards, and the lamp matrix.
 
 **Micro MATE-N-LOK**: The TE Connectivity connector used on AIM board backlighting channels (TE 2-1445093-2 board header, 1445022-2 wire-side housing). 3mm pitch, 2-position.
 
@@ -62,7 +68,11 @@
 
 **SPI**: Serial Peripheral Interface. A four-wire bus (CLK, MOSI, MISO, CS) used to connect display and LED shift-register ICs to the board. Each SPI channel can carry multiple devices via separate CS lines.
 
+**TM1637**: A 7-segment display module with its own driver, on a clock pin and a data pin. Open Hardware boards can use them for the UHF readouts.
+
 **VFT5**: Viper Force Transducer Gen 5. The Invictus USB side-stick controller. Connects directly over USB; does not use the AIM Network, but is configurable in Cockpit Manager.
+
+**X27.168**: A small gauge stepper motor made for car instrument clusters, with its own end stop. The usual choice for a physical gauge needle.
 
 ---
 

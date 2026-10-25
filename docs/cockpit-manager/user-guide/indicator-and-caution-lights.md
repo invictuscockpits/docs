@@ -5,10 +5,10 @@
 There are two distinct output types covered here:
 
 - **Indicator lights**: individual lamps (gear lights, FLCS PWR, master caution, etc.) each driven by one GPIO pin.
-- **Caution panel**: the full 32-lamp caution/advisory panel driven by a TLC59281 shift-register chain over SPI.
+- **Caution panel**: the full 32-lamp caution/advisory panel, driven by a TLC59281 shift-register chain over SPI on an AIM board, or by one MAX7219 on an Arduino, Teensy or Pico.
 
 > [!NOTE]
-> On AIM boards, physical indicator and caution output requires **firmware v2.2.0 or newer**. Check your board's firmware version on the Firmware page before wiring. Open Hardware boards drive indicator lamps from any pin (see the wiring table on [Open Hardware](open-hardware.md)); the caution panel needs an AIM board's SPI channel.
+> On AIM boards, physical indicator and caution output requires **firmware v2.2.0 or newer**. Check your board's firmware version on the Firmware page before wiring. Open Hardware boards drive indicator lamps from any pin (see the wiring table on [Open Hardware](open-hardware.md)). On an Arduino, Teensy or Pico, the caution panel runs from one MAX7219, and any other lamp can sit on a MAX7219 lamp matrix instead of a pin of its own. See [Lamps on a MAX7219](open-hardware.md#lamps-on-a-max7219).
 
 ---
 
@@ -26,6 +26,28 @@ In **Step 3: Pin Assignments**, each lamp appears as its own row. Assign each on
 
 > [!TIP]
 > Use GPIO pins on the opposite side of the MCP23017 expander from your switch inputs if possible. Keeping outputs grouped separately from inputs makes troubleshooting easier later.
+
+### Lamps and buttons inside a cluster
+
+On the F-16C, the indexers, the eyebrows, MASTER CAUTION, the ECM buttons and the threat warning buttons are clusters: several lamps, and in some of them buttons, drawn as one part on Console Panels. Each lamp and each button gets a pin of its own, on every board. In the **Pins** step the cluster's lamps share one row with a pin slot per lamp, and each button has a row of its own.
+
+| Panel | Lamp row: its lamps | Button rows |
+|---|---|---|
+| AOA INDEXER | AOA INDEXER: SLOW, ON SPEED, FAST | |
+| RIGHT INDEXER | AAR: RDY, AR/NWS, DISC | |
+| EYEBROW LIGHTS | L EYEBROW: TF FAIL | |
+| EYEBROW LIGHTS | R EYEBROW: ENG FIRE, ENGINE, HYD/OIL PRESS, FLCS, DBU ON, TO/LDG CONFIG, CANOPY, OXY LOW | |
+| MASTER CAUTION | MASTER CAUTION | MASTER CAUTION |
+| ECM | 1 to 6, FRM and SPL: S, A, F and T on each | 1 to 6, FRM, SPL |
+| THREAT WARNING AUX | THREAT WARNING AUX: SEARCH, ACTIVE, ACT POWER, ALT LOW, ALT, SYSTEM POWER | SEARCH, ACT/PWR, ALTITUDE, POWER |
+| THREAT WARNING PRIME | TWS PRIME: HANDOFF UP, HANDOFF H, MISSILE LAUNCH, MODE PRI, MODE OPEN, UNKNOWN U, UNKNOWN, SYS TEST ON, SYS TEST, TGT SEP UP, TGT SEP DOWN | HANDOFF, MISSILE LAUNCH, MODE, UNKNOWN, SYS TEST, TGT SEP |
+| LANDING GEAR | LG HANDLE LAMP, the light in the gear handle | |
+
+Wire the buttons as pushbuttons. In DCS, the ECM buttons and the TWA POWER button stay in or out, so a pushbutton on one of them turns it on or off with each press.
+
+### An LED for O2 FLOW
+
+The oxygen FLOW indicator can be a single LED that lights whenever the indicator in the sim shows white. On **Console Panels**, open **OXYGEN**, click **⋯** on the **O2 FLOW** row and choose **Light an LED**. In the **Pins** step it is then a lamp row with one pin, and **Test lamp** in the same menu lights it.
 
 ### Wiring
 
@@ -60,6 +82,10 @@ The **/BLANK** (output enable) pin should be pulled low to enable outputs. If yo
 > [!NOTE]
 > If the caution lamps light in the wrong positions, the daisy-chain bit order may be reversed from what the catalog expects. Swap the first and last TLC59281 in the chain, or swap the two ICs' positions, to reverse the order.
 
+### On an Open Hardware board
+
+On an Arduino, Teensy or Pico, the 32 lamps run from one MAX7219 on three pins, two LEDs a lamp. Check **Caution Panel** in **Step 2**, then give its **LAMPS** row in **Step 3** its DIN, CLK and LOAD pins. The exported pinout lists the digit line and the two segment lines for every lamp. See [Lamps on a MAX7219](open-hardware.md#lamps-on-a-max7219).
+
 ---
 
 ## Check it worked
@@ -74,10 +100,10 @@ For the caution panel, trigger a caution condition in DCS (engine fault, fuel lo
 |---|---|
 | Indicator lamp never lights | Check the GPIO pin assignment in Step 3. Confirm the pin is not also assigned to a switch input. Verify the lamp is wired anode → GPIO, cathode → GND. |
 | Indicator lamp is always on | The GPIO may be floating high. Check the pin assignment and confirm the firmware version is 2.2.0+. |
-| Caution panel lamps light in wrong positions | The TLC59281 daisy-chain bit order is reversed. Swap the order of the ICs in the chain. |
+| Caution panel lamps light in wrong positions | On an AIM board, the TLC59281 daisy-chain bit order is reversed: swap the order of the ICs in the chain. On a MAX7219, check each LED against the exported pinout: anode to its segment line, cathode to its digit line. |
 | Caution panel does nothing | Check that the SPI channel in Step 2 matches the physical wiring. Confirm /BLANK is pulled low. |
 | Firmware page shows version older than 2.2.0 | Update board firmware before testing outputs. See [Update Board Firmware](update-board-firmware.md). |
 
 ---
 
-**See also:** [Assign Controls to Pins](assign-controls-to-pins.md), [Update Board Firmware](update-board-firmware.md)
+**See also:** [Assign Controls to Pins](assign-controls-to-pins.md), [Open Hardware](open-hardware.md), [Update Board Firmware](update-board-firmware.md)
