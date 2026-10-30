@@ -76,7 +76,7 @@ Yes. Hall sensors wire the same way as pots (supply, signal to the analog channe
 
 **Can I drive real gauge needles?**
 
-Yes. On Console Panels, set the gauge to **Drive physical needles** and give each needle its pins in the wizard. An AIM board drives an X27.168 gauge stepper. An Open Hardware board can also drive a 28BYJ-48 on a ULN2003, a stepper driver with STEP and DIR inputs, or a hobby servo. Then match each needle to its dial with **Calibrate gauge…**. See [Open Hardware](open-hardware.md) and [Test and Calibrate](test-and-calibrate.md).
+Yes. On [Instruments](instruments.md), set the gauge to **Mechanical** and give each needle its pins in the wizard. An AIM board drives an X27.168 gauge stepper. An Open Hardware board can also drive a 28BYJ-48 on a ULN2003, a stepper driver with STEP and DIR inputs, or a hobby servo. Then match each needle to its dial with **Calibrate gauge…**. See [Open Hardware](open-hardware.md) and [Test and Calibrate](test-and-calibrate.md).
 
 ---
 

@@ -69,10 +69,10 @@ A confirmation dialog appears telling you exactly what to do next in DCS.
 Open DCS World and go to **Options → System**.
 
 1. Set **Resolution** to the value the manager recommended (DCS auto-adds this entry to its dropdown after reading the new layout file).
-2. Set **Monitors** to **AIM MFDs**.
+2. Set **Monitors** to **AIM Displays**. (Managers before 2.6.0 called it **AIM MFDs**: the same setup, renamed because it carries the CDU and other screens too. After updating, the manager asks you to apply the setup once more so DCS shows the new name.)
 3. Click **Apply** and restart DCS.
 
-![DCS Options → System showing AIM MFDs in the Monitors dropdown](images/dcs-monitor-options.png)
+![DCS Options → System showing AIM Displays in the Monitors dropdown](images/dcs-monitor-options.png)
 
 > [!IMPORTANT]
 > You must do this step every time you change which monitors are assigned: DCS won't pick up a new layout file until you select it in Options and restart.
@@ -90,7 +90,7 @@ The **DISPLAY MANAGEMENT** card on the home page shows how many roles are assign
 
 | Problem | Fix |
 |---|---|
-| Monitors don't appear after clicking Apply DCS Setup | Make sure you completed step 6. Selected "AIM MFDs" in DCS Options → System and restarted DCS. |
+| Monitors don't appear after clicking Apply DCS Setup | Make sure you completed step 6. Selected "AIM Displays" in DCS Options → System and restarted DCS. |
 | A display is on the wrong monitor | Reopen the dialog, change the dropdown for that role, click Apply DCS Setup again, then restart DCS. |
 | Display appears in the wrong spot on the screen | Open the Calibrate popup for that role and nudge the dx/dy values. |
 | Displays work in 2D but go dark in VR | Update the manager to 1.6.4 or later, launch it once so it refreshes the layout, and turn on **Use DCS System Resolution** under **Options → VR** in DCS. |

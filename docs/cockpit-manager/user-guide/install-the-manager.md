@@ -51,7 +51,7 @@ The manager checks for a newer version each time it launches. If an update is av
 
 ## Check it worked
 
-The manager opens to the **Home** page, where you pick your airframe and simulator. The **Network** page in the sidebar shows **Listening** and, for now, no boards. That's expected; you haven't set up the cockpit network yet. Open Hardware boards over USB appear on the **DIY Devices** page instead.
+The manager opens to the **Home** page, where you pick your airframe and simulator. The **Network** page in the sidebar shows **Listening** and, for now, no boards. That's expected; you haven't set up the cockpit network yet. Open Hardware boards over USB appear on the **Open Hardware** page instead.
 
 ## If something's wrong
 

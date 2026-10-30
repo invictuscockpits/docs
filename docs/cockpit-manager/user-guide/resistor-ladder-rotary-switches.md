@@ -60,7 +60,7 @@ Click through to **Review** and **Save & Upload**. The pin budget in the panel l
 
 ### 2. Calibrate the positions
 
-Open **Avionics**, then **Console Panels**, and find the rotary switch. Click the **⋯** button at the right end of its row and choose **Calibrate positions…**.
+Open **Avionics**, then **Console Panels**, pick the console and open the panel's card, and find the rotary switch. Click the **⋯** button at the right end of its row and choose **Calibrate positions…**.
 
 ![The row menu with Calibrate positions](images/ladder-calibrate-menu.png)
 
@@ -78,7 +78,7 @@ The dialog refuses to save if two positions read the same number. That means two
 
 ### 3. Check it
 
-The **Live** column in Console Panels follows the switch as you turn it. The calibration is kept with the board's setup in the manager, so it survives a board reboot, unplugging a USB board, or moving it to another port.
+The switch's live state in Console Panels follows it as you turn it. The calibration is kept with the board's setup in the manager, so it survives a board reboot, unplugging a USB board, or moving it to another port.
 
 Learn mode treats a ladder-wired rotary like any other analog input: with the control selected, turn the switch and the manager records which input moved.
 

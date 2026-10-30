@@ -6,14 +6,14 @@ Quick-reference for common problems. Each section links to the relevant wiki pag
 
 ## Board won't appear on the Network page
 
-This section is about AIM boards on the cockpit network. An Open Hardware board over USB appears on the **DIY Devices** page instead; see **A USB board doesn't show up** below.
+This section is about AIM boards on the cockpit network. An Open Hardware board over USB appears on the **Open Hardware** page instead; see **A USB board doesn't show up** below.
 
 > [!TIP]
 > From manager **1.6.0**, start with [Network Health](network-health.md) (Network sidebar, **Network health** button). It checks every layer in order and the first red light tells you exactly which of the steps below to look at, so you don't have to walk them all.
 
 - Confirm the PoE switch provides **802.3at** power. AIM boards require 802.3at. They are not compatible with 802.3af-only switches.
 - Check the switch link light for the port the board is plugged into. No link light = cable or port issue.
-- Confirm the PC's cockpit network adapter has the correct static IP (`10.24.6.1`). Use the manager's **Fix** button on the Network page if the adapter isn't configured yet. See [Set Up the Cockpit Network](set-up-the-cockpit-network.md).
+- Confirm the PC's cockpit network adapter has the correct static IP (`10.24.6.1`). Use the manager's **Fix** button on the Network page if the adapter isn't configured yet. From 2.6.0, the "AIM network not configured" warning no longer shows just because the cockpit cable is unplugged: with no cable in, check the cable and the switch, and use [Network Health](network-health.md). See [Set Up the Cockpit Network](set-up-the-cockpit-network.md).
 - If your PC has Hyper-V, WSL, VMware, or VirtualBox installed, a virtual network adapter may have taken over the cockpit's addresses; see the next section.
 - Power-cycle the board. Hold until the link light returns, then wait 10-15 seconds for the board to boot and announce itself.
 
@@ -51,7 +51,7 @@ The board reboots to apply its new configuration. Wait 15-20 seconds. It will re
 
 ## A USB board doesn't show up
 
-Open Hardware boards appear on the **DIY Devices** page, not the Network page.
+Open Hardware boards appear on the **Open Hardware** page, not the Network page. A DED, PFLD or FFI display board appears on **Avionics**, **Instruments**, under the instrument it shows.
 
 - Use a USB cable that carries data. Many charger cables carry power only.
 - Close the Arduino IDE and any serial monitor; they hold the port.
@@ -62,7 +62,7 @@ Open Hardware boards appear on the **DIY Devices** page, not the Network page.
 
 ## A switch doesn't respond when operated
 
-Switch states are visible in **Avionics → Console Panels**: the **Live** column reflects your physical panel directly, not the sim. When you operate a switch on the panel, its row should change. The arrow buttons beside it drive the control from the manager and send it to the sim.
+Switch states are visible in **Avionics → Console Panels**: open the panel's card, and each row's live state reflects your physical panel directly, not the sim. When you operate a switch on the panel, its row should change. The **‹** and **›** arrows beside it drive the control from the manager and send it to the sim.
 
 If a switch doesn't respond when physically operated:
 

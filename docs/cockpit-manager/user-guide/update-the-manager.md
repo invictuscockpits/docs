@@ -16,17 +16,24 @@ A banner appears at the top of the manager window:
 
 > **AIM Cockpit Manager X.Y.Z is available. You are running A.B.C.**
 
-Click **Download**. The banner updates to show download progress:
+Click **Download** in the banner. A window shows what's new in that version: a short summary, then what's **New**, what **Changed** and what was **Fixed**. The list scrolls when it is long. **Full release notes** opens the GitHub release page in your browser.
+
+![The update window, with what's new in the version on offer](images/update-whats-new.png)
+
+The window only ever opens when you click **Download**. It never pops up by itself, so it can't get in the way while you fly.
+
+Click **Download** in the window to start. The window shows the download's progress, and so does the banner:
 
 > **Downloading update X.Y.Z (45%)**
 
-When the download completes:
+When the download completes, the window's button changes to **Install now** and the banner's to **Run installer**:
 
 > **AIM Cockpit Manager X.Y.Z is ready to install.**
 
-Click **Run installer**. The manager checks that the installer is signed by Invictus Machine LLC, then starts it. Follow the prompts. The installer closes the manager automatically before replacing files.
+Click it. The manager checks that the installer is signed by Invictus Machine LLC, then starts it. Follow the prompts. The installer closes the manager automatically before replacing files. **Later** closes the window. The banner stays until you update.
 
-The **View release notes** button opens the GitHub release page in your browser at any point during the process.
+> [!NOTE]
+> The window arrived in 2.6.0. Updating from 2.5.2 or older, the banner's **View release notes** opens the release page in your browser instead.
 
 ---
 

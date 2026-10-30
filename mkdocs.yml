@@ -75,6 +75,7 @@ nav:
               - Assign Axes in BMS: cockpit-manager/user-guide/assign-axes-in-bms.md
               - Cockpit Displays in BMS: cockpit-manager/user-guide/cockpit-displays-in-bms.md
           - Physical Outputs:
+              - Instruments: cockpit-manager/user-guide/instruments.md
               - Indicator and Caution Lights: cockpit-manager/user-guide/indicator-and-caution-lights.md
           - VFT5 Side-Stick:
               - VFT5 Side-Stick: cockpit-manager/user-guide/vft5-side-stick.md

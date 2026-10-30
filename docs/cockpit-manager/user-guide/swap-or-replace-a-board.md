@@ -62,7 +62,7 @@ Removing a board is **reversible**. It goes to a "Recently deleted" bin rather t
 
 ### Open Hardware boards
 
-The **DIY Devices** page has the same **Delete** and **Recently deleted**. Deleting a USB board also resets the board itself, so it comes back as a new device; restoring it from Recently deleted sends its setup straight back.
+The **Open Hardware** page has the same **Delete** and **Recently deleted**. Deleting a USB board also resets the board itself, so it comes back as a new device; restoring it from Recently deleted sends its setup straight back.
 
 > [!NOTE]
 > Removing an AIM board from the manager doesn't reset the board itself. If you plug the old board back in, it will reappear as a new board. You can then import a saved config onto it. See [Export the config from the source board](#export-the-config-from-the-source-board) above for why keeping a config backup is a good habit.

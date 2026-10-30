@@ -39,6 +39,7 @@ Pick your airframe and simulator on the **Home** page first. Everything else fol
 | Put displays on extra monitors | [Cockpit Displays in DCS](cockpit-displays-in-dcs.md) or [Cockpit Displays in BMS](cockpit-displays-in-bms.md) |
 | Set up my VFT5 stick | [VFT5 Side-Stick](vft5-side-stick.md) |
 | Use my own Arduino, Teensy, Pico or ESP32 | [Open Hardware](open-hardware.md) |
+| Pick how each gauge is built, set up a DED, PFLD or FFI screen, or align a screen with its bezel | [Instruments](instruments.md) |
 | Drive gauge needles, the UHF readouts or a fuel flow screen from my own boards | [Open Hardware](open-hardware.md) |
 | Wire a rotary switch to one input instead of one pin per position | [Resistor Ladder Rotary Switches](resistor-ladder-rotary-switches.md) |
 | Wire indicator lights or the caution panel | [Indicator and Caution Lights](indicator-and-caution-lights.md) |

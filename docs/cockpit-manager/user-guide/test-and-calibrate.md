@@ -11,13 +11,19 @@
 
 ## Console Panels
 
-**Avionics**, then **Console Panels**, lists every panel of your airframe by cockpit zone, with every control on it. No simulator needed.
+**Avionics**, then **Console Panels**, shows your cockpit one console at a time, with every panel and control on it. No simulator needed.
 
-![Console Panels with a panel expanded, showing the Wired to and Live columns](images/test-live-view.png)
+![Console Panels: the console tabs across the top, closed panel cards, and EXT LIGHTING open](images/test-live-view.png)
 
-Expand a zone, then a panel. Each control's row shows what it is, which board and pin it is **wired to**, and its **live** state. Flip a switch or turn a knob on the physical panel. The Live column should respond immediately. Work through each control one at a time.
+Pick a console from the tabs across the top. Each tab shows how much of that console is wired. Every panel is a card. Its top line says which board it's on, its bus channel and whether that board is connected, or **UNCONFIGURED** when no board has it yet. The card also shows how many of its controls are wired. Click a card to open it.
 
-The arrow buttons beside the live state drive the control from the manager, which is how you send a switch position to the sim without touching the panel. The **⋯** button at the right end of a row opens that control's menu: mute, invert, response time, calibration, and a lamp test.
+Each control's row shows what it is, the board pin it is wired to, and its live state. Flip a switch or turn a knob on the physical panel. The live state should follow immediately. Work through each control one at a time.
+
+The **‹** and **›** arrows beside the live state step a switch or knob from the manager, which is how you send a position to the sim without touching the panel. **Press** works a button, and a slider moves a pot. The **⋯** button at the right end of a row opens that control's menu: mute, invert, response time, calibration, how a gauge is built, and a lamp test.
+
+A control with parts of its own, like an MFD's buttons, the ICP's keys or an ECM button's lamps, has a **▸** before its name. Click it to show its parts as chips. A chip lights as the sim lights it, and a button chip presses while you hold it.
+
+The search box looks across every console at once and shows each match under its console.
 
 ### Reading the page
 
@@ -31,7 +37,7 @@ The arrow buttons beside the live state drive the control from the manager, whic
 | Pot moves but is noisy or jittery | Long wiring run picking up noise, or an unwired analog channel; see below |
 | Rotary switch shows the wrong position | On a ladder-wired rotary, calibrate the positions; see below |
 | A knob on a rotary encoder jumps 20 percent per click, or runs backwards | Calibrate the encoder; see below |
-| A gauge's type ends in **choose output** | Pick how the gauge is built in its **⋯** menu: **Drive physical needles**, **Show on a screen**, or **Light an LED** where offered |
+| A gauge's type ends in **choose how it's built** | Pick **Mechanical**, **Screen** or **None** (and **LED** where offered) on [Instruments](instruments.md), or in the gauge's **⋯** menu |
 
 ---
 
@@ -76,7 +82,7 @@ A pot wired as a rotary encoder counts clicks. Encoders differ in how many steps
 
 ## Calibrate a gauge
 
-A needle on a motor has to be matched to its dial. Click the gauge's **⋯** button and choose **Calibrate gauge…**. On a gauge with several needles, use the **⋯** button on each needle's row.
+A needle on a motor has to be matched to its dial. Click **Calibrate** on the gauge's row on [Instruments](instruments.md), or click the gauge's **⋯** button on Console Panels and choose **Calibrate gauge…**. On a gauge with several needles, **Calibrate** asks which needle, and on Console Panels each needle's row has its own **⋯** button.
 
 The dialog has three sections:
 
@@ -90,7 +96,7 @@ The dialog has three sections:
 
 ## Test a lamp
 
-Lamps normally follow the sim. To check a freshly wired one, click the lamp's **⋯** button and choose **Test lamp**. Every cell of that indicator lights for three seconds.
+Lamps normally follow the sim. To check a freshly wired one, click the lamp's **⋯** button and choose **Test lamp**. Every cell of that indicator lights for three seconds. The caution panel is tested from its card on [Instruments](instruments.md) with **Test lamps**.
 
 ---
 

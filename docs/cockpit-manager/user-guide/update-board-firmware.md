@@ -8,7 +8,10 @@
 - You have a firmware `.bin` file for your board type (see below).
 
 > [!NOTE]
-> Open Hardware boards don't use this page. Their firmware is installed over USB from the **Install the firmware** card on the DIY Devices page; see [Open Hardware](open-hardware.md).
+> Open Hardware boards don't use this page. Their firmware is installed over USB from the **Install the firmware** card on the Open Hardware page; see [Open Hardware](open-hardware.md).
+
+> [!TIP]
+> A DED, PFLD or FFI display board on USB updates from its own card on [Instruments](instruments.md). The manager carries the newest display firmware, so **Update to X.Y.Z** installs it with no file to find. The Firmware page also lists display boards, as **AIM USB Display · FFI on COM5 · fw 1.3.0**, for a firmware file of your own.
 
 > [!TIP]
 > OTA (over-the-air, meaning over the cockpit network) is the normal update path. You do not need to open anything or touch the board. USB flashing is a fallback for boards that are too new to have OTA-capable firmware already on them.

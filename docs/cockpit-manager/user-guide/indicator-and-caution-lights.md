@@ -47,7 +47,7 @@ Wire the buttons as pushbuttons. In DCS, the ECM buttons and the TWA POWER butto
 
 ### An LED for O2 FLOW
 
-The oxygen FLOW indicator can be a single LED that lights whenever the indicator in the sim shows white. On **Console Panels**, open **OXYGEN**, click **⋯** on the **O2 FLOW** row and choose **Light an LED**. In the **Pins** step it is then a lamp row with one pin, and **Test lamp** in the same menu lights it.
+The oxygen FLOW indicator can be a single LED that lights whenever the indicator in the sim shows white. On [Instruments](instruments.md), find **O2 FLOW** under **OXYGEN** and pick **LED**. (On Console Panels, the same choice is **LED** in the **⋯** menu on its row.) In the **Pins** step it is then a lamp row with one pin, and **Test lamp** in its **⋯** menu on Console Panels lights it.
 
 ### Wiring
 
@@ -64,6 +64,8 @@ If you're using higher-current lamps, add a current-limiting resistor in series.
 The caution panel's 32 lamps are driven by a **TLC59281** constant-current LED shift register over SPI. All 32 lamps share one SPI channel. You assign the channel once and the firmware handles the rest. There is no pin-by-pin assignment for caution lamps.
 
 The manager maps each DCS caution light argument (or BMS caution flag) to its corresponding TLC59281 output channel automatically, based on the panel catalog's hardcoded layout. You don't need to configure individual channels.
+
+In the manager, the caution panel has its own card on [Instruments](instruments.md), not on Console Panels. The card shows where its lamps are wired and every cell lit as the sim lights it.
 
 ### Setting it up
 
@@ -92,7 +94,7 @@ On an Arduino, Teensy or Pico, the 32 lamps run from one MAX7219 on three pins, 
 
 In **Avionics → Console Panels**, find a lamp, click its **⋯** button and choose **Test lamp**. Every cell of that indicator lights for three seconds, no sim needed. Then load into a mission in DCS and trigger the relevant cockpit state (put the gear down, activate master caution, etc.). The corresponding lamp on your panel should light.
 
-For the caution panel, trigger a caution condition in DCS (engine fault, fuel low, etc.) and verify the correct lamp lights.
+For the caution panel, open **Avionics**, then **Instruments**, and click **Test lamps** on the **CAUTION PANEL** card: every lamp lights for three seconds. Then trigger a caution condition in DCS (engine fault, fuel low, etc.) and verify the correct lamp lights. The card lights the same cell at the same time.
 
 ## If something's wrong
 
@@ -106,4 +108,4 @@ For the caution panel, trigger a caution condition in DCS (engine fault, fuel lo
 
 ---
 
-**See also:** [Assign Controls to Pins](assign-controls-to-pins.md), [Open Hardware](open-hardware.md), [Update Board Firmware](update-board-firmware.md)
+**See also:** [Instruments](instruments.md), [Assign Controls to Pins](assign-controls-to-pins.md), [Open Hardware](open-hardware.md), [Update Board Firmware](update-board-firmware.md)

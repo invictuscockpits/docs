@@ -14,7 +14,7 @@ After the board wizard, the manager knows which panels are on the board. Pin ass
 
 ## How pin assignment works
 
-Pins are assigned in the setup wizard's **Pins** step. To get there for a board that is already set up, open the board (the **Network** page for an AIM board, **DIY Devices** for an Open Hardware board), click **Edit** (**Edit setup** on the DIY Devices page), then click **3. Pins** at the top of the wizard.
+Pins are assigned in the setup wizard's **Pins** step. To get there for a board that is already set up, open the board (the **Network** page for an AIM board, **Open Hardware** for an Open Hardware board), click **Edit** (**Edit setup** on the Open Hardware page), then click **3. Pins** at the top of the wizard.
 
 ![The Pins step: every control on the board's panels with a pin dropdown](images/pin-assign-panel-view.png)
 
@@ -74,9 +74,9 @@ Work through each board. You don't have to assign everything at once; unassigned
 
 If the controls are already wired, skip the planning and let the manager find the pins.
 
-1. Open **Avionics**, then **Console Panels**, and click **Learn wiring**.
-2. Pick the board and click **Start**.
-3. Click a control in the list, then move it on the panel. The manager watches every pin and records the one that moved.
+1. Make sure the board is connected: learning watches its pins.
+2. Open **Avionics**, then **Console Panels**, and click **Learn wiring**. With one board for your airframe connected, learning starts on it right away. With several, pick the board and click **Start**.
+3. Open a panel's card and click **Learn** on a control's row, then move the control on the panel. The manager watches every pin and records the one that moved.
 4. Repeat for each control, then click **Done**. The new wiring is sent to the board.
 
 Read each prompt. A two-position toggle is learned on the leg that means ON. A three-position toggle is learned one end at a time, starting from the center. A rotary switch is learned one position at a time; one wired through a resistor ladder is learned like a pot, by turning it. A pot wired as a rotary encoder is learned one click at a time, two clicks in all.
@@ -95,7 +95,7 @@ See the [FAQ](faq.md) for common wiring questions.
 
 ## Check it worked
 
-Open **Avionics**, then **Console Panels**. The **Wired to** column shows each control's board and pin, and the **Live** column shows its state. Flip a switch or turn a knob on the physical panel. The Live column should follow in real time. If it does, the assignment is correct.
+Open **Avionics**, then **Console Panels**, pick the console and open the panel's card. Each control's row shows the pin it is wired to and its live state. Flip a switch or turn a knob on the physical panel. The live state should follow in real time. If it does, the assignment is correct.
 
 If a control doesn't respond, the two most common causes are a wrong pin number or a wiring issue; see [Test and Calibrate](test-and-calibrate.md) for how to tell which it is.
 

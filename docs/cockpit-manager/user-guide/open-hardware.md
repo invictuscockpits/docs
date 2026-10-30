@@ -11,14 +11,15 @@ Open Hardware is for builders who already have a drawer of boards, or who want a
 
 | | Free | Needs an Open Hardware key |
 |---|---|---|
-| Seeing your boards on the DIY Devices page | Yes | |
+| Seeing your boards on the Open Hardware page | Yes | |
 | A board you already set up keeps working | Yes | |
 | Installing the firmware on a board | | Yes |
 | Setting up a board, editing its setup, learn mode | | Yes |
+| A DED, PFLD or FFI display you built showing anything | | Yes |
 
-AIM hardware never needs a key. Buy one at [invictuscockpits.com](https://invictuscockpits.com/products/aim-cockpit-manager-open-hardware-license). It arrives by email. A key is licensed to you personally, it is not sold, and it cannot be transferred, as set out in the license agreement shown when you install the manager.
+AIM hardware and Invictus displays never need a key. One key unlocks all your DIY devices. Buy one at [invictuscockpits.com](https://invictuscockpits.com/products/aim-cockpit-manager-open-hardware-license). It arrives by email. A key is licensed to you personally, it is not sold, and it cannot be transferred, as set out in the license agreement shown when you install the manager.
 
-![DIY Devices page before a key is entered](images/open-hardware-locked.png)
+![The Open Hardware page before a key is entered](images/open-hardware-locked.png)
 
 ## Boards that work
 
@@ -48,7 +49,7 @@ An ESP32-S2 Mini or ESP32-S3 Super Mini with a small OLED screen can be made int
 
 ### 1. Enter your key
 
-Open **DIY Devices** in the sidebar and click **Enter key**. Paste the key from your email and click **Activate**. Spaces or line breaks that a mail program added are ignored.
+Open **Open Hardware** in the sidebar and click **Enter key**. Paste the key from your email and click **Activate**. Spaces or line breaks that a mail program added are ignored.
 
 ![The Enter key dialog](images/open-hardware-enter-key.png)
 
@@ -77,7 +78,7 @@ When the install finishes, the board restarts and shows up as a new device withi
 
 ### 3. Set it up
 
-A **New device detected** prompt appears. Click **Set up**. You can also click **Set up** next to the board on the DIY Devices page at any time.
+A **New device detected** prompt appears. Click **Set up**. You can also click **Set up** next to the board on the Open Hardware page at any time.
 
 The wizard is the same one AIM boards use, minus the network step:
 
@@ -117,10 +118,12 @@ For a backlight, pick a MOSFET that turns fully on at your board's pin voltage: 
 
 If you would rather wire first and assign afterwards, use learn mode.
 
-1. Open **Avionics**, then **Console Panels**, and click **Learn wiring**.
-2. Pick your board and click **Start**.
-3. Click a control in the list, then move it on the panel. The manager watches every pin and records the one that moved.
+1. Plug the board in. Learning watches the board's pins, so the board has to be connected.
+2. Open **Avionics**, then **Console Panels**, and click **Learn wiring**. With one board for your airframe connected, learning starts on it right away. With several, pick the board and click **Start**.
+3. Open a panel's card and click **Learn** on a control's row, then move the control on the panel. The manager watches every pin and records the one that moved.
 4. Repeat for each control, then click **Done**. The new wiring is sent to the board.
+
+Learning a control on a panel that isn't on the board yet adds the panel to the board's setup.
 
 Read each prompt. A two-position toggle is learned on the leg that means ON, so "Flip X to ON" means into the ON position. A three-position toggle is learned one end at a time, starting from the center, because a switch already sitting in the position the prompt asks for has nothing to report.
 
@@ -132,10 +135,10 @@ Lamps normally follow the sim. To check a freshly wired one, open **Console Pane
 
 ## Gauge needles
 
-A gauge on your panel can have a real needle on a motor. This needs board firmware 1.5.0 or newer; press **Update** on the board's row if the DIY Devices page offers it.
+A gauge on your panel can have a real needle on a motor. This needs board firmware 1.5.0 or newer; press **Update** on the board's row if the Open Hardware page offers it.
 
-1. Open **Avionics**, then **Console Panels**. Click the gauge's **⋯** button and choose **Drive physical needles**. Each needle of the gauge gets a row of its own.
-2. Open the board's setup with **Edit setup**. A panel made only of gauges, like HYDRAULIC A or EPU FUEL, can be picked once one of its gauges drives physical needles.
+1. Open **Avionics**, then [Instruments](instruments.md), and pick **Mechanical** for the gauge, or **All mechanical** for its whole panel. Each needle of the gauge gets a row of its own in the board's setup.
+2. Click **Edit setup** on the panel (or **Configure** if no board has it yet). A panel made only of gauges, like HYDRAULIC A or EPU FUEL, can be picked once one of its gauges is mechanical.
 3. In the **Pins** step, pick each needle's motor and give it the pins the motor needs.
 
 | Motor | Pins | Wiring |
@@ -158,7 +161,7 @@ The wizard checks that the board can drive every motor you wired:
 
 A servo borrows a timer from the board. While one runs, pins 9 and 10 on a Nano, Uno, Pro Mini, Pro Micro, Leonardo or Micro (44, 45 and 46 on a Mega) can't dim, and the wizard won't finish with a backlight on one of them.
 
-After the upload, calibrate each needle so it matches the dial: see [Calibrate a gauge](test-and-calibrate.md#calibrate-a-gauge).
+After the upload, calibrate each needle so it matches the dial: click **Calibrate** on the gauge's row on [Instruments](instruments.md), and see [Calibrate a gauge](test-and-calibrate.md#calibrate-a-gauge).
 
 ---
 
@@ -210,11 +213,13 @@ An ESP32-S2 Mini or an ESP32-S3 Super Mini can run one cockpit screen. The manag
 2. In the **Install the firmware** card, pick **DED, PFLD or FFI display, ESP32-S2 Mini** (or **DED, PFLD or FFI display, ESP32-S3**) and the port that appeared, then click **Install**.
 3. When the install finishes, unplug the board and plug it back in.
 
-The board's row under **Your devices** shows the firmware version it runs. To update a display board, install the firmware again the same way. The FFI needs display firmware 1.2.2 or newer.
+The display then shows up on **Avionics**, [Instruments](instruments.md), under the instrument it shows, with the firmware version it runs. The manager carries the newest display firmware: when a board runs older firmware, its card says so and **Update to X.Y.Z** installs it, no file to find. The FFI needs display firmware 1.2.2 or newer, and **Align** needs 1.3.0.
+
+A display you build needs your open hardware key to show anything. Displays from Invictus never ask for one.
 
 ### Pick what it shows
 
-Each display board has its own row under **Your devices**. Set **SHOWS** on that row to **DED (Data Entry Display)**, **PFLD (Pilot Fault List)** or **FFI (Fuel Flow Indicator)**. It changes right away, and the board remembers it. Moving between a DED or PFLD and the FFI restarts the board on the other screen.
+Each display board has its own card on [Instruments](instruments.md). Set **SHOWS** on that card to **DED (Data Entry Display)**, **PFLD (Pilot Fault List)** or **FFI (Fuel Flow Indicator)**. It changes right away, and the board remembers it. Moving between a DED or PFLD and the FFI restarts the board on the other screen.
 
 The screen shows the AIM logo until the sim sends it something. Start a mission with the manager running.
 
@@ -239,7 +244,7 @@ An FFI on I2C:
 | SCL | 35 | 9 |
 | VCC and GND | 3V3 and GND | 3V3 and GND |
 
-For an FFI, first pick **CONNECTION** in the **Display wiring** card at the bottom of the DIY Devices page: **I2C (4 pins: VCC, GND, SCL, SDA)** or **SPI (7 pins: D0, D1, RES, DC, CS)**, to match your screen.
+For an FFI, first pick **CONNECTION** in the **Display wiring** card at the bottom of the Open Hardware page: **I2C (4 pins: VCC, GND, SCL, SDA)** or **SPI (7 pins: D0, D1, RES, DC, CS)**, to match your screen.
 
 These are the boards' usual pins. To use others, wire the screen the way that suits you, then pick the pins in the **Display wiring** card and click **Save pins**. The screen restarts on the new pins. **Use this board's usual pins** puts the ones above back. With more than one display board plugged in, pick the board under **DISPLAY** first.
 
@@ -247,7 +252,11 @@ These are the boards' usual pins. To use others, wire the screen the way that su
 
 The FFI shows the counter the way the gauge does: three drums and two fixed zeros, in pounds per hour. The drums roll like an odometer. The 10,000 place stays blank below 10,000, as on the gauge.
 
-FUEL FLOW and PPH aren't drawn on the screen. They belong on your data plate. To backlight an engraved FUEL FLOW, right-click the FFI's row under **Your devices** and choose **Turn on the white blocks (data plate backlight)**. Two white blocks light above the digits, one on either side of the hundreds drum. The same menu turns them off.
+FUEL FLOW and PPH aren't drawn on the screen. They belong on your data plate. To backlight an engraved FUEL FLOW, turn on **White blocks** on the FFI's card on [Instruments](instruments.md). Two white blocks light above the digits, one on either side of the hundreds drum.
+
+### Align a screen with its bezel
+
+**Align** on a display's card makes the picture bigger or smaller and moves it, so a DED or PFLD sits in your bezel's window and an FFI's digits sit in your data plate's. The screen shows a test face while you do it. See **Align a screen** on [Instruments](instruments.md).
 
 ---
 
@@ -281,7 +290,7 @@ On the Pico, the numbers are the GP numbers printed next to the pins, not the pi
 > [!NOTE]
 > RS-485 is new and hasn't been tested on every board yet. If a bus gives you trouble, set the board back to USB and tell us with **Report an Issue**.
 
-RS-485 lets several boards share one USB connection. One board, the bus master, plugs into the PC. The others connect to it through RS-485 transceiver modules on a twisted pair, and each one still shows up on the DIY Devices page as its own board.
+RS-485 lets several boards share one USB connection. One board, the bus master, plugs into the PC. The others connect to it through RS-485 transceiver modules on a twisted pair, and each one still shows up on the Open Hardware page as its own board.
 
 | Board | On a bus | As the bus master |
 |---|---|---|
@@ -294,7 +303,7 @@ RS-485 lets several boards share one USB connection. One board, the bus master, 
 ### Set up the boards
 
 1. Set each board up over USB first: install the firmware and run the wizard, as above.
-2. With the board plugged in, click **Connection** next to it on the DIY Devices page. Choose **On an RS-485 bus**, give it a **Bus address**, and click **Save**. Every board on the same bus needs its own address, from 1 to 126.
+2. With the board plugged in, click **Connection** next to it on the Open Hardware page. Choose **On an RS-485 bus**, give it a **Bus address**, and click **Save**. Every board on the same bus needs its own address, from 1 to 126.
 3. Wire it the way the dialog says: the board's TX pin to the module's DI, its RX pin to RO, and the enable pin to DE and RE tied together.
 4. For the board that plugs into the PC, choose **Bus master** instead, pick how many buses it runs, and click **Save**. Each bus needs its own module. The dialog lists the pins for each one.
 
@@ -306,7 +315,7 @@ RS-485 lets several boards share one USB connection. One board, the bus master, 
 - Only the modules at the two ends of the bus should have a 120 Ω terminating resistor. Many modules come with one fitted. Take it off the modules in between.
 - Match the module to the board. MAX485 modules are 5 V parts for 5 V Arduinos. A Pico or Teensy needs a 3.3 V module, such as one with a MAX3485 or SP3485. A 5 V module can damage a 3.3 V board's pins.
 
-Plug the bus master into the PC. The boards on the bus show up on the DIY Devices page through it.
+Plug the bus master into the PC. The boards on the bus show up on the Open Hardware page through it.
 
 To take a board off the bus, plug it into USB, click **Connection**, choose **USB to this PC** and click **Save**.
 
@@ -314,7 +323,7 @@ To take a board off the bus, plug it into USB, click **Connection**, choose **US
 
 ## Managing your devices
 
-- **Edit setup** on the DIY Devices page reopens the wizard for that board.
+- **Edit setup** on the Open Hardware page reopens the wizard for that board.
 - **Delete** removes the board from the manager and resets it. The board forgets its setup and comes back as a new device.
 - **Recently deleted** brings a deleted board back. If it is plugged in, its setup is sent straight back to it.
 - A note like **Firmware v1.5.2 available** on a board's row means the manager has newer firmware for that board. Click **Update** next to it. The board restarts and gets its setup back.
@@ -330,8 +339,9 @@ To take a board off the bus, plug it into USB, click **Connection**, choose **US
 | The install finished but the board never appears | Unplug it and plug it back in. Give it ten seconds. |
 | A display screen shows only the AIM logo | It waits for the sim. Start a mission in DCS or BMS with the manager running. |
 | The FFI screen stays dark | Check that **CONNECTION** on the Display wiring card matches how the screen is wired, I2C or SPI, and that the pins match. |
-| **FFI** is missing from the SHOWS list | The board runs older display firmware. Install the display firmware again from the install card. |
-| A needle doesn't move | Check that the gauge is set to **Drive physical needles** and every pin of its motor is assigned and wired. Motors need board firmware 1.5.0 or newer. |
+| **FFI** is missing from the SHOWS list | The board runs older display firmware. Click **Update to X.Y.Z** on its card on [Instruments](instruments.md). |
+| A display I built shows nothing | Enter your open hardware key. One key unlocks all your DIY devices. |
+| A needle doesn't move | Check that the gauge is set to **Mechanical** on [Instruments](instruments.md) and every pin of its motor is assigned and wired. Motors need board firmware 1.5.0 or newer. |
 | A needle on a 28BYJ-48 or a stepper driver starts from the wrong place | These motors have no end stop. Use **Set home here** in **Calibrate gauge…**, or turn the needle to its rest position by hand with the board unpowered. |
 | A needle on a 28BYJ-48 or a stepper driver turns the wrong way | Tick **Turns the other way** in **Calibrate gauge…**. |
 | A servo needle turns the wrong way | In **Calibrate gauge…**, set **Pulse at full scale** lower than **Pulse at zero**. |
@@ -340,9 +350,10 @@ To take a board off the bus, plug it into USB, click **Connection**, choose **US
 | The wizard offers pins that do not match my board | Plug the board in and open Edit setup again. The pin list comes from the board itself. |
 | A switch reads backwards | In Console Panels, click the ⋯ button on the control's row and choose Invert switch wiring. |
 | Learn mode recorded the wrong pin on a three-position toggle | Move the switch to the center first, then to the position the prompt asks for, and learn it again. |
+| **Learn wiring** won't start | The board has to be connected. Plug it in, then click **Learn wiring** again. |
 | The lamp lights in the manager but not on the board | Check the LED direction and the resistor. The lamp's cell is wired to the pin assigned to that slot. |
 | A board on an RS-485 bus never shows up | Check that each board on the bus has its own address, that A and B aren't swapped, and that only the two end modules have a terminating resistor. |
 
 ---
 
-**See also:** [Add Your First Board](add-your-first-board.md), [Assign Controls to Pins](assign-controls-to-pins.md), [Indicator and Caution Lights](indicator-and-caution-lights.md)
+**See also:** [Instruments](instruments.md), [Add Your First Board](add-your-first-board.md), [Assign Controls to Pins](assign-controls-to-pins.md), [Indicator and Caution Lights](indicator-and-caution-lights.md)
