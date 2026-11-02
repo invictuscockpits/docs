@@ -1,7 +1,7 @@
 # Network Health
 
 > [!NOTE]
-> Requires AIM Cockpit Manager **1.6.0** or later. On earlier versions, use the warning banner and **Fix** button on the Network page; see [Set Up the Cockpit Network](set-up-the-cockpit-network.md).
+> Requires Cockpit Manager **1.6.0** or later. On earlier versions, use the warning banner and **Fix** button on the Network page; see [Set Up the Cockpit Network](set-up-the-cockpit-network.md).
 
 Network Health shows every layer of your cockpit network as a row of lights, checked in order from the physical cable up to live board traffic. Open it from the **Network** section of the sidebar with the **Network health** button.
 

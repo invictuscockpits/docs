@@ -10,11 +10,11 @@
 
 ### 1. Download the installer
 
-Go to the [Software page at invictuscockpits.com](https://invictuscockpits.com/pages/software) and download the latest `AIM-Cockpit-Manager-vX.X.X-Setup.exe`.
+Go to the [Download page at cockpitmanager.com](https://cockpitmanager.com/download) and download the latest `Cockpit-Manager-vX.X.X-Setup.exe`.
 
 ### 2. Get past the SmartScreen warning
 
-Double-click the downloaded file. Because AIM Cockpit Manager is a newly released app, Windows SmartScreen may show a blue **"Windows protected your PC"** screen. This is normal for new software and **does not** mean anything is wrong.
+Double-click the downloaded file. Because Cockpit Manager is a newly released app, Windows SmartScreen may show a blue **"Windows protected your PC"** screen. This is normal for new software and **does not** mean anything is wrong.
 
 ![Windows SmartScreen "Windows protected your PC" warning](images/install-smartscreen.png)
 
@@ -39,11 +39,11 @@ Click through the wizard. The default options are fine. It installs to your user
 
 ### 5. Launch the manager
 
-Open **AIM Cockpit Manager** from the Start Menu or desktop shortcut.
+Open **Cockpit Manager** from the Start Menu or desktop shortcut.
 
 On the very first launch, Windows Defender Firewall may ask whether to allow the app on your network. Click **Allow access** and make sure the **Private networks** box is checked. The manager needs to listen for boards on your cockpit network; if you dismiss or block this prompt, boards won't appear; see [Troubleshooting](troubleshooting.md) if that happens.
 
-![Windows Defender Firewall prompt asking whether to allow AIM Cockpit Manager](images/install-firewall-prompt.png)
+![Windows Defender Firewall prompt asking whether to allow Cockpit Manager](images/install-firewall-prompt.png)
 
 ### 6. Check for updates
 
@@ -59,7 +59,7 @@ The manager opens to the **Home** page, where you pick your airframe and simulat
 |---|---|
 | Windows SmartScreen says the app is unrecognized | Re-download from the [Software page](https://invictuscockpits.com/pages/software), then check **Properties → Digital Signatures** shows **Invictus Machine LLC**. If it does, click **More info → Run anyway**. |
 | Installer won't run / Windows blocks it | Right-click the installer → **Properties** → **Unblock** → try again. |
-| Manager won't open after install | Check Start Menu for "AIM Cockpit Manager." If it's not there, re-run the installer. |
+| Manager won't open after install | Check Start Menu for "Cockpit Manager." If it's not there, re-run the installer. |
 | AIM boards not appearing after launch | Continue to [Set Up the Cockpit Network](set-up-the-cockpit-network.md). Discovery needs the network configured first. |
 | A USB board not appearing after launch | See [Open Hardware](open-hardware.md). The board needs the manager's firmware installed first. |
 

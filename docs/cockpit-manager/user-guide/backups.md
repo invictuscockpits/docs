@@ -1,7 +1,7 @@
 # Backups
 
 > [!NOTE]
-> Requires AIM Cockpit Manager **1.6.0** or later.
+> Requires Cockpit Manager **1.6.0** or later.
 
 The **Backups** section of [Settings](settings.md) protects the two things most painful to lose: your DCS control bindings and your BMS keyfile. It also backs up and restores the manager's own configuration, which makes moving to a new PC a two-click job.
 

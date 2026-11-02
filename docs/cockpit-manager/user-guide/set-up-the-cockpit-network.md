@@ -96,7 +96,7 @@ Work through these checks in order:
 
 **4. Virtual adapters.** Hyper-V / WSL / VM virtual switches can land on `10.24.6.x` and hijack the cockpit subnet. See the next section.
 
-**5. Windows Firewall.** If you dismissed the firewall prompt when the manager first launched, port 8888 inbound may be blocked. Check **Windows Defender Firewall → Allow an app through Windows Firewall** and make sure **AIM Cockpit Manager** is checked for **Private networks**.
+**5. Windows Firewall.** If you dismissed the firewall prompt when the manager first launched, port 8888 inbound may be blocked. Check **Windows Defender Firewall → Allow an app through Windows Firewall** and make sure **Cockpit Manager** (**AIM Cockpit Manager** on installs older than 2.7.0) is checked for **Private networks**.
 
 **6. Still nothing?** See [Troubleshooting](troubleshooting.md) for deeper steps.
 

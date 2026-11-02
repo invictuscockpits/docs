@@ -5,7 +5,7 @@ Every panel the manager knows on the F/A-18C, in the order the Console Panels pa
 > [!NOTE]
 > This airframe was generated from the simulator's own cockpit data. Panels marked **draft** have not been checked against a real cockpit yet, so names and grouping can still change. Wiring you record against a draft panel is kept when it is renamed.
 
-Controls: 361. Panels: 57.
+Controls: 364. Panels: 57.
 
 ## Left Console
 
@@ -111,7 +111,6 @@ Moves the air refueling probe.
 Dumps internal fuel overboard down to the reserve level.
 **ON:** Dumping.
 **OFF:** Not dumping.
-DCS flips this switch on each press, so the manager presses it only when the sim and the panel disagree.
 
 **EXT TANK CTR** · 3-position toggle · 2 pins
 
@@ -159,6 +158,12 @@ Flight control system panel: rudder trim, takeoff trim, FCS reset and the guarde
 **RUD TRIM** · Potentiometer · 1 analog input
 
 Rudder trim knob. It biases the flight control computers; the pedals do not move.
+
+**RUD TRIM MOTOR** · Knob motor · 3 pins
+
+The motor of a motorized RUD TRIM knob (OpenHornet's), through an H-bridge. When the sim's rudder trim moves and nobody is turning the knob, as T/O TRIM centres it, the manager runs the motor until the knob reads where the sim is.
+**CCW, CW:** The bridge's two direction inputs.
+**SPEED:** Its enable or speed input, held on while the motor runs.
 
 **T/O TRIM** · Push button · 1 pin
 
@@ -294,7 +299,7 @@ Oxygen flow valve, from OFF to maximum.
 
 Mission computer power and the hydraulic isolate override, aft on the left console.
 
-**MC** · 3-position toggle, spring return · 2 pins
+**MC** · 3-position toggle · 2 pins
 
 Turns off one mission computer. Spring-loaded from both ends.
 **1 OFF:** Mission computer 1 off.
@@ -444,6 +449,13 @@ Turns the emergency and parking brake handle. Turn it counterclockwise and pull 
 Pulls the emergency and parking brake handle out, or stows it.
 **STOW:** Handle stowed, brakes released.
 **PULL:** Handle pulled, brakes applied.
+
+**BRAKE HANDLE** · Rotary selector · 3 pins, or 1 analog input
+
+The emergency and parking brake handle as one lever, for a handle built with its own contacts (OpenHornet's has one for EMERG and one for PARK). The manager turns and pulls the sim's handle to match, from wherever the sim's handle is.
+**STOWED:** Pushed in, brakes released.
+**EMERG:** Pulled straight out, emergency brake.
+**PARK:** Turned and pulled, parking brake.
 
 **BRAKE PRESSURE** · Needle gauge · display<br>
 BRAKE ACCUMULATOR PRESSURE
@@ -1743,7 +1755,6 @@ Avionics cooling switch.
 
 **NORM:** Normal avionics cooling.
 **EMERG:** Emergency cooling, used with FCS HOT.
-DCS flips this switch on each press, so the manager presses it only when the sim and the panel disagree.
 
 ## Right Console
 
@@ -1826,7 +1837,6 @@ Anti-exposure suit temperature.
 
 **ON:** Heaters on whenever there is power.
 **AUTO:** Heaters on in the air.
-DCS flips this switch on each press, so the manager presses it only when the sim and the panel disagree.
 
 ### DEFOG
 
@@ -1879,9 +1889,8 @@ Brightness of the warning, caution and advisory lights in their low range.
 **LT TEST** · 2-position toggle · 1 pin
 
 Tests the warning, caution and advisory lights, the AOA indexer and the IFEI.
-**TEST:** Test.
+**TEST:** Test. Spring-loaded back to OFF.
 **OFF:** Normal.
-DCS flips this switch on each press, so the manager presses it only when the sim and the panel disagree.
 
 ### SENSORS
 
@@ -1895,7 +1904,11 @@ Radar power.
 **OFF:** Radar off.
 **STBY:** Warming up, no transmitting.
 **OPR:** Operating.
-**EMERG:** Operates with the safety interlocks bypassed. Pull the knob to reach it.
+**EMERG:** Operates with the safety interlocks bypassed. Pull the knob to reach it: wire RADAR PULL, or DCS stops the knob at OPR.
+
+**RADAR PULL** · Push button · 1 pin
+
+Pull the RADAR knob to turn it past OPR to EMERG. DCS keeps the knob at OPR unless it is pulled.
 
 **INS** · Rotary selector · 8 pins, or 1 analog input
 
@@ -1963,7 +1976,7 @@ The right cockpit wall: canopy switch, FCS BIT switch and circuit breakers.
 **CANOPY** · 3-position toggle, spring return · 2 pins
 
 Spring-loaded to HOLD from CLOSE.
-**OPEN:** Raises the canopy.
+**OPEN:** Raises the canopy. On the ground a solenoid holds it in OPEN until the canopy is fully up, then it springs to HOLD; in the air it must be held.
 **HOLD:** Stops it.
 **CLOSE:** Lowers and locks it.
 
@@ -2051,7 +2064,7 @@ Seat safe and arm handle.
 
 **EJECT** · Push button · 1 pin
 
-Ejection handle. DCS needs three pulls.
+Ejection handle. DCS needs three pulls; one pull of yours sends all three.
 
 **MAN ORIDE** · 2-position toggle · 1 pin
 

@@ -3,7 +3,7 @@
 **What you'll do:** decide how each gauge and screen in your cockpit is built, set up the display boards you plug in, and check the caution panel.
 
 > [!NOTE]
-> Requires AIM Cockpit Manager **2.6.0** or later.
+> Requires Cockpit Manager **2.6.0** or later.
 
 Open **Avionics**, then **Instruments**. The page lists every instrument of your airframe, panel by panel, with how each one is built and what drives it. It reads the same list as Console Panels, so the two pages always agree.
 

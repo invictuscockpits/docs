@@ -51,7 +51,7 @@ extra:
 
 nav:
   - Home: index.md
-  - AIM Cockpit Manager:
+  - Cockpit Manager:
       - User Guide:
           - cockpit-manager/user-guide/index.md
           - Start Here:

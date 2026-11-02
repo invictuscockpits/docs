@@ -1,7 +1,7 @@
 # Display Layout
 
 > [!NOTE]
-> Requires AIM Cockpit Manager **1.6.0** or later.
+> Requires Cockpit Manager **1.6.0** or later.
 
 Multi-monitor cockpits depend on Windows keeping every display in the same position and resolution. Windows does not always cooperate: graphics driver updates, unplugging a display, or sometimes just a reboot can shuffle the arrangement, and suddenly your MFD exports render on the wrong glass and your sim viewports are scrambled.
 

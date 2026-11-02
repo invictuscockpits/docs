@@ -1,7 +1,7 @@
 # Hot Start
 
 > [!NOTE]
-> Requires AIM Cockpit Manager **1.6.0** or later.
+> Requires Cockpit Manager **1.6.0** or later.
 
 Hot Start launches your whole flight session with one click. It's the yellow and black striped button at the bottom of the sidebar, and it's also available from the manager's tray icon, so you can start a session without even opening the window.
 

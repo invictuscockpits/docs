@@ -1,12 +1,12 @@
-# AIM Cockpit Manager: User Guide
+# Cockpit Manager: User Guide
 
 Welcome. This guide covers everything you need to get your cockpit wired up, configured, and flying.
 
-![AIM Cockpit Manager's Home page, where you pick the airframe and the simulator](images/home-overview.png)
+![Cockpit Manager's Home page, where you pick the airframe and the simulator](images/home-overview.png)
 
 ## What the AIM platform is
 
-The **AIM network** is the backbone of an Invictus cockpit. Each AIM panel board (Sidewinder, Phoenix) connects to your PC over a single Ethernet cable that carries both data and power. No separate power supplies, no USB hubs, no driver installs for the boards. The **AIM Cockpit Manager** is the Windows app that ties it all together: it finds your boards, walks you through setup, and keeps your switches, knobs, and displays in sync with the sim while you fly.
+The **AIM network** is the backbone of an Invictus cockpit. Each AIM panel board (Sidewinder, Phoenix) connects to your PC over a single Ethernet cable that carries both data and power. No separate power supplies, no USB hubs, no driver installs for the boards. The **Cockpit Manager** is the Windows app that ties it all together: it finds your boards, walks you through setup, and keeps your switches, knobs, and displays in sync with the sim while you fly.
 
 From version 2.0 the manager also drives panels you build on your own **Arduino, Teensy, Raspberry Pi Pico or ESP32** boards. Those plug in over USB and need an Open Hardware key. See [Open Hardware](open-hardware.md).
 
