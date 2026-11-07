@@ -27,10 +27,15 @@ stay put.
 
 The Probe flags a button that changes state three or more times within 25
 milliseconds. No finger can do that (even a fast double tap takes about a
-tenth of a second), so it's always the switch. Flagged rows are tinted amber
-with a **BOUNCE** badge saying how many changes happened and how fast, the
-header counts them, and the button is outlined in amber in the Buttons card
-until you clear the log.
+tenth of a second). Flagged rows are tinted amber with a **POSSIBLE BOUNCE**
+badge saying how many changes happened and how fast, the header counts them,
+and the button is outlined in amber in the Buttons card until you clear the
+log.
+
+It says *possible* because a fast-spun encoder can make the same pattern, so a
+flag on an encoder's buttons isn't necessarily a fault. If the Probe was busy
+for a moment and read several changes late, it doesn't judge them, so a pause
+never shows up as bounce.
 
 If a switch bounces, add debouncing in your board's firmware, or replace a
 worn switch.

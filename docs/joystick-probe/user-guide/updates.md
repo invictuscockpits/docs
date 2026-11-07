@@ -26,5 +26,5 @@ If you're offline, already on the latest version, or there are no releases yet,
 no banner appears. The check never interrupts you.
 
 > [!NOTE]
-> In-app downloads arrived in 1.3.0. Updating from 1.2.1 or older, the banner's
+> In-app downloads arrived in 1.2.2. Updating from 1.2.1 or older, the banner's
 > **Download** opens the release page in your browser instead.
