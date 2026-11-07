@@ -18,6 +18,8 @@ Everything in it is remembered between launches.
   hats, Force feedback, Buttons and Event log. A card you've turned on still
   only appears when the device has what it shows; a stick needs at least two
   axes for X / Y and Centering, for example.
+- **Software** shows your version. **Check for updates** looks for a newer
+  release; see [Updates](updates.md).
 
 ## Collapsing cards
 
