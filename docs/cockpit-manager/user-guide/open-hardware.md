@@ -269,7 +269,7 @@ The wizard uses each board's own pin numbers, so the number on the board's silks
 | Raspberry Pi Pico | GP1 to GP22, GP26 to GP28 | GP1 to GP22 | GP26, GP27, GP28 |
 | Arduino Nano | 2 to 12, A0 to A5 | 3, 5, 6, 9, 10, 11 | A4 to A7 |
 | Arduino Uno, Pro Mini | 2 to 12, A0 to A5 | 3, 5, 6, 9, 10, 11 | A4, A5 |
-| Arduino Mega 2560 | 2 to 53, A0 to A15 | 2 to 13, 44, 45, 46 | A0 to A15 |
+| Arduino Mega 2560 | 2 to 53, A0 to A15 (13 for switches only) | 2 to 12, 44, 45, 46 | A0 to A15 |
 | Pro Micro | 1 to 10, 14, 15, 16, A0 to A3 | 3, 5, 6, 9, 10 | A0 to A3 |
 | Leonardo, Micro | 1 to 12, A0 to A5 | 3, 5, 6, 9, 10, 11 | A0 to A5 |
 | Teensy 4.0 | 1 to 12, A0 to A9 | 1 to 12 | A0 to A9 |
@@ -282,6 +282,12 @@ The wizard uses each board's own pin numbers, so the number on the board's silks
 An analog pin can read a switch or light a lamp too, but not both at once: the wizard flags a pin used twice. On a Nano, A6 and A7 are analog inputs only.
 
 On the Pico, the numbers are the GP numbers printed next to the pins, not the pin count along the board edge. GP1 is the second pin from the corner.
+
+### Pin 13
+
+On a Mega, pin 13 reads switches, buttons and encoders but drives nothing, so the wizard lists it as **13 (inputs only)**. The board's LED is on pin 13, and the Mega's start-up code (its bootloader) blinks that LED for about a second every time the board starts. The board also starts again each time the manager connects to it over USB. A lamp on pin 13 would flash, and a relay, a motor, a servo or an RS-485 transceiver would be switched on and off. A switch on pin 13 reads normally. While the LED blinks, a closed switch briefly shorts the pin to ground, so a 1 kΩ resistor in series with the switch is cheap insurance.
+
+A Nano doesn't offer pin 13 at all. Its LED and resistor sit right on the pin and pull it down, so a switch there can't be read reliably, and the same start-up blink rules out lamps, relays and motors. The Uno and Pro Mini share one firmware, and the Pro Mini's LED is wired like the Nano's, so neither offers pin 13 either.
 
 ---
 
